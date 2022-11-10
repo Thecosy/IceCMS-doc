@@ -1,0 +1,22 @@
+<p>本文主要以图文的形式讲解在Linux环境下的部署，涉及在Docker容器中安装MySQL，以及SpringBoot应用部署，基于CenterOS7.6。</p>
+<h1 id="9um4k"><a name="9um4k" class="reference-link"></a><span class="header-link octicon octicon-link"></span>Docker环境安装</h1><p>安装yum-utils：</p>
+<p><code>yum install -y yum-utils device-mapper-persistent-data lvm2</code>
+为yum源添加docker仓库位置：
+<code>yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</code></p>
+<p>安装docker：</p>
+<p><code>yum install docker-ce</code></p>
+<p>启动docker：</p>
+<p><code>systemctl start docker</code></p>
+<h2 id="aevnr0"><a name="aevnr0" class="reference-link"></a><span class="header-link octicon octicon-link"></span>创建容器</h2><p>   1.运行Mysql容器
+    <code>docker run -d -p 0:3389 \
+    --name MySQL \
+    thecosy/icemysql:latest</code>
+    2.运行Spring容器
+    <code>docker run -d -p 8181:8181 \
+    --name springboot-admin \
+    --link MySQL:db \
+    thecosy/icecms:latest</code>
+说明：
+-p 挂载的容器内的端口为8080，对应配置文件中声明的端口号</p>
+<h1 id="w4p1z"><a name="w4p1z" class="reference-link"></a><span class="header-link octicon octicon-link"></span>访问接口进行测试</h1><p>mall-admin的api接口文档地址：<a href="http://你的ip地址:8080/doc.html">http://你的ip地址:8080/doc.html</a></p>
+<p>``</p>

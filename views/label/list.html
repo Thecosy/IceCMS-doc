@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{{template "widgets/head.html" .}}
+<!-- <link rel="stylesheet" href="/static/price/index.69c8dd3e.css"> -->
+<link rel="stylesheet" href="/static/static/index.3b13fe6e.css">
+
+<!-- <script type="module" crossorigin="" src="/static/price/index.d7ac46fa.js"></script> -->
+<!-- <script src="/static/price/hm.js"></script> -->
+
+</head>
+<body>
+<div class="manual-reader manual-container manual-search-reader">
+    {{template "widgets/header.html" .}}
+    <div class="">
+        <div id="app" data-v-app="">
+            <div class="flex flex-col min-h-screen overflow-hidden">
+      
+              <main class="flex-grow">
+                <section class="bg-gradient-to-b from-white to-gray-100">
+                  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-12 md:pt-40 md:pb-20">
+                      <div class="max-w-3xl mx-auto text-center pb-12">
+                        <h1 class="h1 mb-4 aos-init aos-animate" data-aos="zoom-y-out">产品定价</h1>
+                        <p class="text-xl text-gray-600 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150"> 以下为
+                          IceCMS 的定价，您可以根据您的需求自行选择。 </p>
+                      </div>
+                      <div>
+                        <div
+                          class="max-w-sm md:max-w-2xl xl:max-w-none mx-auto gap-8 grid md:grid-cols-1 xl:grid-cols-3 xl:gap-6 items-start">
+                          <div class="relative flex flex-col h-full py-5 px-6 rounded bg-white shadow-xl aos-init aos-animate"
+                            data-aos="zoom-y-out" data-aos-delay="450">
+                            <div class="mb-4">
+                              <div class="text-lg font-bold mb-1">社区版</div>
+                              <div class="inline-flex items-baseline mb-2"><span class="text-3xl font-bold">￥</span><span
+                                  class="text-4xl font-bold">0</span><span class="text-gray-600 pl-2">/免费</span></div>
+                              <div class="text-base text-gray-500">适合个人轻度使用</div>
+                            </div>
+                            <ul class="text-gray-600 -mb-2 flex-grow">
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>在线预览</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>文件操作操作</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>文件夹密码</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>文件夹文档</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>简易权限控制</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>所有基础功能</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>持续更新中...</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-5 mt-6"><a
+                                class="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" target="_blank"
+                                href="https://docs.IceCMS.vip/" style="outline: none;">查看部署文档</a></div>
+                          </div>
+                          <div
+                            class="relative flex flex-col h-full py-5 px-6 rounded bg-blue-100 shadow-xl border-2 border-blue-500 aos-init aos-animate"
+                            data-aos="zoom-y-out" data-aos-delay="450">
+                            <div class="absolute top-0 right-0 mr-5 p-3 -mt-5 bg-yellow-500 rounded-full"><svg
+                                class="w-4 h-4 fill-current text-white" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M15.145 5.05l-4.316-.627L8.898.513c-.338-.684-1.456-.684-1.794 0l-1.93 3.91-4.317.627a1.002 1.002 0 00-.554 1.707l3.124 3.044-.737 4.3a1 1 0 001.45 1.053L8 13.125l3.862 2.03c.728.381 1.59-.234 1.45-1.054l-.736-4.299L15.7 6.758a1.003 1.003 0 00-.555-1.708z">
+                                </path>
+                              </svg></div>
+                            <div class="mb-4">
+                              <div class="text-lg font-bold mb-1">捐赠版</div>
+                              <div class="inline-flex items-baseline mb-2"><span class="text-3xl font-bold">￥</span><span
+                                  class="text-4xl font-bold">188</span><span class="text-gray-600 pl-2">/根域名（限时特价）</span></div>
+                              <div class="text-base text-gray-500">适合个人轻度使用</div>
+                            </div>
+                            <ul class="text-gray-600 -mb-2 flex-grow">
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>社区版所有功能</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>细致权限控制</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>直链下载统计分析</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>本地、腾讯云、阿里云限速下载</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>WebDAV 支持（目前只支持只读）</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>打包下载</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>文件搜索</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>持续更新中...</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-5 mt-6"><a href="https://www.IceCMS.vip/signup"
+                                class="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style="outline: none;">立即购买</a>
+                            </div>
+                          </div>
+                          <div class="relative flex flex-col h-full py-5 px-6 rounded bg-white shadow-xl aos-init aos-animate"
+                            data-aos="zoom-y-out" data-aos-delay="450">
+                            <div class="mb-4">
+                              <div class="text-lg font-bold mb-1">定制版</div>
+                              <div class="inline-flex items-baseline mb-2"><span class="text-3xl font-bold">￥</span><span
+                                  class="text-4xl font-bold">详询</span><span class="text-gray-600 pl-2"></span></div>
+                              <div class="text-base text-gray-500">适合有特殊需求的用户</div>
+                            </div>
+                            <ul class="text-gray-600 -mb-2 flex-grow">
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>基于捐赠版所有功能</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>支持随主版本升级</span></li>
+                              <li class="flex items-center mb-2"><svg
+                                  class="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
+                                  </path>
+                                </svg><span>定制化服务</span></li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-5 mt-6"><a target="_blank"
+                                class="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full"
+                                href="https://wpa.qq.com/msgrd?v=3&amp;uin=873019219&amp;site=qq&amp;menu=yes&amp;jumpflag=1"
+                                style="outline: none;">联系作者</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="py-16 bg-white overflow-hidden lg:py-24">
+                  <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+                    <div class="relative">
+                      <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">捐赠版功能
+                      </h2>
+                      <p class="mt-4 max-w-3xl mx-auto text-center text-lg text-gray-500">演示包含目前捐赠版的特有功能，且会持续更新。</p>
+                    </div>
+                    <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+                      <div class="relative">
+                        <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">文件搜索</h3>
+                        <p class="mt-3 text-lg text-gray-500"></p>
+                        <dl class="mt-10 space-y-10">
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">模糊搜索</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">支持按照文件名模糊搜索，且支持配置是否搜索忽略大小写</dd>
+                          </div>
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                  </path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">搜索方式</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">支持搜索当前文件夹、当前文件夹及子文件夹、全局搜索三种模式</dd>
+                          </div>
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                  </path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">权限控制</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">支持配置仅管理员搜索还是匿名用户也可搜索</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 h-full" aria-hidden="true">
+                        <div class="el-carousel el-carousel--horizontal">
+                          <div class="el-carousel__container" style="height: 552.5px;">
+                            <!--v-if-->
+                            <!--v-if-->
+                            <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1);">
+                              <!--v-if-->
+                              <div class="el-image" style="height: inherit;"><img src="/static/price/lTDC3h.png" loading="auto"
+                                  class="el-image__inner el-image__preview">
+                                <!--v-if-->
+                                <!--v-if-->
+                              </div>
+                            </div>
+                          </div>
+                          <!--v-if-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative mt-12 sm:mt-16 lg:mt-24">
+                      <div
+                        class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 lg:space-x-reverse">
+                        <div class="lg:col-start-2">
+                          <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">下载限制</h3>
+                          <dl class="mt-10 space-y-10">
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">限速下载</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">限速下载文件单链接的下载速度限制（仅支持本地存储、阿里云、腾讯云、FTP、SFTP、WebDav）
+                              </dd>
+                            </div>
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636">
+                                    </path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">限制多线程下载</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">支持限制文件是否可多线程下载（仅本地存储支持）</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 lg:col-start-1 h-full">
+                          <div class="el-carousel el-carousel--horizontal">
+                            <div class="el-carousel__container" style="height: 552.5px;">
+                              <!--v-if-->
+                              <!--v-if-->
+                              <div class="el-carousel__item is-active is-animating"
+                                style="transform: translateX(0px) scale(1);">
+                                <!--v-if-->
+                                <div class="el-image" style="height: inherit;"><img src="/static/price/87bAQh.png" loading="auto"
+                                    class="el-image__inner el-image__preview">
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                </div>
+                              </div>
+                            </div>
+                            <!--v-if-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+                      <div class="relative">
+                        <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">权限控制</h3>
+                        <p class="mt-3 text-lg text-gray-500"></p>
+                        <dl class="mt-10 space-y-10">
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                  </path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">细致权限</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">支持控制管理员和匿名用户对文件操作、直链、忽略密码、忽略隐藏等功能进行权限配置。</dd>
+                          </div>
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                  </path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">安全可靠</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">采用前后端双重校验，避免被绕过权限判断。</dd>
+                          </div>
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">性能优先</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">采用缓存机制，避免权限校验带来的性能损耗，给你畅快的体验.</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 h-full" aria-hidden="true">
+                        <div class="el-carousel el-carousel--horizontal">
+                          <div class="el-carousel__container" style="height: 552.5px;">
+                            <!--v-if-->
+                            <!--v-if-->
+                            <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1);">
+                              <!--v-if-->
+                              <div class="el-image" style="height: inherit;"><img src="/static/price/2yuUIr.png" loading="auto"
+                                  class="el-image__inner el-image__preview">
+                                <!--v-if-->
+                                <!--v-if-->
+                              </div>
+                            </div>
+                          </div>
+                          <!--v-if-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative mt-12 sm:mt-16 lg:mt-24">
+                      <div
+                        class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 lg:space-x-reverse">
+                        <div class="lg:col-start-2">
+                          <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">统计分析</h3>
+                          <p class="mt-3 text-lg text-gray-500"></p>
+                          <dl class="mt-10 space-y-10">
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">热点文件</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">通过统计热点文件，找出哪些文件被频繁下载。</dd>
+                            </div>
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">热点 IP</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">通过统计热点 IP，找出哪些 IP 频繁引用了直链。</dd>
+                            </div>
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6">
+                                    </path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">热点来源</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">通过统计热点来源，找出哪些网站引用了您的直链，并结合 Referer 防盗链，保护您的站点安全。
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 lg:col-start-1 h-full">
+                          <div class="el-carousel el-carousel--horizontal">
+                            <div class="el-carousel__container" style="height: 552.5px;">
+                              <!--v-if-->
+                              <!--v-if-->
+                              <div class="el-carousel__item is-active is-animating"
+                                style="transform: translateX(0px) scale(1);">
+                                <!--v-if-->
+                                <div class="el-image" style="height: inherit;"><img src="/static/price/EmH5Ao.png" loading="auto"
+                                    class="el-image__inner el-image__preview">
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                </div>
+                              </div>
+                            </div>
+                            <!--v-if-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+                      <div class="relative">
+                        <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">打包下载</h3>
+                        <p class="mt-3 text-lg text-gray-500"></p>
+                        <dl class="mt-10 space-y-10">
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">
+                                  </path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">打包下载</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">支持多选文件后打包下载，且可指定打包文件名</dd>
+                          </div>
+                          <div class="relative">
+                            <dt>
+                              <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                  stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg></div>
+                              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">速度优先</p>
+                            </dt>
+                            <dd class="mt-2 ml-16 text-base text-gray-500">不进行服务器中转，而是采用现代浏览器技术进行客户端打包，不会受限于服务器带宽。（仅支持 Chrome
+                              浏览器）</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 h-full" aria-hidden="true">
+                        <div class="el-carousel el-carousel--horizontal">
+                          <div class="el-carousel__container" style="height: 552.5px;">
+                            <!--v-if-->
+                            <!--v-if-->
+                            <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1);">
+                              <!--v-if-->
+                              <div class="el-image" style="height: inherit;"><img src="/static/price/pnGGAh.png" loading="auto"
+                                  class="el-image__inner el-image__preview">
+                                <!--v-if-->
+                                <!--v-if-->
+                              </div>
+                            </div>
+                          </div>
+                          <!--v-if-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative mt-12 sm:mt-16 lg:mt-24">
+                      <div
+                        class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 lg:space-x-reverse">
+                        <div class="lg:col-start-2">
+                          <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">WebDAV</h3>
+                          <p class="mt-3 text-lg text-gray-500"></p>
+                          <dl class="mt-10 space-y-10">
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9">
+                                    </path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">动态开启</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">可动态启用或禁用 webdav，可以根据实际需求进行调整。</dd>
+                            </div>
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">权限控制</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">
+                                支持使用管理员账号密码访问，会使用管理员权限查看文件和文件夹，也可以为游客权限的账号密码，不配置账号密码，则无需密码可访问 webdav.</dd>
+                            </div>
+                            <div class="relative">
+                              <dt>
+                                <div
+                                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                  </svg></div>
+                                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">兼容下载</p>
+                              </dt>
+                              <dd class="mt-2 ml-16 text-base text-gray-500">支持中转下载也支持重定向下载，可以自由选择下载方式。</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 lg:col-start-1 h-full">
+                          <div class="el-carousel el-carousel--horizontal">
+                            <div class="el-carousel__container" style="height: 552.5px;">
+                              <!--v-if-->
+                              <!--v-if-->
+                              <div class="el-carousel__item is-active is-animating"
+                                style="transform: translateX(0px) scale(1);">
+                                <!--v-if-->
+                                <div class="el-image" style="height: inherit;"><img src="/static/price/PsosM3.png" loading="auto"
+                                    class="el-image__inner el-image__preview">
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                </div>
+                              </div>
+                            </div>
+                            <!--v-if-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section>
+                  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20 border-t border-gray-200">
+                      <div class="max-w-3xl mx-auto text-center pb-20">
+                        <h2 class="h2">常见问题</h2>
+                      </div>
+                      <ul class="max-w-3xl mx-auto pl-12">
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>授权是否是永久的？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 是的，永久授权，买断制，就算以后出 V5、V6 您也不用再次付费。 </p>
+                          </div>
+                        </li>
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>授权的形式是什么？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 授权支持泛域名、公网 IP、内网网段三种方式: <br><br> - <span class="font-bold">泛域名授权</span>：如根域名为
+                              <code>IceCMS.vip</code>, 则
+                              <code>IceCMS.vip</code>、<code>a.IceCMS.vip</code>、<code>a.b.IceCMS.vip</code> 均可用 <br> - <span
+                                class="font-bold">公网 IP 授权</span>：指定公网 <code>IP</code> 授权，如授权 <code>1.1.1.1</code>，则可使用
+                              <code>http://1.1.1.1</code> 访问。 <br> - <span class="font-bold">内网网段</span>：内网授权将授权所有
+                              <code>IPV4</code> 内网网段:
+                              <code>10.0.0.0/8</code>、<code>172.16.0.0/12</code>、<code>192.168.0.0/16</code> （需服务器可访问公网）
+                              <br><br><span class="text-gray-500">tips: 每个月可修改一次授权.</span></p>
+                          </div>
+                        </li>
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>我之前捐赠过 IceCMS，现在购买捐赠版有没有优惠？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 当然，非常感谢您之前对 IceCMS 的支持，之前捐赠过的用户，购买后，可凭捐赠转账截图联系我，可返 1.5 倍捐赠金额（返现金额最大为 IceCMS
+                              购买金额），如您之前捐赠过 IceCMS 100 元，购买后，可找我返现 150. </p>
+                          </div>
+                        </li>
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>是否支持从 3.x 版本升级？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 很抱歉，由于版本差异过大，数据无法直接迁移，安装 4.x 版本会让您重新初始化数据（不会覆盖之前版本的数据），IceCMS 只保证同一个大版本可无缝升级，如您从 4.x
+                              升级到 4.x Pro 是可以无缝升级的。 </p>
+                          </div>
+                        </li>
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>IceCMS 是否可以商用？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 当然，只要您不删除 IceCMS 相关 logo 或标志，哪怕是开源版也可以商用，无需向我申请。但绝对不允许用来做赌博、诈骗、木马、病毒等违法规范行为。 </p>
+                          </div>
+                        </li>
+                        <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                            aria-expanded="false" style="outline: none;"><svg
+                              class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out"></rect>
+                              <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                            </svg><span>购买捐赠版后是否支持退款？</span></button>
+                          <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                            style="max-height: 0px; opacity: 0;">
+                            <p class="pb-5"> 理论上不支持退款，如有特殊需求，可申请退款，但要扣除支付平台的手续费，约 3%。（购买超出 14 天后不再支持退款。） </p>
+                          </div>
+                        </li><span class="block border-t border-gray-200" aria-hidden="true"></span>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="pb-12 md:pb-20">
+                      <div class="bg-blue-600 rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl aos-init" data-aos="zoom-y-out">
+                        <div class="flex flex-col lg:flex-row justify-between items-center">
+                          <div class="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
+                            <h3 class="h3 text-white mb-2">觉得怎么样？</h3>
+                            <p class="text-white text-lg opacity-75">如果想要购买的话，点击右侧按钮跳转至购买页面。</p>
+                          </div>
+                          <div><a href="https://www.IceCMS.vip/signup"
+                              class="btn text-blue-600 bg-gradient-to-r from-blue-100 to-white" style="outline: none;">购买授权</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </main>
+              <!-- <footer>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 bg-white">
+                  <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 border-t border-gray-200">
+                    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                      <div class="px-5 py-2"><a href="https://zhaojun.vip/" class="text-base text-gray-500 hover:text-gray-900"
+                          style="outline: none;">博客</a></div>
+                      <div class="px-5 py-2"><a href="https://docs.IceCMS.vip/"
+                          class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">文档</a></div>
+                      <div class="px-5 py-2"><a href="https://bbs.IceCMS.vip/"
+                          class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">社区</a></div>
+                      <div class="px-5 py-2"><a href="https://demo.IceCMS.vip/"
+                          class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">演示</a></div>
+                      <div class="px-5 py-2"><a href="https://github.com/zhaojun1998/IceCMS"
+                          class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">Github</a></div>
+                    </nav>
+                    <div class="mt-8 flex justify-center space-x-6"><a target="_blank"
+                        href="https://wpa.qq.com/msgrd?v=3&amp;uin=873019219&amp;site=qq&amp;menu=yes&amp;jumpflag=1"
+                        class="text-gray-400 hover:text-gray-500" style="outline: none;"><span class="sr-only">QQ</span><img
+                          alt="qq" src="/static/price/qq.532d6295.svg" class="h-6 w-6"></a><a target="_blank"
+                        href="mailto:873019219@qq.com" class="text-gray-400 hover:text-gray-500" style="outline: none;"><span
+                          class="sr-only">Email</span><img alt="email" src="/static/price/email.13ec6a3c.svg" class="h-6 w-6"></a><a
+                        target="_blank" href="https://github.com/zhaojun1998/IceCMS" class="text-gray-400 hover:text-gray-500"
+                        style="outline: none;"><span class="sr-only">Github</span><img alt="github"
+                          src="/static/price/github.22601200.svg" class="h-6 w-6"></a></div>
+                    <p class="mt-8 text-center text-base text-gray-400">© 2022 IceCMS, Inc. All rights reserved. | <a
+                        href="https://beian.miit.gov.cn/" class="text-blue-500" target="_blank"
+                        style="outline: none;">冀ICP备17004571号-4</a></p>
+                  </div>
+                </div>
+              </footer> -->
+            </div>
+          </div>
+       
+    </div>
+
+</div>
+{{template "widgets/footer.html" .}}
+</body>
+</html>

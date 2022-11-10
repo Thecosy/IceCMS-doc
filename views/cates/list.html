@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+{{template "widgets/head.html" .}}
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <script src="/static/static/hm.js"></script> -->
+<link rel="icon" href="https://www.IceCMS.vip/favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IceCMS 官网</title>
+<!-- <script type="module" crossorigin="" src="/static/static/index.684a399a.js"></script> -->
+<link rel="stylesheet" href="/static/static/index.3b13fe6e.css">
+
+</head>
+<body>
+<div class="manual-reader manual-container">
+{{template "widgets/header.html" .}}
+
+    <div class="my-container manual-body cate-list">
+  
+  <div id="app" data-v-app="">
+    <div class="flex flex-col min-h-screen overflow-hidden">
+      <!-- <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="flex items-center justify-between h-16 md:h-20">
+            <div class="flex-shrink-0 mr-4"><a aria-current="page" href="https://www.IceCMS.vip/"
+                class="router-link-active router-link-exact-active block" aria-label="Cruip" style="outline: none;"><img
+                  class="w-28" src="/static/static/IceCMS-horizontal.abd5aec9.svg"></a></div>
+            <nav class="hidden md:flex md:flex-grow">
+              <ul class="flex flex-grow justify-end flex-wrap items-center">
+                <li><a href="https://www.IceCMS.vip/pricing"
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    style="outline: none;">定价</a></li>
+                <li><a href="https://demo.IceCMS.vip/" target="_blank"
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    style="outline: none;">演示</a></li>
+                <li><a href="https://docs.IceCMS.vip/" target="_blank"
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    style="outline: none;">文档</a></li>
+                <li><a href="https://docs.IceCMS.vip/changelog" target="_blank"
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    style="outline: none;">更新记录</a></li>
+                <li class="relative"><a
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    href="https://www.IceCMS.vip/#0" aria-haspopup="true" aria-expanded="{dropdownOpen}"
+                    style="outline: none;">部署 <svg
+                      class="w-3 h-3 fill-current text-gray-500 cursor-pointer ml-1 flex-shrink-0" viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z">
+                      </path>
+                    </svg></a>
+                  <ul class="origin-top-right absolute top-full right-0 w-40 bg-white py-2 ml-4 rounded shadow-lg"
+                    style="display: none;">
+                    <li><a href="https://docs.IceCMS.vip/install-os" target="_blank"
+                        class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
+                        style="outline: none;">开源版</a></li>
+                    <li><a href="https://docs.IceCMS.vip/install-pro" target="_blank"
+                        class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
+                        style="outline: none;">捐赠版</a></li>
+                  </ul>
+                </li>
+                <li class="relative"><a
+                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                    href="https://www.IceCMS.vip/#0" aria-haspopup="true" aria-expanded="{dropdownOpen}"
+                    style="outline: none;">Github <svg
+                      class="w-3 h-3 fill-current text-gray-500 cursor-pointer ml-1 flex-shrink-0" viewBox="0 0 12 12"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z">
+                      </path>
+                    </svg></a>
+                  <ul class="origin-top-right absolute top-full right-0 w-40 bg-white py-2 ml-4 rounded shadow-lg"
+                    style="display: none;">
+                    <li><a href="https://github.com/IceCMS-dev/IceCMS" target="_blank"
+                        class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
+                        style="outline: none;">IceCMS 后端</a></li>
+                    <li><a href="https://github.com/IceCMS-dev/IceCMS-vue" target="_blank"
+                        class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
+                        style="outline: none;">IceCMS 前端</a></li>
+                    <li><a href="https://github.com/IceCMS-dev/docs" target="_blank"
+                        class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
+                        style="outline: none;">IceCMS 文档</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="flex flex-grow justify-end flex-wrap items-center">
+                <li><a href="https://www.IceCMS.vip/signup"
+                    class="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    style="outline: none;">购买授权</a></li>
+                <li><a href="https://www.IceCMS.vip/login"
+                    class="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3" style="outline: none;"><span>登
+                      录</span><svg class="w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1"
+                      viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                        fill-rule="nonzero"></path>
+                    </svg></a></li>
+              </ul>
+            </nav>
+            <div class="flex md:hidden"><button class="hamburger" aria-controls="mobile-nav" aria-expanded="false"
+                style="outline: none;"><span class="sr-only">Menu</span><svg class="w-6 h-6 fill-current text-gray-900"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="4" width="24" height="2"></rect>
+                  <rect y="11" width="24" height="2"></rect>
+                  <rect y="18" width="24" height="2"></rect>
+                </svg></button>
+              <nav id="mobile-nav" class="absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white"
+                style="display: none;">
+                <ul class="px-5 py-2">
+                  <li><a href="https://www.IceCMS.vip/pricing" class="flex text-gray-600 hover:text-gray-900 py-2"
+                      style="outline: none;">定价</a></li>
+                  <li><a href="https://demo.IceCMS.vip/" target="_blank"
+                      class="flex text-gray-600 hover:text-gray-900 py-2" style="outline: none;">演示</a></li>
+                  <li><a href="https://docs.IceCMS.vip/" target="_blank"
+                      class="flex text-gray-600 hover:text-gray-900 py-2" style="outline: none;">文档</a></li>
+                  <li><a href="https://github.com/zhaojun1998/IceCMS" target="_blank"
+                      class="flex text-gray-600 hover:text-gray-900 py-2" style="outline: none;">Github</a></li>
+                  <li><a href="https://docs.IceCMS.vip/changelog" target="_blank"
+                      class="flex text-gray-600 hover:text-gray-900 py-2" style="outline: none;">更新记录</a></li>
+                  <li><a href="https://www.IceCMS.vip/signup"
+                      class="flex btn-sm bg-blue-500 font-medium w-full text-white hover:text-gray-900 py-2 justify-center"
+                      style="outline: none;">购买捐赠版</a></li>
+                  <li><a href="https://www.IceCMS.vip/login"
+                      class="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2"
+                      style="outline: none;"><span>登 录</span><svg
+                        class="w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1" viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                          fill="#999" fill-rule="nonzero"></path>
+                      </svg></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header> -->
+      <main class="flex-grow IceCMS-pay-main">
+        <section class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
+            aria-hidden="true"><svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
+                  <stop stop-color="#FFF" offset="0%"></stop>
+                  <stop stop-color="#EAEAEA" offset="77.402%"></stop>
+                  <stop stop-color="#DFDFDF" offset="100%"></stop>
+                </lineargradient>
+              </defs>
+              <g fill="url(#illustration-01)" fill-rule="evenodd">
+                <circle cx="1232" cy="128" r="128"></circle>
+                <circle cx="155" cy="443" r="64"></circle>
+              </g>
+            </svg></div>
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="pt-32 pb-12 md:pt-40 md:pb-20">
+              <div class="text-center pb-12 md:pb-16">
+                <h1
+                  class="text-5xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4 aos-init aos-animate"
+                  data-aos="zoom-y-out"><span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 tracking-wider">IceCMS</span>
+                </h1>
+                <div class="max-w-3xl mx-auto">
+                  <p class="text-xl text-gray-600 mb-8 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150">
+                    基于 Spring Boot + Vue 前后端分离的内容管理系统，适合做 资讯商城，社区论坛，聊天交友 社区.</p>
+                  <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center aos-init aos-animate"
+                    data-aos="zoom-y-out" data-aos-delay="300">
+                    <div><a class="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
+                        target="_blank" href="https://github.com/Thecosy/IceCMS" style="outline: none;">快速开始</a></div>
+                    <div><a class="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
+                        target="_blank" href="http://snym.cn/" style="outline: none;">查看演示</a></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="relative flex justify-center mb-8 aos-init aos-animate" data-aos="zoom-y-out"
+                  data-aos-delay="450">
+                  <div class="flex flex-col justify-center"><img class="mx-auto" src="/static/images/home-img.svg"
+                      width="600" alt="Hero"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="py-16 bg-white overflow-hidden lg:py-24">
+          <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+            <div class="relative">
+              <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">美观、流畅的操作体验
+              </h2>
+              <p class="mt-4 max-w-3xl mx-auto text-center text-lg text-gray-500">IceCMS 在各个方便考虑易用性，简洁性，力求给您最畅快的体验。</p>
+            </div>
+            <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+              <div class="relative">
+                <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">自适应性布局</h3>
+                <p class="mt-3 text-lg text-gray-500">响应式自适应手机、平板、PC 等多种设备屏幕分辨率，提供绝佳的浏览体验，一次建站即可拥有多个站点。</p>
+                <dl class="mt-10 space-y-10">
+                  <div class="relative">
+                    <dt>
+                      <div
+                        class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                          stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                          </path>
+                        </svg></div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">PC端</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">采用简洁布局，灵感来源于MacWk对于特定ui进行美化处理。</dd>
+                  </div>
+                  <div class="relative">
+                    <dt>
+                      <div
+                        class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                          stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                        </svg></div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">移动端</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">对移动端进行适配处理，保障用户操作体验。</dd>
+                  </div>
+                  <div class="relative">
+                    <dt>
+                      <div
+                        class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                          stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                          </path>
+                        </svg></div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">小程序端</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">使用uniapp进行开发，一次开发多端编译运行。</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 h-full" aria-hidden="true">
+                <div class="el-carousel el-carousel--horizontal">
+                  <div class="el-carousel__container" style="height: 552.5px;"><button type="button"
+                      class="el-carousel__arrow el-carousel__arrow--left" style="display: none; outline: none;"><i
+                        class="el-icon"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                          <path fill="currentColor"
+                            d="M609.408 149.376 277.76 489.6a32 32 0 0 0 0 44.672l331.648 340.352a29.12 29.12 0 0 0 41.728 0 30.592 30.592 0 0 0 0-42.752L339.264 511.936l311.872-319.872a30.592 30.592 0 0 0 0-42.688 29.12 29.12 0 0 0-41.728 0z">
+                          </path>
+                        </svg></i></button><button type="button" class="el-carousel__arrow el-carousel__arrow--right"
+                      style="display: none; outline: none;"><i class="el-icon"><svg viewBox="0 0 1024 1024"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill="currentColor"
+                            d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z">
+                          </path>
+                        </svg></i></button>
+                    <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1);">
+                      <!--v-if-->
+                      <div class="el-image" style="height: inherit;"><img src="https://camo.githubusercontent.com/eb321d8d6b3367fd03a55db2ae71847738b17a33b2cb0e1df8f19642b5738de2/68747470733a2f2f69302e6864736c622e636f6d2f6266732f616c62756d2f333534613163616132396266643862633935373162653637623138646231333232376265613830662e706e67" loading="auto"
+                          class="el-image__inner el-image__preview">
+                        <!--v-if-->
+                        <!--v-if-->
+                      </div>
+                    </div>
+                    <div class="el-carousel__item" style="transform: translateX(553px) scale(1);">
+                      <!--v-if-->
+                      <div class="el-image" style="height: inherit;"><img src="/static/static/eHlUWc.png" loading="auto"
+                          class="el-image__inner el-image__preview">
+                        <!--v-if-->
+                        <!--v-if-->
+                      </div>
+                    </div>
+                    <div class="el-carousel__item is-animating" style="transform: translateX(-553px) scale(1);">
+                      <!--v-if-->
+                      <div class="el-image" style="height: inherit;"><img src="/static/static/L4P33F.png" loading="auto"
+                          class="el-image__inner el-image__preview">
+                        <!--v-if-->
+                        <!--v-if-->
+                      </div>
+                    </div>
+                  </div>
+                  <ul
+                    class="el-carousel__indicators el-carousel__indicators--horizontal el-carousel__indicators--outside">
+                    <li class="el-carousel__indicator el-carousel__indicator--horizontal is-active"><button
+                        class="el-carousel__button" style="outline: none;">
+                        <!--v-if-->
+                      </button></li>
+                    <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                        class="el-carousel__button" style="outline: none;">
+                        <!--v-if-->
+                      </button></li>
+                    <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                        class="el-carousel__button" style="outline: none;">
+                        <!--v-if-->
+                      </button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="relative mt-12 sm:mt-16 lg:mt-24">
+              <div
+                class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 lg:space-x-reverse">
+                <div class="lg:col-start-2">
+                  <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">高效规范的代码结构</h3>
+                  <p class="mt-3 text-lg text-gray-500">符合标准的纯净 XHTML/CSS 手写编码, 规范合理简单易读的程序结构, 方便客户进行网站的二次开发, 具备良好的功能扩展优势。</p>
+                  <dl class="mt-10 space-y-10">
+                    <div class="relative">
+                      <dt>
+                        <div
+                          class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                          </svg></div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">文本处理</p>
+                      </dt>
+                      <dd class="mt-2 ml-16 text-base text-gray-500">后端支持预览纯文本、Markdown等编辑模式.
+                      </dd>
+                    </div>
+                    <div class="relative">
+                      <dt>
+                        <div
+                          class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
+                          </svg></div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">上传图片</p>
+                      </dt>
+                      <dd class="mt-2 ml-16 text-base text-gray-500">支持在线上传图片，还提供oss等云端存储方式。</dd>
+                    </div>
+                    <div class="relative">
+                      <dt>
+                        <div
+                          class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                          </svg></div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">支持在线播放</p>
+                      </dt>
+                      <dd class="mt-2 ml-16 text-base text-gray-500">支持在线音频播放，如 mp3、wav、ogg、flac 等. 并提供播放列表方便切换.</dd>
+                    </div>
+                    <div class="relative">
+                      <dt>
+                        <div
+                          class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                          </svg></div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">提供模式预览</p>
+                      </dt>
+                      <dd class="mt-2 ml-16 text-base text-gray-500">支持图片在线预览.</dd>
+                    </div>
+                    <div class="relative">
+                      <dt>
+                        <div
+                          class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                          </svg></div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">更多功能</p>
+                      </dt>
+                      <dd class="mt-2 ml-16 text-base text-gray-500">更多功能等待探索.
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 lg:col-start-1 h-full">
+                  <div class="el-carousel el-carousel--horizontal">
+                    <div class="el-carousel__container" style="height: 552.5px;"><button type="button"
+                        class="el-carousel__arrow el-carousel__arrow--left" style="display: none; outline: none;"><i
+                          class="el-icon"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                              d="M609.408 149.376 277.76 489.6a32 32 0 0 0 0 44.672l331.648 340.352a29.12 29.12 0 0 0 41.728 0 30.592 30.592 0 0 0 0-42.752L339.264 511.936l311.872-319.872a30.592 30.592 0 0 0 0-42.688 29.12 29.12 0 0 0-41.728 0z">
+                            </path>
+                          </svg></i></button><button type="button" class="el-carousel__arrow el-carousel__arrow--right"
+                        style="display: none; outline: none;"><i class="el-icon"><svg viewBox="0 0 1024 1024"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                              d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z">
+                            </path>
+                          </svg></i></button>
+                      <div class="el-carousel__item" style="transform: translateX(2212px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="/static/static/R44kS0.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                      <div class="el-carousel__item" style="transform: translateX(-1106px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="/static/static/n9QakX.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                      <div class="el-carousel__item is-animating" style="transform: translateX(-553px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="/static/static/1yctpf.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                      <div class="el-carousel__item is-active is-animating"
+                        style="transform: translateX(0px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="https://s1.ax1x.com/2022/11/10/zpgmhd.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                      <div class="el-carousel__item" style="transform: translateX(553px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="/static/static/fpMK7V.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                      <div class="el-carousel__item" style="transform: translateX(1106px) scale(1);">
+                        <!--v-if-->
+                        <div class="el-image" style="height: inherit;"><img src="/static/static/Z6hAZ3.png" loading="auto"
+                            class="el-image__inner el-image__preview">
+                          <!--v-if-->
+                          <!--v-if-->
+                        </div>
+                      </div>
+                    </div>
+                    <ul
+                      class="el-carousel__indicators el-carousel__indicators--horizontal el-carousel__indicators--outside">
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal is-active"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                      <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button
+                          class="el-carousel__button" style="outline: none;">
+                          <!--v-if-->
+                        </button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+              <div class="relative">
+                <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">开源无加密</h3>
+                <p class="mt-3 text-lg text-gray-500">采用 GPL 开源且无任何代码加密的代码，所提供程序文件无条件开放源代码。</p>
+                <dl class="mt-10 space-y-10">
+                  <div class="relative">
+                    <dt>
+                      <div
+                        class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                          stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                          </path>
+                        </svg></div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">GPL 开源协议</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                     代码支持商用、二次开发</dd>
+                  </div>
+                  <div class="relative">
+                    <dt>
+                      <div
+                        class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                          stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg></div>
+                      <p class="ml-16 text-lg leading-6 font-medium text-gray-900">无后门</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">代码一经授权不留痕迹</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="mt-10 border hover:border-gray-300 relative lg:mt-0 h-full" aria-hidden="true">
+                <div class="el-image relative mx-auto"><img alt="" src="https://s1.ax1x.com/2022/11/10/zpgJAg.md.png"
+                    class="el-image__inner el-image__preview">
+                  <!--v-if-->
+                  <!--v-if-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white">
+          <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+              <h2 class="text-3xl font-extrabold text-gray-900">更多功能</h2>
+              <p class="mt-4 text-lg text-gray-500">更多功能待您探索...</p>
+            </div>
+            <dl
+              class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">高效的后台管理 <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">独有可视化模版后台设置和内置常用模块, 帮助客户轻松快捷地安装设置管理网站栏目, 无需代码知识减少管理成本。基本设置、 首页</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">强大的SEO搜索优化 <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">更加强调和注重合理的搜索引擎优化, 充分发挥 WordPress 特有的强大搜索优化优势, 使得您的网站优化推广更加轻松, 站点收录更快</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">兼容各主流浏览器  <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">每一套网站模版都会在各主流浏览器中进行测试, 确保兼容这些浏览器, 例如: Firefox、Google Chrome、Safari、Opera等。</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">预设常用功能模块 <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">预设企业网站常用功能模块, 包括新闻文章、产品展示、SEO优化、在线留言、友情链接等, 并完美兼容常见第三方插件扩展更多特色</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">自动缩略图功能 <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">内置强大的自动缩略图功能, 减少产品文章发布编辑时间, 自动完成文章缩略图尺寸控制, 并支持多种有效的递进式缩略图显示方式。</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Docker 支持 <span class="badge-blue"
+                      style="display: none;">Pro</span></p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">支持 Docker 和 Docker Compose 方式部署，且支持 amd64 和 arm 架构.</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">强大自定义栏目模块
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">可视化自定义设置网站首页、企业特色栏目、侧边栏等众多栏目模块, 方便快捷地完成更多个性化内容的添加设置, 发挥特性实现高效建</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">直链统计 
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">针对直链和短链下载情况进行统计，支持按文件、IP、Referer 来源查看热点文件</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">全局搜索
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">对内容进行全局搜索功能、子目录搜索、当前搜索</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">OSS 
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">支持对外提供 WebDAV 服务，方便挂载到本地电脑或其他设备上 (目前只支持只读)</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">权限控制 
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">对存用户的权限控制，设置管理员/匿名用户是否可以进行操作.</dd>
+              </div>
+              <div class="relative">
+                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" aria-hidden="true" class="absolute h-6 w-6 text-green-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <p class="ml-9 text-lg leading-6 font-medium text-gray-900">超宽屏 
+                    <!-- <span class="badge-blue">Pro</span> -->
+                  </p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">灵活部署</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <section>
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="py-12 md:py-20 border-t border-gray-200">
+              <div class="max-w-3xl mx-auto text-center pb-20">
+                <h2 class="h2">常见问题</h2>
+              </div>
+              <ul class="max-w-3xl mx-auto pl-12">
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>授权是否是永久的？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 是的，永久授权，买断制，就算以后出 V5、V6 您也不用再次付费。 </p>
+                  </div>
+                </li>
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>授权的形式是什么？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 授权支持泛域名、公网 IP、内网网段三种方式: <br><br> - <span class="font-bold">泛域名授权</span>：如根域名为
+                      <code>IceCMS.vip</code>, 则
+                      <code>IceCMS.vip</code>、<code>a.IceCMS.vip</code>、<code>a.b.IceCMS.vip</code> 均可用 <br> - <span
+                        class="font-bold">公网 IP 授权</span>：指定公网 <code>IP</code> 授权，如授权 <code>1.1.1.1</code>，则可使用
+                      <code>http://1.1.1.1</code> 访问。 <br> - <span class="font-bold">内网网段</span>：内网授权将授权所有
+                      <code>IPV4</code> 内网网段:
+                      <code>10.0.0.0/8</code>、<code>172.16.0.0/12</code>、<code>192.168.0.0/16</code> （需服务器可访问公网）
+                      <br><br><span class="text-gray-500">tips: 每个月可修改一次授权.</span></p>
+                  </div>
+                </li>
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>我之前捐赠过 IceCMS，现在购买捐赠版有没有优惠？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 当然，非常感谢您之前对 IceCMS 的支持，之前捐赠过的用户，购买后，可凭捐赠转账截图联系我，可返 1.5 倍捐赠金额（返现金额最大为 IceCMS
+                      购买金额），如您之前捐赠过 IceCMS 100 元，购买后，可找我返现 150. </p>
+                  </div>
+                </li>
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>是否支持从 3.x 版本升级？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 很抱歉，由于版本差异过大，数据无法直接迁移，安装 4.x 版本会让您重新初始化数据（不会覆盖之前版本的数据），IceCMS 只保证同一个大版本可无缝升级，如您从 4.x
+                      升级到 4.x Pro 是可以无缝升级的。 </p>
+                  </div>
+                </li>
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>IceCMS 是否可以商用？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 当然，只要您不删除 IceCMS 相关 logo 或标志，哪怕是开源版也可以商用，无需向我申请。但绝对不允许用来做赌博、诈骗、木马、病毒等违法规范行为。 </p>
+                  </div>
+                </li>
+                <li><button class="flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+                    aria-expanded="false" style="outline: none;"><svg
+                      class="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1"
+                        class="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+                    </svg><span>购买捐赠版后是否支持退款？</span></button>
+                  <div class="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    style="max-height: 0px; opacity: 0;">
+                    <p class="pb-5"> 理论上不支持退款，如有特殊需求，可申请退款，但要扣除支付平台的手续费，约 3%。（购买超出 14 天后不再支持退款。） </p>
+                  </div>
+                </li><span class="block border-t border-gray-200" aria-hidden="true"></span>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="pb-12 md:pb-20">
+              <div class="bg-blue-600 rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl aos-init" data-aos="zoom-y-out">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                  <div class="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left">
+                    <h3 class="h3 text-white mb-2">觉得怎么样？</h3>
+                    <p class="text-white text-lg opacity-75">如果觉得不错的话，快来试试吧！</p>
+                  </div>
+                  <div><a href="https://www.IceCMS.vip/pricing"
+                      class="btn text-blue-600 bg-gradient-to-r from-blue-100 to-white" style="outline: none;">快速开始</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <footer>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 bg-white">
+          <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 border-t border-gray-200">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+              <div class="px-5 py-2"><a href="https://zhaojun.vip/" class="text-base text-gray-500 hover:text-gray-900"
+                  style="outline: none;">博客</a></div>
+              <div class="px-5 py-2"><a href="https://docs.IceCMS.vip/"
+                  class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">文档</a></div>
+              <div class="px-5 py-2"><a href="https://bbs.IceCMS.vip/"
+                  class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">社区</a></div>
+              <div class="px-5 py-2"><a href="https://demo.IceCMS.vip/"
+                  class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">演示</a></div>
+              <div class="px-5 py-2"><a href="https://github.com/zhaojun1998/IceCMS"
+                  class="text-base text-gray-500 hover:text-gray-900" style="outline: none;">Github</a></div>
+            </nav>
+            <div class="mt-8 flex justify-center space-x-6"><a target="_blank"
+                href="https://wpa.qq.com/msgrd?v=3&amp;uin=873019219&amp;site=qq&amp;menu=yes&amp;jumpflag=1"
+                class="text-gray-400 hover:text-gray-500" style="outline: none;"><span class="sr-only">QQ</span><img
+                  alt="qq" src="/static/static/qq.532d6295.svg" class="h-6 w-6"></a><a target="_blank"
+                href="mailto:873019219@qq.com" class="text-gray-400 hover:text-gray-500" style="outline: none;"><span
+                  class="sr-only">Email</span><img alt="email" src="/static/static/email.13ec6a3c.svg" class="h-6 w-6"></a><a
+                target="_blank" href="https://github.com/zhaojun1998/IceCMS" class="text-gray-400 hover:text-gray-500"
+                style="outline: none;"><span class="sr-only">Github</span><img alt="github"
+                  src="/static/static/github.22601200.svg" class="h-6 w-6"></a></div>
+            <p class="mt-8 text-center text-base text-gray-400">© 2022 IceCMS, Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer> -->
+    </div>
+  </div>
+        <div class="row visible-xs" style="margin:15px 0px 30px 0px;">
+            <form method="get" action="{{urlfor "SearchController.Result"}}" class="search-form">
+                <div class="input-group input-group-lg">
+                    <input type="text" name="wd" placeholder="Search..." class="form-control">
+                    <span class="input-group-addon"><i class="fa fa-search"></i><span class="hidden-xs"> 搜索</span></span>
+                </div>
+            </form>
+        </div>
+        {{if .Recommends}}
+            <div class="panel panel-default panel-recommend">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="{{urlfor "HomeController.Index"}}?tab=recommend" title="更多推荐"><i class="fa fa-thumbs-o-up"></i> 最新推荐</a>
+                        <span style="color: #ddd;"> &nbsp;|&nbsp; </span>
+                        <a href="{{urlfor "SettingController.Star"}}" style="color: #f44336" title="我的收藏"><i class="fa fa-heart"></i> 我的收藏</a>
+                        <span class="text-muted hidden-xs hidden-sm" style="margin-left: 30px;">猿生不能只有 <span class="text-red">Ctrl + C</span> 和 <span class="text-red">Ctrl + V</span>，还要有 <span class="text-red">Ctrl + D</span></span>
+                        <small class="pull-right">
+                            <a href="{{urlfor "HomeController.Index"}}?tab=recommend" title="更多推荐"> 更多 <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+                        </small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        {{range $idx,$item:=.Recommends}}
+                            <a href="{{urlfor "DocumentController.Index" ":key" $item.Identify}}" target="_blank" title="{{$item.BookName}}" class="col-xs-3 col-sm-2 col-md-1 {{if gt $idx 7}}hidden-xs{{end}}">
+                                <img class="img-responsive" onerror="this.src='/static/images/book.png'" src="{{showImg $item.Cover "cover"}}" class="cover" alt="{{$item.BookName}}">
+                                <div class="help-block">{{$item.BookName}}</div>
+                            </a>
+                        {{end}}
+                    </div>
+                    {{if (ads "index-under-latest-recommend" $.IsMobile)}}
+                        <div class="row">
+                            <div class="ap ap-index-under-latest-recommend col-xs-12">{{str2html (ads "index-under-latest-recommend" $.IsMobile)}}</div>
+                        </div>
+                    {{end}}
+                </div>
+            </div>
+        {{end}}
+
+        <div class="row">
+            {{if eq .SHOW_CATEGORY_INDEX "true"}}
+            <div class="col-sm-2 hidden-xs col-md-2 category-index">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-globe"></i> 分类索引</h3></div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="javascript:void(0)" data-show="all" class="active" title="全部分类">全部分类</a></li>
+                            {{range $idx,$cate:=.Cates}}
+                                {{if and (eq $cate.Pid 0) (gt $cate.Cnt 0)}}
+                                    <li><a href="javascript:void(0);" title="{{$cate.Title}}" data-show="cate-{{$cate.Id}}">{{$cate.Title}}</a></li>
+                                {{end}}
+                            {{end}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10 col-xs-12 col-md-10 category-detail">
+            {{else}}<div class="col-xs-12">{{end}}
+                {{range $idx,$cate:=.Cates}}
+                    {{if and (eq $cate.Pid 0) (gt $cate.Cnt 0)}}
+                        <div class="panel panel-default" id="cate-{{$cate.Id}}">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <!--这里不显示一级分类的计数，主要是为了避免误导用户，因为一本书籍，可能属于多个子分类，但是一级分类下的计数并不是所有子分类计数的和-->
+                                    <a href="{{urlfor "HomeController.Index"}}?cid={{$cate.Id}}&tab=popular" title="{{$cate.Title}}"><i class="fa fa-th text-muted"></i> &nbsp;{{$cate.Title}} <!-- （{{$cate.Cnt}}） --></a>
+                                </h3>
+                            </div>
+                            <div class="panel-body" style="padding-left: 0px;padding-right:0px;margin-left: -8px;margin-right: -8px;">
+                                {{range $idx1,$children:=$.Cates}}
+                                    {{if and (gt $children.Cnt 0) (eq $cate.Id $children.Pid)}}
+                                        <div class="col-xs-12 col-sm-6 col-md-4">
+                                            <div class="cate-item clearfix" data-placement="bottom" title="{{$children.Intro}}">
+                                                <div>
+                                                    <a href="{{urlfor "HomeController.Index"}}?cid={{$children.Id}}&tab=popular" title="{{$children.Title}}" class="pull-left"><img onerror="this.src='/static/images/cate.png'" src="{{showImg $children.Icon}}" alt="{{$children.Title}}"></a>
+                                                    <a href="{{urlfor "HomeController.Index"}}?cid={{$children.Id}}&tab=popular" title="{{$children.Title}}" >{{$children.Title}} （{{$children.Cnt}}）</a>
+                                                    <div class="help-block">{{$children.Intro}}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{end}}
+                                {{end}}
+                            </div>
+                        </div>
+                    {{end}}
+                {{end}}
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="backtop tooltips" title="回到顶部">
+    <i class="fa fa-arrow-up"></i>
+</div>
+{{template "widgets/footer.html" .}}
+<script>
+    'use strict';
+    $(function () {
+        $(".cate-item").tooltip();
+        $(".backtop").click(function () {
+            $(window).scrollTop(0)
+        });
+        $(".cate-item").click(function (e) {
+            e.preventDefault()
+            location.href=$(this).find("a").attr("href")
+        });
+        $(".panel-recommend .panel-body a").tooltip();
+
+        function setFixedWith(){
+            $(".category-index .panel-default").attr("style","width:"+$(".category-index").width()+"px")
+        }
+
+        function fixed(){
+            var top = $(".category-index").offset().top
+            var height = $(window).height() - 110 - 70
+            var style = 'max-height:'+height+'px';
+            var scrollTop = $(window).scrollTop()
+            if(scrollTop -15>=top){
+                $(".category-index .panel-default").addClass("fixed")
+                $(".category-index .panel-body").attr("style",style)
+            }else{
+                $(".category-index .panel-default").removeClass("fixed")
+                $(".category-index .panel-body").attr("style",'')
+            }
+            console.log(scrollTop)
+            var panels = $(".category-detail>.panel")
+            
+            for (var i = 0; i < panels.length; i++) {
+                if($(panels[i]).offset().top - scrollTop>=0){
+                    $(".category-index a").removeClass("active");
+                    $("[data-show="+$(panels[i]).attr("id")+"]").addClass("active");
+                    i=panels.length
+                }
+            }
+        }
+        
+        $(".category-index a").tooltip();
+        $(".category-index a").click(function () {
+            var show=$(this).attr("data-show"),panels = $('.category-detail .panel');
+            $(".category-index a").removeClass("active");
+            $(this).addClass("active");
+            var panel=$(".category-detail #"+show);
+            if(panel.length == 0){
+                $(window).scrollTop(0)
+            }else{
+                var scrollTo = panel.offset().top - 70;
+                $(window).scrollTop(scrollTo)
+            }
+        });
+        if($(".category-index").length>0){
+            setFixedWith()
+            fixed()
+            $(window).resize(function () {
+                setFixedWith()
+            })
+            $(window).scroll(function () {
+                fixed()
+            })
+        }
+    })
+</script>
+</body>
+</html>
