@@ -1,39 +1,3 @@
-
-**BookStack 配套手机APP `BookChatApp` 开源地址**
-
-- Gitee: https://gitee.com/truthhun/BookChatApp
-- GitHub: https://github.com/TruthHun/BookChatApp
-
-**BookChatApp下载体验地址**
-
-- https://www.bookstack.cn/app
-
-目录：
-- [BookStack简介](#intro)
-    - [开源](#open)
-    - [QQ交流群](#qqgroup)
-    - [站点](#site)
-		- [演示站点](#demo)
-		- [正式站点](#normal)
-    - [更新、维护和升级](#upgrade)
-    - [功能与亮点](#func)
-		- [书籍分类](#cate)
-		- [用户主页](#homepage)
-		- [一键导入markdown书籍](#import)
-		- [一键拉取markdown书籍](#pull)
-		- [生成和导出PDF、epub、mobi等离线文档](#generate)
-		- [文档排序和批量创建文档](#sort)
-		- [文档间的跳转](#redirect)
-		- [采集功能](#crawl)
-		- [SEO](#seo)
-		- [赞助二维码](#qrcode)
-		- [更美观、简洁的页面布局和更为完善的移动端兼容](#beauty)
-    - [TODO](#todo)
-    - [安装与使用](#install)
-    - [关于本人](#aboutme)
-    - [赞助我](#support)
-
-    
 <a name="intro"></a>
 # BookStack 简介
 
@@ -52,23 +16,13 @@ BookStack是基于[Mindoc](https://github.com/lifei6671/mindoc)开发的，为�
 
 后来学了Go语言，又在无意间遇到了[Mindoc](https://github.com/lifei6671/mindoc)，然后我们公司([掘金量化](https://www.myquant.cn) )也恰巧让我开发公司官网和文档系统，然后我就对[Mindoc](https://github.com/lifei6671/mindoc)做了二次开发。
 
-本来是不想开源的，因为自己写代码的时候，写着写着，代码改来改去，然后代码就乱七八糟了，怕开源出来丢人现眼。但是踏入IT行业三年多时间以来，自身也受益于各种开源书籍和开源组件，所以最终还是决定将BookStack开源出来。
-
-其中肯定还是有不足的地方，大家在使用的过程中，遇到问题，欢迎反馈。
-
 源码托管：
 - Github: https://github.com/TruthHun/BookStack
 - Gitee: https://gitee.com/truthhun/BookStack
 
-<a name="qqgroup"></a>
-## QQ交流群
-为方便相互学习和交流，建了个QQ群，加群请备注`来自BookStack`
-
-> QQ交流群：457803862(猿军团)
-
-同时要说明的是，该群是一个学习交流群，如果是程序相关问题，请直接提交issues，不接受邮件求助、微信求助和QQ私信求助
-
 BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www.bookstack.cn/books/help)
+
+
 
 
 <a name="site"></a>
@@ -77,7 +31,7 @@ BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www
 <a name="demo"></a>
 ### 演示站点
 
-> 服务器资源有限，不再提供演示站点
+- https://doc.snym.cn
 
 <a name="normal"></a>
 ### 正式站点
@@ -254,25 +208,5 @@ Tips:
 > `v1.0`升级到`v1.1`,直接下载对应系统的发行版本，然后根据配置文件的配置提示修改配置文件，然后覆盖升级即可。本次升级，没有改动数据库。
 
 关于二次开发，请看这个issue [README.md中能否添源码编译说明](https://github.com/TruthHun/BookStack/issues/3)
-
-
-<a name="aboutme"></a>
-## 关于本人
-2014年7月本科"毕业"踏入IT行业；Web全栈工程师；什么都懂一点，什么都不精通。
-
-
-<a name="support"></a>
-## 赞助我
-如果我的努力值得你的肯定，请赞助我，让我在开源的路上，做更好，走更远。
-赞助我的方式包括：`支付宝打赏`、`微信打赏`、`给BookStack一个star`、`向我反馈意见和建议`
-
-
-<a name="alipay"></a>
-### 支付宝打赏赞助
-![支付宝打赏赞助](static/openstatic/alipay.jpg)
-
-<a name="wxpay"></a>
-### 微信打赏赞助
-![微信打赏赞助](static/openstatic/wxpay.jpg)
 
 
