@@ -85,13 +85,6 @@ abbr:where([title]) {
   text-decoration: underline dotted
 }
 
-h1,
-h2,
-h3 {
-  font-size: inherit;
-  font-weight: inherit
-}
-
 a {
   color: inherit;
   text-decoration: inherit
@@ -1268,15 +1261,6 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 
 .lead {
   font-size: 21px;
-}
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .my-6 {
