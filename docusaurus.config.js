@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['en','zh-Hans'],
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -56,6 +56,29 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'M65ABXB3AJ',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '102d0da9ef9156324f563e21fb4f98a2',
+  
+        indexName: 'icecms',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'http://doc.snym.cn',
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        // searchPagePath: 'search',
+  
+        //... other Algolia params
+      },
       navbar: {
         title: '首页',
         logo: {
@@ -76,11 +99,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           
-          {
-            type: 'localeDropdown',
-            label: 'Translate',
-            position: 'right',
-          },
+          // {
+          //   type: 'localeDropdown',
+          //   label: 'Translate',
+          //   position: 'right',
+          // },
           {
             href: 'https://github.com/Thecosy/IceCMS',
             label: 'GitHub',
