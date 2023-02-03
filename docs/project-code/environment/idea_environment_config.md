@@ -42,7 +42,6 @@ maven 在 IDEA 中的配置
 
 ## 3、tomcat 配置
 
-tomcat 的下载安装参考：[文档](/docs/project-code/environment/tomcat_config.md)
 
 IDEA 配置 tomcat 启动
 
