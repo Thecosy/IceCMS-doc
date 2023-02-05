@@ -550,7 +550,7 @@ button:focus,
 }
 
 .text-xl {
-  font-size: 2.35rem
+  font-size: 2.05rem
 }
 
 .text-lg {
@@ -582,7 +582,7 @@ button:focus,
 }
 
 .leading-8 {
-  line-height: 2rem
+  line-height: 4rem
 }
 
 .leading-tighter {
@@ -855,7 +855,7 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 }
 
 .md\:text-5xl {
-  font-size: 6.25rem
+  font-size: 5.25rem
 }
 
 
@@ -1251,11 +1251,12 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 }
 
 .more-function {
+  margin-bottom: 30px;
   font-size: 3.10938rem;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 1px;
-  line-height: 3.6;
+  letter-spacing: 8px;
+  line-height: 1.6;
   font-weight: 700;
 }
 
@@ -1275,45 +1276,58 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
   justify-content: center;
   flex-direction: column;
   align-content: center;
-} 
+}
 
 .characteristics>.characteristics-item-box {
   width: 100%;
   justify-content: space-around;
   /* border: 1px solid red; */
-  }
+}
+
 .wrap-title-padding-top {
   padding-top: 80px;
-  }
+}
+
 .display-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.characteristics-item {
+  height: 193px;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.characteristics-item-image {
+  width: 65px;
+  height: 65px;
+}
+
+.characteristics-item-h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 36px;
+  margin-top: 29px;
+}
+
+.characteristics-item-div {
+  margin-top: 19px;
+}
+
+.characteristics-item-p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 24px;
+}
+
+@media screen and (max-width:820px){
+  .nav{display:none; }
   }
 
-  .characteristics-item {
-    height: 193px;
-    text-align: center;
-    /* border: 1px solid red; */
-    }
-
-    .characteristics-item-image {
-      width: 65px;
-      height: 65px;
-      }
-      .characteristics-item-h2 {
-        font-size: 20px;
-        font-weight: 500;
-        color: #333333;
-        line-height: 36px;
-        margin-top: 29px;
-        }
-        .characteristics-item-div {
-          margin-top: 19px;
-          }
-          .characteristics-item-p {
-            font-size: 14px;
-            font-weight: 400;
-            color: #333333;
-            line-height: 24px;
-            }
+.padding-a{
+  padding: 5px;
+}

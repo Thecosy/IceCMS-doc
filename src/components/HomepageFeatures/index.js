@@ -24,7 +24,7 @@ export default function HomepageFeatures() {
                   <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center aos-init aos-animate"
                     data-aos="zoom-y-out" data-aos-delay="300">
                     <div><a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
-                      target="_blank" href="http://doc.macwk.cc" style={{ outline: 'none' }}>快速开始</a></div>
+                      target="_blank" href="/docs/faststart" style={{ outline: 'none' }}>快速开始</a></div>
                     <div><a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
                       target="_blank" href="https://www.macwk.cc/" style={{ outline: 'none' }}>查看演示</a></div>
                   </div>
@@ -49,7 +49,7 @@ export default function HomepageFeatures() {
               </h2>
               <p className="mt-4 max-w-3xl mx-auto text-center text-lg text-gray-500">IceCMS 在各个方便考虑易用性，简洁性，力求给您最畅快的体验。</p>
             </div>
-            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 nav">
               <div className="relative">
                 <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">自适应性布局</h3>
                 <p className="mt-3 text-lg text-gray-500">响应式自适应手机、平板、PC 等多种设备屏幕分辨率，提供绝佳的浏览体验，一次建站即可拥有多个站点。</p>
@@ -58,7 +58,7 @@ export default function HomepageFeatures() {
                     <dt>
                       <div
                         className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                           stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
                             d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
@@ -72,7 +72,7 @@ export default function HomepageFeatures() {
                     <dt>
                       <div
                         className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                           stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
                             d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
@@ -85,7 +85,7 @@ export default function HomepageFeatures() {
                     <dt>
                       <div
                         className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                           stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
                             d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
@@ -108,7 +108,7 @@ export default function HomepageFeatures() {
               </div>
             </div>
 
-            <div className="relative mt-12 sm:mt-16 lg:mt-24">
+            <div className="relative mt-12 sm:mt-16 lg:mt-24 nav">
               <div
                 className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 lg:space-x-reverse">
                 <div className="lg:col-start-2">
@@ -119,7 +119,7 @@ export default function HomepageFeatures() {
                       <dt>
                         <div
                           className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                          <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                             stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                             <path strokeLinecap="round" strokeLinejoin="round"
                               d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
@@ -134,7 +134,7 @@ export default function HomepageFeatures() {
                       <dt>
                         <div
                           className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                          <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                             stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                             <path strokeLinecap="round" strokeLinejoin="round"
                               d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
@@ -148,7 +148,7 @@ export default function HomepageFeatures() {
                       <dt>
                         <div
                           className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                          <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                             stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                             <path strokeLinecap="round" strokeLinejoin="round"
                               d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
@@ -170,7 +170,7 @@ export default function HomepageFeatures() {
                 </div>
               </div>
             </div>
-            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8">
+            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:space-x-8 nav">
               <div className="relative">
                 <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">开源无加密</h3>
                 <p className="mt-3 text-lg text-gray-500">采用 GPL 开源且无任何代码加密的代码，所提供程序文件无条件开放源代码。</p>
@@ -179,7 +179,7 @@ export default function HomepageFeatures() {
                     <dt>
                       <div
                         className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                           stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
                             d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
@@ -194,7 +194,7 @@ export default function HomepageFeatures() {
                     <dt>
                       <div
                         className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                        <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                           stroke="currentColor" aria-hidden="true" className="h-6 w-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg></div>
@@ -221,35 +221,35 @@ export default function HomepageFeatures() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-extrabold text-gray-900">一款追求体验的社区论坛系统</h2>
               <p className="mt-4 text-lg text-gray-500">Operation experience forum system</p>
-              <div className="wrap-title-padding-top display-flex-center characteristics-item-box">
+              <div className="wrap-title-padding-top display-flex-center characteristics-item-box nav">
                 <div className="characteristics-item" style={{ marginRight: '55px' }}>
-                  <img className='characteristics-item-image' src={require('/static/img/site/duoneirong.png').default} alt="多类型内容形式" className="image" draggable="true" />
-                  <h2 className='characteristics-item-h2'>多类型内容形式</h2>
-                  <div className="characteristics-item-div">
+                  <img className='characteristics-item-image' src={require('/static/img/site/duoneirong.png').default} alt="多类型内容形式" draggable="true" />
+                  <h2 className='characteristics-item-h2 nav'>多类型内容形式</h2>
+                  <div className="characteristics-item-div nav">
                     <p className='characteristics-item-p'>长文、短图文、音频、视频、短视频、</p>
                     <p className='characteristics-item-p'>问卷、活动</p>
                   </div>
                 </div>
                 <div className="characteristics-item" style={{ marginRight: '88px' }}>
-                  <img className='characteristics-item-image' src={require('/static/img/site/qiangdayulun.png').default} alt="强大的舆论管控能力" className="image" />
-                  <h2 className='characteristics-item-h2'>强大的舆论管控能力</h2>
-                  <div className="characteristics-item-div">
+                  <img className='characteristics-item-image' src={require('/static/img/site/qiangdayulun.png').default} alt="强大的舆论管控能力" />
+                  <h2 className='characteristics-item-h2 nav'>强大的舆论管控能力</h2>
+                  <div className="characteristics-item-div nav">
                     <p className='characteristics-item-p'>预审核、敏感词、禁止评论等功能</p>
                     <p className='characteristics-item-p'>小程序社交类目上架无忧</p>
                   </div>
                 </div>
                 <div className="characteristics-item" style={{ marginRight: '93px' }}>
-                  <img className='characteristics-item-image' src={require('/static/img/site/neirongzidingyi.png').default} alt="跨版块内容自定义组合" className="image" />
-                  <h2 className='characteristics-item-h2'>跨版块内容自定义组合</h2>
-                  <div className="characteristics-item-div">
+                  <img className='characteristics-item-image' src={require('/static/img/site/neirongzidingyi.png').default} alt="跨版块内容自定义组合" />
+                  <h2 className='characteristics-item-h2 nav'>跨版块内容自定义组合</h2>
+                  <div className="characteristics-item-div nav">
                     <p className='characteristics-item-p'>自定义频道功能，跨版块的内容</p>
                     <p className='characteristics-item-p'>可自由DIY组成新的内容聚合频道</p>
                   </div>
                 </div>
                 <div className="characteristics-item" style={{ marginRight: '45px' }}>
-                  <img className='characteristics-item-image' src={require('/static/img/site/dulijianzhan.png').default} alt="全平台独立建站支持" className="image" />
-                  <h2 className='characteristics-item-h2'>全平台独立建站支持</h2>
-                  <div className="characteristics-item-div">
+                  <img className='characteristics-item-image' src={require('/static/img/site/dulijianzhan.png').default} alt="全平台独立建站支持" />
+                  <h2 className='characteristics-item-h2 nav'>全平台独立建站支持</h2>
+                  <div className="characteristics-item-div nav">
                     <p className='characteristics-item-p'>支持主流形式。PC端、移动端</p>
                     <p className='characteristics-item-p'>均支持。</p>
                   </div>
@@ -269,15 +269,15 @@ export default function HomepageFeatures() {
 
 
                 <div className="gap-xy-2 my-6 jpress-download">
-                  <a target="_blank" href="https://github.com/Thecosy/IceCMS">
+                  <a className='padding-a' target="_blank" href="https://github.com/Thecosy/IceCMS">
                     <svg width="18px" className="svg-icon" viewBox="0 0 20 20">
                       <path stroke="#FFFFFF" d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z"></path>
                     </svg>Docker 一键安装</a>
-                  <a target="_blank" href="https://github.com/Thecosy/IceCMS">
+                  <a className='padding-a' target="_blank" href="https://github.com/Thecosy/IceCMS">
                     <svg width="18px" className="svg-icon" viewBox="0 0 20 20">
                       <path stroke="#FFFFFF" d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z"></path>
                     </svg>Tomcat 安装包 （.jar）</a>
-                  <a target="_blank" href="https://github.com/Thecosy/IceCMS">
+                  <a className='padding-a' target="_blank" href="https://github.com/Thecosy/IceCMS">
                     <svg width="18px" className="svg-icon" viewBox="0 0 20 20">
                       <path stroke="#FFFFFF" d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z"></path>
                     </svg>下载源码</a>
@@ -286,7 +286,7 @@ export default function HomepageFeatures() {
               </div>
 
               <div className="col-md-6 text-center">
-                <img src="http://oss4jpressio.oss-cn-beijing.aliyuncs.com/templates/dockers/NewJPress/images/download-banner.jpg" />
+                <img src="https://oss4jpressio.oss-cn-beijing.aliyuncs.com/templates/dockers/NewJPress/images/download-banner.jpg" />
               </div>
 
             </div>
@@ -299,9 +299,9 @@ export default function HomepageFeatures() {
               <p className="mt-4 text-lg text-gray-500">更多功能待您探索...</p>
             </div>
             <dl
-              className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+              className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8 nav">
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -310,7 +310,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">独有可视化模版后台设置和内置常用模块, 帮助客户轻松快捷地安装设置管理网站栏目, 无需代码知识减少管理成本。基本设置、 首页</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -319,7 +319,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">更加强调和注重合理的搜索引擎优化, 充分发挥 WordPress 特有的强大搜索优化优势, 使得您的网站优化推广更加轻松, 站点收录更快</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -328,7 +328,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">每一套网站模版都会在各主流浏览器中进行测试, 确保兼容这些浏览器, 例如: Firefox、Google Chrome、Safari、Opera等。</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -337,7 +337,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">预设企业网站常用功能模块, 包括新闻文章、产品展示、SEO优化、在线留言、友情链接等, 并完美兼容常见第三方插件扩展更多特色</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -346,7 +346,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">内置强大的自动缩略图功能, 减少产品文章发布编辑时间, 自动完成文章缩略图尺寸控制, 并支持多种有效的递进式缩略图显示方式。</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -355,7 +355,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">支持 Docker 和 Docker Compose 方式部署，且支持 amd64 和 arm 架构.</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -365,7 +365,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">可视化自定义设置网站首页、企业特色栏目、侧边栏等众多栏目模块, 方便快捷地完成更多个性化内容的添加设置, 发挥特性实现高效建</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -375,7 +375,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">针对直链和短链下载情况进行统计，支持按文件、IP、Referer 来源查看热点文件</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -385,7 +385,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">对内容进行全局搜索功能、子目录搜索、当前搜索</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -395,7 +395,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">支持对外提供 WebDAV 服务，方便挂载到本地电脑或其他设备上 (目前只支持只读)</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -405,7 +405,7 @@ export default function HomepageFeatures() {
                 <dd className="mt-2 ml-9 text-base text-gray-500">对存用户的权限控制，设置管理员/匿名用户是否可以进行操作.</dd>
               </div>
               <div className="relative">
-                <dt><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
+                <dt><svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
                   stroke="currentColor" aria-hidden="true" className="absolute h-6 w-6 text-green-500">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                 </svg>
@@ -428,7 +428,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -442,7 +442,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -456,7 +456,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -471,7 +471,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -486,7 +486,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -500,7 +500,7 @@ export default function HomepageFeatures() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -524,7 +524,7 @@ export default function HomepageFeatures() {
                     <h3 className="h3 text-white mb-2">觉得怎么样？</h3>
                     <p className="text-white text-lg opacity-75">如果觉得不错的话，快来试试吧！</p>
                   </div>
-                  <div><a href="http://doc.macwk.cc"
+                  <div><a href="https://doc.macwk.cc"
                     className="btn text-blue-600 bg-gradient-to-r from-blue-100 to-white" style={{ outline: 'none' }}>快速开始</a>
                   </div>
                 </div>

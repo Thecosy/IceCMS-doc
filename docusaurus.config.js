@@ -22,10 +22,10 @@ const config = {
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en'],
+  // },
 
   presets: [
     [
@@ -80,7 +80,7 @@ const config = {
         //... other Algolia params
       },
       navbar: {
-        title: '首页',
+        title: 'IceCMS',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -105,6 +105,11 @@ const config = {
           //   position: 'right',
           // },
           {
+            href: 'https://www.macwk.cc',
+            label: '演示',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Thecosy/IceCMS',
             label: 'GitHub',
             position: 'right',
@@ -120,6 +125,10 @@ const config = {
               {
                 label: '文档',
                 to: '/docs/intro',
+              },
+              {
+                label: '演示',
+                to: 'https://www.macwk.cc',
               },
             ],
           },

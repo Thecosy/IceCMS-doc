@@ -30,29 +30,29 @@ export default function HomepagePrice() {
                                 <div className="text-base text-gray-500">适合个人轻度使用</div>
                               </div>
                               <ul className="text-gray-600 -mb-2 flex-grow">
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>在线预览</span></li>
 
 
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>简易权限控制</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>所有基础功能</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>定期更新中...</span></li>
                               </ul>
-                              <div className="border-t border-gray-200 pt-5 mt-6"><a className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" target="_blank" href="https://docs.IceCMS.vip/" style={{ outline: 'none' }}>查看部署文档</a></div>
+                              <div className="border-t border-gray-200 pt-5 mt-6"><a className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" target="_blank" href="/docs/faststart" style={{ outline: 'none' }}>查看部署文档</a></div>
                             </div>
                             <div className="relative flex flex-col h-full py-5 px-6 rounded bg-blue-100 shadow-xl border-2 border-blue-500 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
-                              <div className="absolute top-0 right-0 mr-5 p-3 -mt-5 bg-yellow-500 rounded-full"><svg className="w-4 h-4 fill-current text-white" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                              <div className="absolute top-0 right-0 mr-5 p-3 -mt-5 bg-yellow-500 rounded-full"><svg className="w-4 h-4 fill-current text-white" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
                                 <path d="M15.145 5.05l-4.316-.627L8.898.513c-.338-.684-1.456-.684-1.794 0l-1.93 3.91-4.317.627a1.002 1.002 0 00-.554 1.707l3.124 3.044-.737 4.3a1 1 0 001.45 1.053L8 13.125l3.862 2.03c.728.381 1.59-.234 1.45-1.054l-.736-4.299L15.7 6.758a1.003 1.003 0 00-.555-1.708z">
                                 </path>
                               </svg></div>
@@ -62,34 +62,30 @@ export default function HomepagePrice() {
                                 <div className="text-base text-gray-500">适合个人轻度使用</div>
                               </div>
                               <ul className="text-gray-600 -mb-2 flex-grow">
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>社区版所有功能</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>细致权限控制</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
-                                </svg><span>直链下载统计分析</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
-                                  </path>
-                                </svg><span>本地、腾讯云、阿里云限速下载</span></li>
+                                </svg><span>付费系统</span></li>
 
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>打包下载</span></li>
 
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>持续更新中...</span></li>
                               </ul>
-                              <div className="border-t border-gray-200 pt-5 mt-6"><a href="https://www.IceCMS.vip/signup" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style={{ outline: 'none' }}>立即购买</a>
+                              <div className="border-t border-gray-200 pt-5 mt-6"><a href="https://mbd.pub/o/bread/Y56bmJ9s" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style={{ outline: 'none' }}>立即购买</a>
                               </div>
                             </div>
                             <div className="relative flex flex-col h-full py-5 px-6 rounded shadow-xl aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
@@ -99,15 +95,15 @@ export default function HomepagePrice() {
                                 <div className="text-base text-gray-500">适合有特殊需求的用户</div>
                               </div>
                               <ul className="text-gray-600 -mb-2 flex-grow">
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>基于捐赠版所有功能</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>支持随主版本升级</span></li>
-                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
                                 </svg><span>定制化服务</span></li>
@@ -515,7 +511,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -529,7 +525,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -543,7 +539,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -558,7 +554,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -573,7 +569,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
@@ -587,7 +583,7 @@ export default function HomepagePrice() {
                 <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
                   aria-expanded="false" style={{ outline: 'none' }}><svg
                     className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="https://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1"
                       className="transform origin-center transition duration-200 ease-out"></rect>
                     <rect y="7" width="16" height="2" rx="1"
