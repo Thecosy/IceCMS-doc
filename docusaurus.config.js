@@ -136,7 +136,7 @@ const config = {
             title: '联系方式',
             items: [
               {
-                label: '微信:Gavemealuck',
+                label: '微信:17630505717',
                 href: 'https://github.com/Thecosy/IceCMS',
               },
               {
