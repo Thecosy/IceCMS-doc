@@ -58,14 +58,14 @@ export default function HomepagePrice() {
                               </svg></div>
                               <div className="mb-4">
                                 <div className="text-lg font-bold mb-1">捐赠版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-600 pl-2">/根域名（限时特价）</span></div>
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-600 pl-2">/不限根域名（限时特价）</span></div>
                                 <div className="text-base text-gray-500">适合个人轻度使用</div>
                               </div>
                               <ul className="text-gray-600 -mb-2 flex-grow">
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
-                                </svg><span>社区版所有功能</span></li>
+                                </svg><span>社区版所有功能 + 领先一个版本拉入私人仓库优先更新</span></li>
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
@@ -78,7 +78,7 @@ export default function HomepagePrice() {
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
-                                </svg><span>打包下载</span></li>
+                                </svg><span>Nuxt - seo优化版本</span></li>
 
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">

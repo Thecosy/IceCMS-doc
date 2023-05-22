@@ -10,7 +10,7 @@ sidebar_position: 2
 | ------------ | ------------ | ------------ |
 |  JDK |  >=1.8 |  1.8 |
 | Mysql  |  >=5.7 | 5.7  |
-| nginx或 apache  |  无限制 | nginx或  |
+| nginx或 apache  |  无限制 | 1.20.x  |
 | Redis  |  >=6.0 | 7.0.0  |
 
 # 前端
