@@ -18,7 +18,7 @@ export default function HomepagePrice() {
                       <div className="pt-32 pb-12 md:pt-40 md:pb-20">
                         <div className="max-w-3xl mx-auto text-center pb-12">
                           <h1 className="h1 mb-4 aos-init aos-animate" data-aos="zoom-y-out">产品定价</h1>
-                          <p className="text-xl text-gray-600 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150"> 以下为
+                          <p className="text-xl text-gray-6001 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150"> 以下为
                             IceCMS 的定价，您可以根据您的需求自行选择。 </p>
                         </div>
                         <div>
@@ -26,10 +26,10 @@ export default function HomepagePrice() {
                             <div className="relative flex flex-col h-full py-5 px-6 rounded shadow-xl aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
                               <div className="mb-4">
                                 <div className="text-lg font-bold mb-1">社区版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">0</span><span className="text-gray-600 pl-2">/免费</span></div>
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">0</span><span className="text-gray-6001 pl-2">/免费</span></div>
                                 <div className="text-base text-gray-500">适合个人轻度使用</div>
                               </div>
-                              <ul className="text-gray-600 -mb-2 flex-grow">
+                              <ul className="text-gray-6001 -mb-2 flex-grow">
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
@@ -58,10 +58,10 @@ export default function HomepagePrice() {
                               </svg></div>
                               <div className="mb-4">
                                 <div className="text-lg font-bold mb-1">捐赠版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-600 pl-2">/不限根域名（限时特价）</span></div>
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-6001 pl-2">/不限根域名（限时特价）</span></div>
                                 <div className="text-base text-gray-500">适合个人轻度使用</div>
                               </div>
-                              <ul className="text-gray-600 -mb-2 flex-grow">
+                              <ul className="text-gray-6001 -mb-2 flex-grow">
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
@@ -91,10 +91,10 @@ export default function HomepagePrice() {
                             <div className="relative flex flex-col h-full py-5 px-6 rounded shadow-xl aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
                               <div className="mb-4">
                                 <div className="text-lg font-bold mb-1">定制版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">详询</span><span className="text-gray-600 pl-2"></span></div>
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">详询</span><span className="text-gray-6001 pl-2"></span></div>
                                 <div className="text-base text-gray-500">适合有特殊需求的用户</div>
                               </div>
-                              <ul className="text-gray-600 -mb-2 flex-grow">
+                              <ul className="text-gray-6001 -mb-2 flex-grow">
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>

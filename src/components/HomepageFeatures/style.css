@@ -1332,6 +1332,7 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
   padding: 5px;
 }
 
+
 .max-w-6xl {
   max-width: 6xl;
 }
@@ -1420,4 +1421,9 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 .quaection:hover ~ .text-gray-600 {
   max-height: 1000px;
   transition: max-height 0.5s ease-in-out;
+}
+
+.text-gray-6001 {
+  --tw-text-opacity: 1;
+  color:rgb(102 102 102 / var(--tw-text-opacity))
 }

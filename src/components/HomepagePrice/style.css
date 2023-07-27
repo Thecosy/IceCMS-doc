@@ -841,6 +841,11 @@ html {
     color:rgb(102 102 102 / var(--tw-text-opacity))
 }
 
+.text-gray-6001 {
+    --tw-text-opacity: 1;
+    color:rgb(102 102 102 / var(--tw-text-opacity))
+}
+
 .text-white {
     --tw-text-opacity: 1;
     color:rgb(255 255 255 / var(--tw-text-opacity))
@@ -1296,6 +1301,12 @@ html {
 :after {
   border-width: 0;
 }
+
+@media screen and (max-width:820px){
+    .nav{display:none; }
+    }
+
+
 .max-w-6xl {
     max-width: 6xl;
   }
@@ -1385,6 +1396,3 @@ html {
     max-height: 1000px;
     transition: max-height 0.5s ease-in-out;
   }
-@media screen and (max-width:820px){
-    .nav{display:none; }
-    }

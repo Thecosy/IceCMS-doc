@@ -19,7 +19,7 @@ export default function HomepageFeatures() {
                     className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 tracking-wider">IceCMS</span>
                 </h1>
                 <div className="max-w-3xl mx-auto">
-                  <p className="text-xl text-gray-600 mb-8 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150">
+                  <p className="text-xl text-gray-6001 mb-8 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="150">
                     基于 Spring Boot + Vue 前后端分离的内容管理系统，适合做 资讯商城，社区论坛，聊天交友 社区.</p>
                   <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center aos-init aos-animate"
                     data-aos="zoom-y-out" data-aos-delay="300">
@@ -422,7 +422,7 @@ export default function HomepageFeatures() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
   <div className="py-12 md:py-20 border-t border-gray-200">
     <div className="max-w-3xl mx-auto text-center pb-20">
-      <h2 className="h2">常见问题</h2>
+    <h2 className="h2">常见问题</h2>
     </div>
     <ul className="max-w-3xl mx-auto pl-12">
       <li>
