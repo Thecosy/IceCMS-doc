@@ -1296,7 +1296,95 @@ html {
 :after {
   border-width: 0;
 }
+.max-w-6xl {
+    max-width: 6xl;
+  }
 
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:px-6 {
+    @media (min-width: 640px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:py-20 {
+    @media (min-width: 768px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .border-t {
+    border-top-width: 1px;
+  }
+
+  .border-gray-200 {
+    border-color: #edf2f7;
+  }
+
+  .max-w-3xl {
+    max-width: 3xl;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+
+  .max-w-3xl {
+    max-width: 3xl;
+  }
+
+  .pl-12 {
+    padding-left: 3rem;
+  }
+
+  .quaection {
+    cursor: pointer;
+  }
+
+  .quaection svg {
+    transition: transform 0.2s ease-out;
+  }
+
+  .quaection:hover svg {
+    transform: rotate(90deg);
+  }
+
+  .text-gray-600 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .quaection:hover ~ .text-gray-600 {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in-out;
+  }
 @media screen and (max-width:820px){
     .nav{display:none; }
     }

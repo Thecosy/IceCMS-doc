@@ -4,13 +4,12 @@ sidebar_position: 1
 
 # VUEX开发教程
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/6928468842377117709)
 
 为什么要做这篇文集呢？市面上关于 vuex 的教程多如牛毛，甚至 vuex 被某些大神都封装出花儿来了；一方面是想从最简单最基础的地方带大家使用一下 vuex，另一方面也是想让自己复习一下 vuex，好，不多废话了，接下来我们简单对 vuex 介绍一下，这究竟是个啥？
 
 第一步，如果你想了解一个技术，就去他的官网去看，准没错，进入官网，映入眼帘的就是 “vuex 是什么”：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b4fcb1556af49a383be02218f68fe85~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/12.jpg)
 
 如图所示，它是一个程序里面的**状态管理模式**，它是**集中式**存储**所有**组件的状态的小仓库，并且保持我们存储的状态以一种**可以预测**的方式发生变化。对于可以预测，现在我不多做说明，相信在看完这篇文章之后，你就会有自己的理解。
 
@@ -40,7 +39,7 @@ sidebar_position: 1
 
 ### 😨 接着，你就会看到下面这张官网的 vuex 使用周期图（看不懂没关系）：
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7b77fdcf29d410eb74f4872dd9c82fe~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/13.jpg)
 
 ### 🤩 什么时候应该用 vuex 呢？
 
@@ -126,7 +125,7 @@ export default {
 
 此时，启动项目`npm run dev`，即可在控制台输出刚才我们定义在 store 中的 name 的值。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/160e64c624e941bdb850c0ce175444e0~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/14.jpg)
 
 *   🤖 官方建议 1： 官方建议我们以上操作 this.$store.state.XXX 最好放在计算属性中，当然，我也建议你这么使用，这样可以让你的代码看起来更优雅一些，就像这样：
 
@@ -252,7 +251,7 @@ export default {
 
 然后查看控制台：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3e26092fc444753a0904e527af8ba47~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/15.jpg)
 
 没有问题的
 
@@ -357,7 +356,7 @@ export default {
 
 *   运行项目，查看控制台：
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ec40d56e76e349ad935ee50ef1211cd8~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/16.png.jpeg)
 
 *   🤡 以上是简单实现 mutations 的方法，是没有传参的，如果我们想传不固定的参数怎么办？接下来教你解决
     
@@ -409,7 +408,7 @@ export default {
 
 *   运行项目，查看控制台：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0241f71bc47048178b80dff9cf32df8f~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/17.png.jpeg)
 
 没有问题！
 
@@ -547,7 +546,7 @@ async mounted() {
 
 *   运行项目，查看控制台：
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d76d3befa96146fd8615d61edc134c92~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/18.png.jpeg)
 
 🤓 看了例子，是不是明白了，action 就是去提交 mutation 的，什么异步操作都在 action 中消化了，最后再去提交 mutation 的。
 
@@ -585,7 +584,7 @@ async mounted() {
 
 *   运行项目，查看控制台
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/106313d086c042628651e5f593be35c2~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+![](/img/icecms/202307/19.png.jpeg)
 
 没有任何问题！
 
@@ -642,13 +641,13 @@ actions: {
 
 🤒 我们看到，一个 store/index.js 里面大致包含 state/getters/mutations/actions 这四个属性，我们可以彻底点，index.js 里面就保持这个架子，把里面的内容四散到其他文件中。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc39e92fcf7242d78da6329d64ce1d44~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/20.png)
 
 于是我们可以这样拆分：
 
 新建四个文件，分别是`state.js` `getters.js` `mutations.js` `actions.js`：
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d9443814df5e48579e1bac65e48a22f4~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/21.png)
 
 *   1.  拆出来`state`放到`state.js`中：
 
@@ -756,7 +755,7 @@ export default store;
 
 🤖 我们先来看下官方文档是怎么介绍 Module 的：
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5bec544ce0784eedabd4a9c307bcd362~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/22.png)
 
 *   看了图中的描述，你或许已经区分了这里使用的**按功能拆分 Module** 和我们上次介绍的**按属性拆分**的异同了；就像图中的场景一样，我们有一个总 store，在这里面根据不同的功能，我们加了两个不同的 store，每个 store 里面维护自己的 state，以及自己的 actions/mutations/getters。
     

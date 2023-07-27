@@ -200,8 +200,8 @@ export default function HomepagePrice() {
                               <tr>
                                 <td rowSpan="10" className="bg-table" >IceCMS服务</td>
                                 <td>授权方式</td>
-                                <td>基于 GPL 开源协议授权。但是无法二开，包括无法修改任何的 html 和 css 文件等。</td>
-                                <td>源码同开源版一致，但是可以进行二次开发不用担心版权问题，可以把后台的版权信息修改为自己的信息等。</td>
+                                <td>基于 GPL 开源协议授权。但是无法二开，包括无法修改任何的 html 和 css 文件等，以及无法商业使用。</td>
+                                <td>源码增添功能，可以进行二次开发不用担心版权问题，可以把后台的版权信息修改为自己的信息等。</td>
                                 <td>基于商业合同授权，不用担心侵权</td>
                                 <td>基于商业合同授权，不用担心侵权</td>
                               </tr>
@@ -229,9 +229,9 @@ export default function HomepagePrice() {
                               <tr>
                                 <td className="text-left">服务周期</td>
                                 <td>-</td>
-                                <td>3个月</td>
-                                <td>1年</td>
-                                <td>1年</td>
+                                <td>永久</td>
+                                <td>永久</td>
+                                <td>永久</td>
                               </tr>
                               <tr>
                                 <td className="text-left">等保测评</td>
@@ -502,101 +502,117 @@ export default function HomepagePrice() {
 
                     <section>
                           <div>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="py-12 md:py-20 border-t border-gray-200">
-              <div className="max-w-3xl mx-auto text-center pb-20">
-                <h2 className="h2">常见问题</h2>
-              </div>
-              <ul className="max-w-3xl mx-auto pl-12">
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>授权是否是永久的？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
-                    <p className="pb-5"> 是的，永久授权，买断制，就算以后出 V5、V6 您也不用再次付费。 </p>
-                  </div>
-                </li>
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>授权的形式是什么？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
+                          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+  <div className="py-12 md:py-20 border-t border-gray-200">
+    <div className="max-w-3xl mx-auto text-center pb-20">
+    <h2 className="h2">常见问题</h2>
+    </div>
+    <ul className="max-w-3xl mx-auto pl-12">
+      <li>
+        <button
+          className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+          aria-expanded="false"
+          style={{ outline: 'none' }}
+        >
+          <svg
+            className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12"
+            viewBox="0 0 16 16"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center transition duration-200 ease-out"></rect>
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+          </svg>
+          <span>授权是否是永久的？</span>
+        </button>
+        <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out">
+          <p className="pb-5">是的，永久授权，买断制，就算以后出 V5、V6 您也不用再次付费。</p>
+        </div>
+      </li>
+      <li>
+        <button
+          className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+          aria-expanded="false"
+          style={{ outline: 'none' }}
+        >
+          <svg
+            className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12"
+            viewBox="0 0 16 16"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center transition duration-200 ease-out"></rect>
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+          </svg>
+          <span>我之前捐赠过 IceCMS，现在购买捐赠版有没有优惠？</span>
+        </button>
+        <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out">
+          <p className="pb-5">当然，非常感谢您之前对 IceCMS 的支持，之前捐赠过的用户，购买后，可凭捐赠转账截图联系我，可返 1.5 倍捐赠金额（返现金额最大为 IceCMS 购买金额），如您之前捐赠过 IceCMS 100 元，购买后，可找我返现 150。</p>
+        </div>
+      </li>
+      <li>
+        <button
+          className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+          aria-expanded="false"
+          style={{ outline: 'none' }}
+        >
+          <svg
+            className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12"
+            viewBox="0 0 16 16"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center transition duration-200 ease-out"></rect>
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+          </svg>
+          <span>是否支持从 3.x 版本升级？</span>
+        </button>
+        <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out">
+          <p className="pb-5">很抱歉，由于版本差异过大，数据无法直接迁移，安装 4.x 版本会让您重新初始化数据（不会覆盖之前版本的数据），IceCMS 只保证同一个大版本可无缝升级，如您从 4.x 升级到 4.x Pro 是可以无缝升级的。</p>
+        </div>
+      </li>
+      <li>
+        <button
+          className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+          aria-expanded="false"
+          style={{ outline: 'none' }}
+        >
+          <svg
+            className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12"
+            viewBox="0 0 16 16"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center transition duration-200 ease-out"></rect>
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+          </svg>
+          <span>IceCMS 是否可以商用？</span>
+        </button>
+        <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out">
+          <p className="pb-5">当然，前提是您购买付费版。但绝对不允许用来做赌博、诈骗、木马、病毒等违法规范行为。</p>
+        </div>
+      </li>
+      <li>
+        <button
+          className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
+          aria-expanded="false"
+          style={{ outline: 'none' }}
+        >
+          <svg
+            className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12"
+            viewBox="0 0 16 16"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center transition duration-200 ease-out"></rect>
+            <rect y="7" width="16" height="2" rx="1" className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
+          </svg>
+          <span>购买捐赠版后是否支持退款？</span>
+        </button>
+        <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out">
+          <p className="pb-5">理论上不支持退款，如有特殊需求，可申请退款，但要扣除支付平台的手续费，约 3%。（购买超出 14 天后不再支持退款。）</p>
+        </div>
+      </li>
+      <span className="block border-t border-gray-200" aria-hidden="true"></span>
+    </ul>
+  </div>
+</div>
 
-                  </div>
-                </li>
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>我之前捐赠过 IceCMS，现在购买捐赠版有没有优惠？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
-                    <p className="pb-5"> 当然，非常感谢您之前对 IceCMS 的支持，之前捐赠过的用户，购买后，可凭捐赠转账截图联系我，可返 1.5 倍捐赠金额（返现金额最大为 IceCMS
-                      购买金额），如您之前捐赠过 IceCMS 100 元，购买后，可找我返现 150. </p>
-                  </div>
-                </li>
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>是否支持从 3.x 版本升级？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
-                    <p className="pb-5"> 很抱歉，由于版本差异过大，数据无法直接迁移，安装 4.x 版本会让您重新初始化数据（不会覆盖之前版本的数据），IceCMS 只保证同一个大版本可无缝升级，如您从 4.x
-                      升级到 4.x Pro 是可以无缝升级的。 </p>
-                  </div>
-                </li>
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>IceCMS 是否可以商用？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
-                    <p className="pb-5"> 当然，只要您不删除 IceCMS 相关 logo 或标志。但绝对不允许用来做赌博、诈骗、木马、病毒等违法规范行为。 </p>
-                  </div>
-                </li>
-                <li><button className="quaection flex items-center w-full text-lg font-medium text-left py-5 border-t border-gray-200"
-                  aria-expanded="false" style={{ outline: 'none' }}><svg
-                    className="w-4 h-4 fill-current text-blue-500 flex-shrink-0 mr-8 -ml-12" viewBox="0 0 16 16"
-                    xmlns="https://www.w3.org/2000/svg">
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center transition duration-200 ease-out"></rect>
-                    <rect y="7" width="16" height="2" rx="1"
-                      className="transform origin-center rotate-90 transition duration-200 ease-out"></rect>
-                  </svg><span>购买捐赠版后是否支持退款？</span></button>
-                  <div className="text-gray-600 overflow-hidden transition-all duration-300 ease-in-out"
-                  >
-                    <p className="pb-5"> 理论上不支持退款，如有特殊需求，可申请退款，但要扣除支付平台的手续费，约 3%。（购买超出 14 天后不再支持退款。） </p>
-                  </div>
-                </li><span className="block border-t border-gray-200" aria-hidden="true"></span>
-              </ul>
-            </div>
-          </div>
         </div>
                     </section>
                     <section>

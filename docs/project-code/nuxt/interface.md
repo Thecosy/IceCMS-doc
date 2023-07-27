@@ -70,14 +70,15 @@ npx create-nuxt-app 项目名称
 
 创建完成 输入 npm run dev 启动项目
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/032df7eb736743e39ce713cdcbee82e2~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/1.png)
 
 二、路由
 ----
 
 #### 1、路由跳转
 
-[www.nuxtjs.cn/guide/routi…](https://link.juejin.cn?target=https%3A%2F%2Fwww.nuxtjs.cn%2Fguide%2Frouting "https://www.nuxtjs.cn/guide/routing")
+![](/img/icecms/202307/2.png)
+
 
 nuxt 路由跳转标签 nuxt-link 会渲染成 a 标签
 
@@ -105,17 +106,19 @@ index.vue 文件中要有标签显示子路由页面
 
 子路由要放在父页面同名的文件夹下。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72eb5fd66e754239b4eeb92f6d117a29~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/3.png)
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c5eb8922f22434db8f9e0eff79f0901~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/4.png)
 
 #### 3、动态路由
 
 在 Nuxt.js 里面定义带参数的动态路由，需要创建对应的**以下划线作为前缀**的 Vue 文件 或 目录。
 
-命名的文件或目录为参数名 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19ba2781b98a4ee0baf80d06d307ca07~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+命名的文件或目录为参数名 
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5c721af9eb6644e894efd9bef579342a~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/5.png)
+
+![](/img/icecms/202307/6.png)
 
 三、插件的引入
 -------
@@ -349,11 +352,11 @@ pm2 list 显示所有进程
 
 这里以 bilibili 举例
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a50b874620a4e0698511ee8fc7523ce~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/7.png)
 
 在 nuxt 中配置
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f584a62a8ea41f8b6aedacadf4cda9e~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/8.png)
 
 #### 2、sitemap 站点地图
 
@@ -408,7 +411,7 @@ modules: [
 
 npm run dev 测试 会生成站点地图
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68d2072adc514b0aae2fc51f0944614a~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/9.png)
 
 配置参数查看官网 [www.npmjs.com/package/@nu…](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40nuxtjs%2Fsitemap%23usage "https://www.npmjs.com/package/@nuxtjs/sitemap#usage")
 
@@ -422,16 +425,14 @@ npm run dev 测试 会生成站点地图
 
 **测试生成的站点地图是否可用**
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b27a03cd1a544b37a5fed700e9b76429~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/10.png)
 
 在这输入输入 sitemap.xml 提交就行。
 
 **请求编入索引**
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a86811fc0e9a4f3d9ef4de7a07a8a7a9~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](/img/icecms/202307/11.png)
 
 接下来等待谷歌爬虫收录网站。
 
 排名和用户搜索点击量和网站内容相关。
-
-网站优化：[pagespeed.web.dev/?utm_source…](https://link.juejin.cn?target=https%3A%2F%2Fpagespeed.web.dev%2F%3Futm_source%3Dpsi%26utm_medium%3Dredirect "https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect")
