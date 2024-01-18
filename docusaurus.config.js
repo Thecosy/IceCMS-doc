@@ -145,6 +145,7 @@ const siteConfig = {
         "./plugins/example-redirects.js",
     ],
     themeConfig: {
+        onBrokenLinks: 'ignore',
         prism: {
             theme: require("prism-react-renderer/themes/github"),
             darkTheme: require("prism-react-renderer/themes/vsDark"),
