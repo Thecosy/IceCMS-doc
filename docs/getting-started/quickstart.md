@@ -147,7 +147,7 @@ npm run dev
 
 :::tip
 
-In case you select `Yes` for the `Do you want to add example pages?` option while using the CLI wizard, the Refine will add sample CRUD pages utilizing [`Refine Inferencer`](/docs/ui-integrations/ant-design/components/inferencer/) and fill the `resources` property.
+In case you select `Yes` for the `Do you want to add example pages?` option while using the CLI wizard, the Refine will add sample CRUD pages utilizing [`Refine Inferencer`] and fill the `resources` property.
 
 It is highly recommended to add example pages as it provides a clearer understanding of how **Refine** works and lets you test out the CRUD operation functionalities.
 
@@ -174,6 +174,6 @@ You will see the output as a table populated with `blog_posts` and `category` da
 
 👉 Jump to [Tutorials](/docs/tutorial/introduction/index/) and continue your work to turn your example project into a full-blown CRUD application! 🚀
 
-👉 Read more on [Advanced Tutorials](/docs/advanced-tutorials/) for different usage scenarios.
+👉 Read more on [Advanced Tutorials] for different usage scenarios.
 
 👉 See [real-life examples](/templates) built using **Refine**
