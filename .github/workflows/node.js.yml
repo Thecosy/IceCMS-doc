@@ -1,31 +1,57 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
-
+name: CI
 on:
+  # 代码push的时候触发
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    # main分支的时候触发
+    branches: main
 jobs:
-  build:
-
+  # 定义一个job，名字为CI
+  CI:
+    # 使用github提供给我们的机器去跑
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    # 步骤
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+      # 拉取最新的代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      # 安装node环境
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      # 为node_modules设置缓存
+      - name: Cache
+        # 缓存命中结果会存储在steps.[id].outputs.cache-hit里，该变量在继后的step中可读
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          # 缓存文件目录的路径
+          path: |
+            **/node_modules
+          key: ${{runner.OS}}
+      # 安装依赖
+      - name: Installing Dependencies
+        # 如果命中缓存，就不需要安装依赖，使用缓存即可
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: yarn
+      # 打包
+      - name: Build
+        run: |
+            yarn build
+            zip -r build ./build/**
+      # 产物上传服务器
+      - name: Upload to Deploy Server
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+          # 免密登录的秘钥
+          SSH_PRIVATE_KEY: ${{ secrets.D_PASS }}
+          # 服务器登录用户名
+          REMOTE_USER: ${{ secrets.D_USER }}
+          # 服务器的公网IP
+          REMOTE_HOST: ${{ secrets.D_HOST }}
+          # 你打包后产物的文件夹
+          SOURCE: "build/"
+          # 先清空目标目录
+          ARGS: "-avzr --delete"
+          # 上传到服务器目标目录
+          TARGET: "/www/www.icecms.cn"

@@ -24,26 +24,26 @@ export const useDynamicImport = (
 ): DeclarationType | null => {
     const [props, setProps] = useState<DeclarationType>(null);
 
-    useEffect(() => {
-        let resolved = false;
+    // useEffect(() => {
+    //     let resolved = false;
 
-        import(
-            `@docgen/${
-                name.startsWith(prefix) ? name : `${prefix}${name}`
-            }.json`
-        )
-            .then((props) => {
-                if (!resolved) {
-                    resolved = true;
-                    setProps(props.default);
-                }
-            })
-            .catch(console.warn);
+    //     import(
+    //         `@docgen/${
+    //             name.startsWith(prefix) ? name : `${prefix}${name}`
+    //         }.json`
+    //     )
+    //         .then((props) => {
+    //             if (!resolved) {
+    //                 resolved = true;
+    //                 setProps(props.default);
+    //             }
+    //         })
+    //         .catch(console.warn);
 
-        return () => {
-            resolved = true;
-        };
-    }, [name]);
+    //     return () => {
+    //         resolved = true;
+    //     };
+    // }, [name]);
 
     return props;
 };
