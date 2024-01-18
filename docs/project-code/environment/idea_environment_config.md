@@ -1,5 +1,7 @@
 ---
-sidebar_position: 3
+id: idea_environment_config
+title: IDEA 开发环境准备
+sidebar_label: IDEA 开发环境准备
 ---
 
 # IDEA 开发环境准备

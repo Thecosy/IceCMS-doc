@@ -1,6 +1,9 @@
 ---
-sidebar_position: 1
+id: jdk-config
+title: jdk 下载安装及配置
+sidebar_label: jdk 下载安装及配置
 ---
+
 # jdk 下载安装及配置
 
 jdk 官网地址： [https://www.oracle.com/java/](https://www.oracle.com/java/)

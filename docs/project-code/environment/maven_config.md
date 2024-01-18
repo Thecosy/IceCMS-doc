@@ -1,6 +1,9 @@
 ---
-sidebar_position: 2
+id: maven_config
+title: Maven 下载及配置
+sidebar_label: Maven 下载及配置
 ---
+
 # Maven 下载及配置
 
 

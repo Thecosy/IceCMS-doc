@@ -1,5 +1,7 @@
 ---
-sidebar_position: 4
+id: icecms_compiler
+title: 导入 IceCMS 源码到编辑器
+sidebar_label: 导入 IceCMS 源码到编辑器
 ---
 
 # 导入 IceCMS 源码到编辑器

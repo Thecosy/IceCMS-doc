@@ -1,175 +1,364 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+require("dotenv").config();
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'Ice-doc',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+const redirectJson = require("./redirects.json");
+const tutorialData = require("./tutorial-units");
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  // i18n: {
-  //   defaultLocale: 'en',
-  //   locales: ['en'],
-  // },
-
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Thecosy/Ice-doc/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Thecosy/Ice-doc/tree/main/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
+/** @type {import('@docusaurus/types/src/index').DocusaurusConfig} */
+const siteConfig = {
+    title: "IceCMS",
+    tagline: "Build your IceCMS",
+    url: "https://icecms.cn",
+    baseUrl: "/",
+    projectName: "IceCMS",
+    organizationName: "IceCMS",
+    trailingSlash: true,
+    favicon: "img/refine_favicon.svg",
+    scripts: ["https://platform.twitter.com/widgets.js"],
+    presets: [
+        [
+            "@docusaurus/preset-classic",
+            {
+                docs: Boolean(process.env.DISABLE_DOCS)
+                    ? false
+                    : {
+                          path: "./docs",
+                          sidebarPath: require.resolve("./sidebars.js"),
+                          editUrl:
+                              "https://github.com/Thecosy/IceCMS/tree/master/documentation",
+                          showLastUpdateAuthor: true,
+                          showLastUpdateTime: true,
+                          disableVersioning:
+                              process.env.DISABLE_VERSIONING === "true",
+                          versions: {
+                              current: {
+                                  label: "中文",
+                              },
+                          },
+                          lastVersion: "current",
+                          admonitions: {
+                              tag: ":::",
+                              keywords: [
+                                  "additional",
+                                  "note",
+                                  "tip",
+                                  "info-tip",
+                                  "info",
+                                  "caution",
+                                  "danger",
+                                  "sourcecode",
+                                  "create-example",
+                                  "simple",
+                              ],
+                          },
+                          exclude: ["**/**/_*.md"],
+                      },
+                blog: false,
+                theme: {
+                    customCss: [
+                        require.resolve("./src/refine-theme/css/colors.css"),
+                        require.resolve("./src/refine-theme/css/fonts.css"),
+                        require.resolve("./src/refine-theme/css/custom.css"),
+                        require.resolve("./src/css/custom.css"),
+                        require.resolve("./src/css/split-pane.css"),
+                        require.resolve("./src/css/demo-page.css"),
+                    ],
+                },
+                gtag: {
+                    trackingID: "G-27Z1WY952H",
+                },
+                sitemap: {
+                    ignorePatterns: ["**/_*.md"],
+                },
+            },
+        ],
     ],
-  ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'M65ABXB3AJ',
-  
-        // Public API key: it is safe to commit it
-        apiKey: '102d0da9ef9156324f563e21fb4f98a2',
-  
-        indexName: 'icecms',
-  
-        // Optional: see doc section below
-        contextualSearch: true,
-  
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'http://doc.snym.cn',
-  
-        // Optional: Algolia search parameters
-        searchParameters: {},
-  
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        // searchPagePath: 'search',
-  
-        //... other Algolia params
-      },
-      navbar: {
-        title: 'IceCMS',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.png',
+    plugins: [
+        [
+            "@docusaurus/plugin-client-redirects",
+            {
+                redirects: redirectJson.redirects,
+                createRedirects(existingPath) {
+                    if (existingPath.includes("/api-reference/core/")) {
+                        return [
+                            existingPath.replace(
+                                "/api-reference/core/",
+                                "/api-references/",
+                            ),
+                        ];
+                    }
+                    return undefined; // Return a falsy value: no redirect created
+                },
+            },
+        ],
+        [
+            "docusaurus-plugin-copy",
+            {
+                id: "Copy Workers",
+                path: "static/workers",
+                context: "workers",
+                include: ["**/*.{js}"],
+            },
+        ],
+        async function tailwindcss() {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins.push(require("tailwindcss"));
+                    postcssOptions.plugins.push(require("autoprefixer"));
+                    return postcssOptions;
+                },
+            };
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: '文档',
-          },
-          {
-            to: '/price',
-            position: 'left',
-            label: '定价',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          
-          // {
-          //   type: 'localeDropdown',
-          //   label: 'Translate',
-          //   position: 'right',
-          // },
-          {
-            href: 'https://www.macwk.cc',
-            label: '演示',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/Thecosy/IceCMS',
-            label: 'GitHub',
-            position: 'right',
-          },
+        "./plugins/docgen.js",
+        "./plugins/examples.js",
+        "./plugins/checklist.js",
+        ...(process.env.DISABLE_BLOG
+            ? []
+            : [
+                  [
+                      "./plugins/blog-plugin.js",
+                      {
+                          blogTitle: "Blog",
+                          blogDescription:
+                              "A resource for Refine, front-end ecosystem, and web development",
+                          routeBasePath: "/blog",
+                          postsPerPage: 12,
+                          blogSidebarTitle: "All posts",
+                          blogSidebarCount: 0,
+                          feedOptions: {
+                              type: "all",
+                              copyright: `Copyright © ${new Date().getFullYear()} refine.`,
+                          },
+                      },
+                  ],
+              ]),
+        "./plugins/intercom.js",
+        "./plugins/clarity.js",
+        "./plugins/templates.js",
+        "./plugins/example-redirects.js",
+    ],
+    themeConfig: {
+        prism: {
+            theme: require("prism-react-renderer/themes/github"),
+            darkTheme: require("prism-react-renderer/themes/vsDark"),
+            magicComments: [
+                // Remember to extend the default highlight class name as well!
+                {
+                    className: "theme-code-block-highlighted-line",
+                    line: "highlight-next-line",
+                    block: { start: "highlight-start", end: "highlight-end" },
+                },
+                {
+                    className: "code-block-hidden",
+                    line: "hide-next-line",
+                    block: { start: "hide-start", end: "hide-end" },
+                },
+                {
+                    className: "theme-code-block-added-line",
+                    line: "added-line",
+                    block: { start: "added-start", end: "added-end" },
+                },
+                {
+                    className: "theme-code-block-removed-line",
+                    line: "removed-line",
+                    block: { start: "removed-start", end: "removed-end" },
+                },
+            ],
+        },
+        image: "img/refine_social.png",
+        algolia: {
+            appId: "KRR9VEUPCT",
+            apiKey: "cd0188125dcd31fb4b011b5e536d963a",
+            indexName: "refine",
+            contextualSearch: true,
+        },
+        metadata: [
+            {
+                name: "keywords",
+                content:
+                    "react-admin, react-framework, internal-tool, admin-panel, ant-design, material ui, mui",
+            },
         ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
+        navbar: {
+            logo: {
+                alt: "refine",
+                src: "img/refine_logo.png",
+            },
             items: [
-              {
-                label: '文档',
-                to: '/docs/intro',
-              },
-              {
-                label: '演示',
-                to: 'https://www.macwk.cc',
-              },
+                { to: "blog", label: "Blog", position: "left" },
+                {
+                    type: "docsVersionDropdown",
+                    position: "right",
+                    dropdownActiveClassDisabled: true,
+                },
+                {
+                    href: "https://github.com/Thecosy/IceCMS",
+                    position: "right",
+                    className: "header-icon-link header-github-link",
+                },
+                {
+                    href: "https://discord.gg/refine",
+                    position: "right",
+                    className: "header-icon-link header-discord-link",
+                },
+                {
+                    href: "https://twitter.com/refine_dev",
+                    position: "right",
+                    className: "header-icon-link header-twitter-link",
+                },
             ],
-          },
-          {
-            title: '联系方式',
-            items: [
-              {
-                label: '微信:17630505717',
-                href: 'https://github.com/Thecosy/IceCMS',
-              },
-              {
-                label: 'qq:23339097',
-                href: 'https://github.com/Thecosy/IceCMS',
-              },
-              {
-                label: 'qq群聊:951286996',
-                href: 'https://qm.qq.com/cgi-bin/qm/qr?k=XLX0hSw6GGuOgNbC53r-Pc7Lrubwcm4q&authKey=AaNuGPfAWTSyaN6MR5yGYFQ0+4AKsZQq7kI0uRASo+v5ttyrc6xvh7gfNEMQ7UDR&noverify=0',
-              },
+        },
+        footer: {
+            logo: {
+                alt: "refine",
+                src: "/img/refine_logo.png",
+            },
+            links: [
+                {
+                    title: "Resources",
+                    items: [
+                        {
+                            label: "Getting Started",
+                            to: "docs",
+                        },
+                        {
+                            label: "Tutorials",
+                            to: "docs/tutorial/introduction/index/",
+                        },
+                        {
+                            label: "Blog",
+                            to: "blog",
+                        },
+                    ],
+                },
+                {
+                    title: "Product",
+                    items: [
+                        {
+                            label: "Examples",
+                            to: "examples",
+                        },
+                        {
+                            label: "Integrations",
+                            to: "integrations",
+                        },
+                        {
+                            label: "Become an Expert",
+                            to: "become-a-refine-expert",
+                        },
+                    ],
+                },
+                {
+                    title: "Company",
+                    items: [
+                        {
+                            label: "About",
+                            to: "about",
+                        },
+                        {
+                            label: "Store 🎁",
+                            to: "https://store.refine.dev",
+                        },
+                    ],
+                },
+                {
+                    title: "__LEGAL",
+                    items: [
+                        {
+                            label: "License",
+                            to: "https://github.com/Thecosy/IceCMS/blob/master/LICENSE",
+                        },
+                        // {
+                        //     label: "Terms",
+                        //     to: "/enterprise",
+                        // },
+                        // {
+                        //     label: "Privacy",
+                        //     to: "/privacy-policy",
+                        // },
+                        // {
+                        //     label: "info@refine.dev",
+                        //     to: "mailto:info@refine.dev",
+                        // },
+                    ],
+                },
+                {
+                    title: "__SOCIAL",
+                    items: [
+                        {
+                            href: "https://github.com/Thecosy/IceCMS",
+                            label: "github",
+                        },
+                        {
+                            href: "https://discord.gg/refine",
+                            label: "discord",
+                        },
+                        {
+                            href: "https://reddit.com/r/refine",
+                            label: "reddit",
+                        },
+                        {
+                            href: "https://twitter.com/refine_dev",
+                            label: "twitter",
+                        },
+                        {
+                            href: "https://www.linkedin.com/company/refine-dev",
+                            label: "linkedin",
+                        },
+                    ],
+                },
             ],
-          },
-          {
-            title: '更多',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Thecosy/IceCMS',
-              },
-            ],
-          },
+        },
+        docs: {
+            sidebar: {
+                autoCollapseCategories: true,
+            },
+        },
+        colorMode: {
+            defaultMode: "dark",
+        },
+    },
+    customFields: {
+        /** Footer Fields */
+        footerDescription:
+            '<strong style="font-weight:700;">refine</strong> is a React-based framework for the rapid development of web applications. It eliminates the repetitive tasks demanded by <strong style="font-weight:700;">CRUD</strong> operations and provides industry standard solutions.',
+        contactTitle: "Contact",
+        contactDescription: [
+            "IceCMS Development Inc.",
+            "IceCMS obtains all interpretation rights",
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Document.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+        contactEmail: "info@icecms.cn",
+        /** ---- */
+        /** Live Preview */
+        LIVE_PREVIEW_URL:
+            process.env.LIVE_PREVIEW_URL ?? "http://localhost:3030/preview",
+        /** ---- */
+        tutorial: tutorialData,
+    },
+    webpack: {
+        jsLoader: (isServer) => ({
+            loader: require.resolve("swc-loader"),
+            options: {
+                jsc: {
+                    parser: {
+                        syntax: "typescript",
+                        tsx: true,
+                    },
+                    target: "es2017",
+                },
+                module: {
+                    type: isServer ? "commonjs" : "es6",
+                },
+            },
+        }),
+    },
 };
 
-module.exports = config;
+module.exports = siteConfig;

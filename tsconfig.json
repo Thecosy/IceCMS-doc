@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "jsx": "react",
+  "exclude": [
+    "node_modules",
+    "./plugins",
+    "./static",
+    "./build",
+    "./docusaurus"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["@types/gtag.js"],
+    "resolveJsonModule": true
+  }
+}

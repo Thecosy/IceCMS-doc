@@ -1,5 +1,7 @@
 ---
-sidebar_position: 5
+id: icecms_with_run
+title: IceCMS 的编译和运行
+sidebar_label: IceCMS 的编译和运行
 ---
 
 # IceCMS 的编译和运行

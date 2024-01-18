@@ -1,33 +1,220 @@
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
+/** @type {import('@docusaurus/plugin-content-docs/src/sidebars/types').Sidebars} */
+module.exports = {
+    mainSidebar: [
+        // Getting Started
+        {
+            type: "category",
+            label: "开始",
+            className: "category-as-header",
+            items: [
+                "getting-started/overview",
+                "getting-started/quickstart",
+                {
+                    type: "doc",
+                    id: "tutorial/introduction/index",
+                    label: "演示",
+                },
+                {
+                    type: "link",
+                    href: "https://s.refine.dev/examples",
+                    label: "在线演示",
+                    customProps: {
+                        external: true,
+                    },
+                },
+                {
+                    type: "link",
+                    href: "https://refine.dev/templates",
+                    label: "模版",
+                    customProps: {
+                        external: true,
+                    },
+                },
+            ],
+        },
+        // Devtools
+        {
+            type: "link",
+            href: "/enterprise",
+            label: "Pro版",
+            className: "enterprise-badge",
+        },
+        // Guides & Concepts
+        {
+            type: "category",
+            label: "环境",
+            className: "category-as-header",
+            items: [    
+                "project-env/environment",
+                "project-env/tool",
+            ]
+        },
+        // Guides & Concepts
+        {
+            type: "category",
+            label: "部署",
+            className: "category-as-header",
+            items: [
+                {
+                    type: "category",
+                    label: "前端",
+                    link: {
+                        type: "generated-index",
+                        title: "front",
+                        slug: "/front",
+                    },
+                    items: [
+                        "project-build/front/front-end",
+                        {
+                            type: "category",
+                            label: "Nuxt端",
+                            items: [
+                                "project-build/front/nuxt/base",
+                                "project-build/front/nuxt/interface",
+                            ],
+                        },
+                        {
+                            type: "category",
+                            label: "Uniapp端",
+                            items: [
+                                "project-build/front/uniapp/base",
+                                {
+                                    type: "category",
+                                    label: "小程序配置",
+                                    items: [
+                                        "project-build/front/uniapp/miniproject/fasttest",
+                                        "project-build/front/uniapp/miniproject/flow",
+                                    ],
+                                },
+                                {
+                                    type: "category",
+                                    label: "App配置",
+                                    items: [
+                                        "project-build/front/uniapp/app/fast",
+                                        "project-build/front/uniapp/app/ios",
+                                        "project-build/front/uniapp/app/market",
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "后端",
+                    link: {
+                        type: "generated-index",
+                        title: "server",
+                        slug: "/server",
+                    },
+                    items: [
+                        "project-build/server/baota",
+                        "project-build/server/docker",
+                        "project-build/server/java",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "支付配置",
+                    link: {
+                        type: "generated-index",
+                        title: "pay",
+                        slug: "/pay",
+                    },
+                    items: [
+                        "project-build/pay/ali",
+                        "project-build/pay/we",
+                    ],
+                },
+            ],
+        },
+        // Guides & Concepts
+        {
+            type: "category",
+            label: "开发",
+            className: "category-as-header",
+            items: [    
+                "project-code/overview",
+                {
+                    type: "category",
+                    label: "环境配置",
+                    link: {
+                        type: "generated-index",
+                        title: "environment",
+                        slug: "/environment",
+                    },
+                    items: [
+                        "project-code/environment/jdk-config",
+                        "project-code/environment/maven_config",
+                        "project-code/environment/idea_environment_config",
+                        "project-code/environment/icecms_compiler",
+                        "project-code/environment/icecms_with_run",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "docker",
+                    link: {
+                        type: "generated-index",
+                        title: "docker",
+                        slug: "/docker",
+                    },
+                    items: [
+                        "project-code/docker/dockerfile",
+                        "project-code/docker/dockercomplose",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "nuxt",
+                    link: {
+                        type: "generated-index",
+                        title: "nuxt",
+                        slug: "/nuxt",
+                    },
+                    items: [
+                        "project-code/nuxt/config",
+                        "project-code/nuxt/nuxtstart",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "vue",
+                    link: {
+                        type: "generated-index",
+                        title: "vue",
+                        slug: "/vue",
+                    },
+                    items: [
+                        "project-code/vue/vuex",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "接口",
+                    link: {
+                        type: "generated-index",
+                        title: "interface",
+                        slug: "/interface",
+                    },
+                    items: [
+                        "project-code/interface/code",
+                        "project-code/interface/allinterface",
+                    ],
+                },
+            ]
+        },
+        // Migration Guide
+        {
+            type: "category",
+            label: "指南 🚀",
+            className: "category-as-header",
+            items: [
+                "migration-guide/3x-to-4x",
+                "migration-guide/auth-provider",
+                "migration-guide/router-provider",
+            ],
+        },
 
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
-// @ts-check
-
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-  tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
+    ],
 };
-
-module.exports = sidebars;
