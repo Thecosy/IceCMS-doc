@@ -30,7 +30,10 @@
 :focus, button:focus, .btn:focus, .btn-sm:focus {
     outline:2px solid rgba(0, 112, 244, .5)
 }
-
+.bg-blue-101 {
+    --tw-bg-opacity: 0.5;
+    background-color: rgba(242, 247, 255, var(--tw-bg-opacity));
+    }
 .el-button:focus-visible {
     outline: 2px solid var(--el-button-outline-color);
     outline-offset:1px

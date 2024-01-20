@@ -70,14 +70,16 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                               </ul>
                               <div className="border-t border-gray-200 pt-5 mt-6"><a className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" target="_blank" href="/docs" style={{ outline: 'none' }}>查看部署文档</a></div>
                             </div>
-                            <div className="relative flex flex-col h-full py-5 px-6 rounded bg-blue-100 shadow-xl border-2 border-blue-500 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
+                            <div className="relative flex flex-col h-full py-5 px-6 rounded bg-blue-101 shadow-xl border-2 border-blue-500 aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">
                               <div className="absolute top-0 right-0 mr-5 p-3 -mt-5 bg-yellow-500 rounded-full"><svg className="w-4 h-4 fill-current text-white" viewBox="0 0 16 16" xmlns="https://www.w3.org/2000/svg">
                                 <path d="M15.145 5.05l-4.316-.627L8.898.513c-.338-.684-1.456-.684-1.794 0l-1.93 3.91-4.317.627a1.002 1.002 0 00-.554 1.707l3.124 3.044-.737 4.3a1 1 0 001.45 1.053L8 13.125l3.862 2.03c.728.381 1.59-.234 1.45-1.054l-.736-4.299L15.7 6.758a1.003 1.003 0 00-.555-1.708z">
                                 </path>
                               </svg></div>
                               <div className="mb-4">
-                                <div className="text-lg font-bold mb-1">捐赠版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-6001 pl-2">/不限根域名（限时特价）</span></div>
+                                <div className="text-lg font-bold mb-1" >捐赠版</div>
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-6001 pl-2">/不限根域名（限时特价）
+                              
+                                </span></div>
                                 <div className="text-base text-gray-500">适合个人使用</div>
                               </div>
                               <ul className="text-gray-6001 -mb-2 flex-grow">
