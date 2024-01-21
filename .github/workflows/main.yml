@@ -54,4 +54,4 @@ jobs:
           # 先清空目标目录
           ARGS: "-avzr --delete"
           # 上传到服务器目标目录
-          TARGET: "/www/www.icecms.cn"
+          TARGET: "/www/wwwroot/www.icecms.cn"
