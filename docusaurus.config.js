@@ -20,7 +20,7 @@ const siteConfig = {
     organizationName: "IceCMS",
     trailingSlash: true,
     favicon: "img/refine_favicon.svg",
-    scripts: ["https://platform.twitter.com/widgets.js"],
+    scripts: [],
     presets: [
         [
             "@docusaurus/preset-classic",
