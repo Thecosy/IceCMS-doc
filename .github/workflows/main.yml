@@ -41,12 +41,17 @@ jobs:
             zip -r build ./build/**
       # 产物上传服务器
       - name: Upload to Deploy Server
-        uses: burnett01/rsync-deployments@4.1
-        with:
-         switches: -avzh
-         path: public/    # 将public文件夹同步到服务器下的 PATH 路径
-         remote_path: "/www/wwwroot/www.icecms.cn" #服务器的文件存放绝对路径
-         remote_host: ${{ secrets.D_HOST }} #服务器域名或者IP地址
-         remote_port: 22 # ssh远程端口(如果没修改过ssh远程端口，默认是22)
-         remote_user: ${{ secrets.D_USER }} # 使用ssh登录的用户
-         remote_key: ${{ secrets.D_PASS }}      
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+          # 免密登录的秘钥
+          SSH_PRIVATE_KEY: ${{ secrets.D_PASS }}
+          # 服务器登录用户名
+          REMOTE_USER: ${{ secrets.D_USER }}
+          # 服务器的公网IP
+          REMOTE_HOST: ${{ secrets.D_HOST }}
+          # 你打包后产物的文件夹
+          SOURCE: "build/"
+          # 先清空目标目录
+          ARGS: "-avzr --delete"
+          # 上传到服务器目标目录
+          TARGET: "/www/wwwroot/www.icecms.cn"
