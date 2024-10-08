@@ -17,7 +17,7 @@ import { CommonHeader } from "../refine-theme/common-header";
 import { LandingTestimonial } from "../refine-theme/landing-testimonial";
 
 function Home() {
-    const title = "Refine | Open-source Retool for Enterprise";
+    const title = "IceCMS | 开源免费的内容管理系统";
     return (
         <>
             <Head>

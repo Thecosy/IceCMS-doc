@@ -16,7 +16,7 @@ import { EnterpriseTable } from "@site/src/refine-theme/enterprise-table";
 import { LandingFooter } from "@site/src/refine-theme/landing-footer";
 
 const Enterprise: React.FC = () => {
-    const title = "Refine | Open-source Retool for Enterprise";
+    const title = "IceCMS | 开源免费的内容管理系统";
 
     return (
         <>

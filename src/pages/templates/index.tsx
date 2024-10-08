@@ -24,7 +24,7 @@ import { TemplatesFilterButton } from "@site/src/refine-theme/templates-filter-b
 import { CommonDrawer } from "@site/src/refine-theme/common-drawer";
 
 const Templates: React.FC = () => {
-    const title = "Refine | Open-source Retool for Enterprise";
+    const title = "IceCMS | 开源免费的内容管理系统";
 
     const [isFilterDrawerOpen, setIsFilterDrawerOpen] = React.useState(false);
 
