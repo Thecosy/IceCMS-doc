@@ -19,7 +19,7 @@ const siteConfig = {
     projectName: "IceCMS",
     organizationName: "IceCMS",
     trailingSlash: true,
-    favicon: "img/refine_favicon.svg",
+    favicon: "img/logo.svg",
     scripts: [],
     presets: [
         [
