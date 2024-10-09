@@ -33,7 +33,7 @@ export const CommunityStatsProvider: FC = ({ children }) => {
             setLoading(true);
 
             const response = await fetch(
-                `http://star.icecms.cn/stats`,
+                `https://star.icecms.cn/stats`,
                 {
                     method: "GET",
                     headers: {
