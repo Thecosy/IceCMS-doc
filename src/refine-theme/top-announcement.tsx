@@ -110,7 +110,7 @@ export const TopAnnouncement = () => {
 const Text = () => {
     return (
         <a
-            href="https://s.refine.dev/devtools-beta"
+            href="https://www.icecmspro.com"
             target="_blank"
             rel="noreferrer"
             className={clsx(
