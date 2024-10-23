@@ -170,10 +170,4 @@ You will see the output as a table populated with `blog_posts` and `category` da
 
 <br />
 
-## Next Steps
 
-👉 Jump to [Tutorials](/docs/tutorial/introduction/index/) and continue your work to turn your example project into a full-blown CRUD application! 🚀
-
-👉 Read more on [Advanced Tutorials] for different usage scenarios.
-
-👉 See [real-life examples](/templates) built using **Refine**

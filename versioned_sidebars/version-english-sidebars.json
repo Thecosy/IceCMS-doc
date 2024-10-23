@@ -8,7 +8,17 @@
         "getting-started/quickstart"
       ],
       "collapsed": false
-    }
-   
+    },
+    {
+      "type": "category",
+      "label": "指南 🚀",
+      "className": "category-as-header",
+      "items": [
+          "migration-guide/3x-to-4x",
+          "migration-guide/auth-provider",
+          "migration-guide/router-provider"
+      ],
+      "collapsed": false
+  }
   ]
 }

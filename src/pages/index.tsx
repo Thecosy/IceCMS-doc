@@ -24,6 +24,7 @@ function Home() {
                 <html data-active-page="index" />
                 <title>{title}</title>
                 <meta property="og:title" content={title} />
+                <meta name="algolia-site-verification"  content="798BB9F15E5FBF3A" />
                 <link
                     rel="preload"
                     href="https://refine.new/embed-form"

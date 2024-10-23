@@ -1,6 +1,6 @@
 ---
 id: prerequisite
-title: 2. Prerequisite
+title: 开发环境要求
 tutorial:
   order: 1
   prev: tutorial/introduction/index
