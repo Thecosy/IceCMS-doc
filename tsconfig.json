@@ -11,6 +11,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "types": ["@types/gtag.js"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "moduleResolution": "Node16",
+    "module": "Node16"
   }
 }

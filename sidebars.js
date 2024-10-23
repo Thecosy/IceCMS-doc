@@ -1,3 +1,5 @@
+const { type } = require('os');
+
 /** @type {import('@docusaurus/plugin-content-docs/src/sidebars/types').Sidebars} */
 module.exports = {
     mainSidebar: [
@@ -214,7 +216,6 @@ module.exports = {
                 "migration-guide/auth-provider",
                 "migration-guide/router-provider",
             ],
-        },
-
+        }
     ],
 };

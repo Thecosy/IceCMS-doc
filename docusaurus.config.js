@@ -175,9 +175,9 @@ const siteConfig = {
         },
         image: "img/refine_social.png",
         algolia: {
-            appId: "KRR9VEUPCT",
-            apiKey: "cd0188125dcd31fb4b011b5e536d963a",
-            indexName: "refine",
+            appId: "GPWXCCSB9H",
+            apiKey: "824dfa995db5bc16b143e72cfe32d311",
+            indexName: "icecms",
             contextualSearch: true,
         },
         metadata: [
