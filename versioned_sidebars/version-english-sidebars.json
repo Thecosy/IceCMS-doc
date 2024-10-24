@@ -11,7 +11,7 @@
     },
     {
       "type": "category",
-      "label": "环境",
+      "label": "environment",
       "className": "category-as-header",
       "items": [
         "project-env/environment",
@@ -20,12 +20,12 @@
     },
     {
       "type": "category",
-      "label": "部署",
+      "label": "deploy",
       "className": "category-as-header",
       "items": [
         {
           "type": "category",
-          "label": "前端",
+          "label": "front end",
           "link": {
             "type": "generated-index",
             "title": "front",
@@ -35,7 +35,7 @@
             "project-build/front/front-end",
             {
               "type": "category",
-              "label": "Nuxt端",
+              "label": "Nuxt side",
               "items": [
                 "project-build/front/nuxt/base",
                 "project-build/front/nuxt/interface"
@@ -43,12 +43,12 @@
             },
             {
               "type": "category",
-              "label": "Uniapp端",
+              "label": "Uniapp side",
               "items": [
                 "project-build/front/uniapp/base",
                 {
                   "type": "category",
-                  "label": "小程序配置",
+                  "label": "Mini program configuration",
                   "items": [
                     "project-build/front/uniapp/miniproject/fasttest",
                     "project-build/front/uniapp/miniproject/flow"
@@ -56,7 +56,7 @@
                 },
                 {
                   "type": "category",
-                  "label": "App配置",
+                  "label": "App configuration",
                   "items": [
                     "project-build/front/uniapp/app/fast",
                     "project-build/front/uniapp/app/ios",
@@ -69,7 +69,7 @@
         },
         {
           "type": "category",
-          "label": "后端",
+          "label": "rear end",
           "link": {
             "type": "generated-index",
             "title": "server",
@@ -83,7 +83,7 @@
         },
         {
           "type": "category",
-          "label": "支付配置",
+          "label": "Payment configuration",
           "link": {
             "type": "generated-index",
             "title": "pay",
@@ -98,13 +98,13 @@
     },
     {
       "type": "category",
-      "label": "开发",
+      "label": "develop",
       "className": "category-as-header",
       "items": [
         "project-code/overview",
         {
           "type": "category",
-          "label": "环境配置",
+          "label": "Environment configuration",
           "link": {
             "type": "generated-index",
             "title": "environment",
@@ -158,7 +158,7 @@
         },
         {
           "type": "category",
-          "label": "接口",
+          "label": "interface",
           "link": {
             "type": "generated-index",
             "title": "interface",
@@ -173,7 +173,7 @@
     },
     {
       "type": "category",
-      "label": "指南 🚀",
+      "label": "guide 🚀",
       "className": "category-as-header",
       "items": [
         "migration-guide/3x-to-4x",

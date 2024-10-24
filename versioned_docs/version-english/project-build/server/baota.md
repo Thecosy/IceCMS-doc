@@ -1,64 +1,101 @@
 ---
 id: baota
-title: 宝塔部署
-sidebar_label: 宝塔部署
+title: Pagoda deployment
+sidebar_label: Pagoda deployment
 ---
 
-# 宝塔部署
+# Pagoda deployment
 
-[#](#基础信息) 基础信息
----------------
+## [#Basic](#%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF) Information
 
-### [#](#下载) 下载
+### [#download](#%E4%B8%8B%E8%BD%BD)
 
-### [#](#环境要求) 环境要求
+### [#Environmental](#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82) requirements
 
-#### [#](#服务端) 服务端
+#### [#Server](#%E6%9C%8D%E5%8A%A1%E7%AB%AF)
 
-<table><thead><tr><th>运行环境</th><th>要求版本</th><th>推荐版本</th></tr></thead><tbody><tr><td>JDK</td><td>&gt;=1.8</td><td>1.8</td></tr><tr><td>Mysql</td><td>&gt;=5.7</td><td>5.7</td></tr><tr><td>nginx 或 apache</td><td>无限制</td><td>-</td></tr><tr><td>Redis</td><td>&gt;=6.0</td><td>7.0.0</td></tr></tbody></table>
+<table>
+<thead><tr>
+<th>Operating Environment</th>
+<th>Required version</th>
+<th>Recommended version</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>JDK</td>
+<td>&gt;=1.8</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td>Mysql</td>
+<td>&gt;=5.7</td>
+<td>5.7</td>
+</tr>
+<tr>
+<td>nginx or apache</td>
+<td>No restrictions</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>&gt;=6.0</td>
+<td>7.0.0</td>
+</tr>
+</tbody>
+</table>
 
-#### [#](#前端) 前端
+#### [#front](#%E5%89%8D%E7%AB%AF) end
 
-<table><thead><tr><th>运行环境</th><th>要求版本</th><th>推荐版本</th></tr></thead><tbody><tr><td>Node.js</td><td>&gt;=14.18.1</td><td>14.18.1</td></tr></tbody></table>
+<table>
+<thead><tr>
+<th>Operating Environment</th>
+<th>Required version</th>
+<th>Recommended version</th>
+</tr></thead>
+<tbody><tr>
+<td>Node.js</td>
+<td>&gt;=14.18.1</td>
+<td>14.18.1</td>
+</tr></tbody>
+</table>
 
-[#](#宝塔面板部署-1-推荐使用) 宝塔面板部署 - 1 - 推荐使用
--------------------------------------
+## [#Baota](#%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2-1-%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8) panel deployment- 1 - recommended
 
-强烈正式环境推荐使用宝塔面板部署项目，让部署更方便，减少部署出现问题。
+It is strongly recommended to use the Baota panel to deploy projects in a formal environment to make deployment more convenient and reduce deployment problems.
 
-### [#](#服务器环境设置) 服务器环境设置
+### [#Server](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE) environment settings
 
-*   **步骤 1**: 点击【软件商店】-【运行环境】，安装 Nginx、MySQL、其中 Mysql 选择 5.7 版本。然后搜索 redis 并安装 redis。
-    
-    提示
-    
-    安装软件的时候，使用极速安装，避免出现一些环境引起的问题。
-    
-    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-1.png)  
-    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-2.png)  
-    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-3.png)  
-    
-*   **步骤 2**: 点击【终端】，登录 root 帐号，根据系统运行命令安装 maven。
+- **Step 1** : Click [Software Store] - [Operation Environment], install Nginx, MySQL, and select MySQL version 5.7. Then search for redis and install it.
 
-或者
+    hint
 
-![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-2.png)  
+    When installing the software, use the fast installation method to avoid problems caused by some environments.
 
-### [#](#数据库导入) 数据库导入
+    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-1.png)
+    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-2.png)
+    ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-1-3.png)
 
-### [#](#源码编译) 源码编译
+- **Step 2** : Click [Terminal], log in to the root account, and install Maven according to the system run command.
 
-提示
+or
 
-本步骤将源码上传至服务器，并编译成可运行的 jar 包，如果熟悉 Java，建议在本地电脑编译，减少对运行服务器的影响，跳过编译步骤，直接上传 rar 包。
+![](https://doc.likeadmin.cn/docs/java/images/readme/bt-env-2.png)
 
-*   **步骤 1**: 下载 icecms 压缩包，解压到宝塔面板 / www/wwwroot 目录。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-1-1.png)  
+### [#Database](#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5) import
+
+### [#](#%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91) Source code compilation
+
+hint
+
+In this step, the source code is uploaded to the server and compiled into an executable jar package. If you are familiar with Java, it is recommended to compile it on the local computer to reduce the impact on the running server. You can skip the compilation step and upload the rar package directly.
+
+- **Step 1** : Download the icecms compressed package and unzip it to the Baota Panel/www/wwwroot directory. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-1-1.png)
     ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-1-2.png)
-*   **步骤 2**: 打开【文件】，找到项目目录的 server/like-admin/src/main/resources，复制 application-dev-example.yml 文件并改名为 application-dev.yml，此配置为后台配置。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-2.png)
-*   **步骤 3**: 打开 application-dev.yml 文件，根据图片内容，设置相关信息。【upload-directory】项为上传文件目录，可以根据需要设置位置。【database】项为 Mysql 相关信息，【redis】项为 Redis 相关信息，如果 Redis 没有设置密码，可以为空。此配置为后台的配置，设置完以后，保存文件。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-3.png)
-*   **步骤 4**: 同样打开【文件】，找到项目目录的 server/like-front/src/main/resources，复制 application-dev-example.yml 文件并改名为 application-dev.yml，此配置为前台配置。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-4.png)
-*   **步骤 5**: 同样打开 application-dev.yml 文件，根据图片内容，设置相关信息。【upload-directory】项为上传文件目录，可以根据需要设置位置。【database】项为 Mysql 相关信息，【redis】项为 Redis 相关信息，如果 Redis 没有设置密码，可以为空。此配置为前台的配置，设置完以后，保存文件。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-5.png)
-*   **步骤 6**: 打开【终端】，运行 cd 命令进入项目目录的 server 目录，运行编译命令。首次编译需要下载依赖，时间会比较长。编译成功以后，终端会出现下图的信息。同时生成 / server/like-admin/target/like-admin-1.0.0.jar 文件和 / server/like-front/target/like-front-1.0.0.jar 文件，下面步骤需要用到这两个 jar 文件包。
+- **Step 2** : Open [File], find server/like-admin/src/main/resources in the project directory, copy the application-dev-example.yml file and rename it to application-dev.yml. This configuration is the background configuration. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-2.png)
+- **Step 3** : Open the application-dev.yml file and set the relevant information according to the image content. The [upload-directory] item is the upload file directory, and the location can be set as needed. The [database] item is the Mysql related information, and the [redis] item is the Redis related information. If Redis has no password set, it can be left blank. This configuration is the background configuration. After setting, save the file. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-3.png)
+- **Step 4** : Open [File] again, find server/like-front/src/main/resources in the project directory, copy the application-dev-example.yml file and rename it to application-dev.yml. This configuration is the front-end configuration. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-4.png)
+- **Step 5** : Open the application-dev.yml file and set the relevant information according to the image content. The [upload-directory] item is the upload file directory, and the location can be set as needed. The [database] item is the Mysql related information, and the [redis] item is the Redis related information. If Redis has no password set, it can be left blank. This configuration is the front-end configuration. After setting, save the file. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-5.png)
+- **Step 6** : Open the terminal, run the cd command to enter the server directory of the project directory, and run the compile command. The first compilation requires downloading dependencies, which will take a long time. After the compilation is successful, the terminal will display the following information. At the same time, the / server/like-admin/target/like-admin-1.0.0.jar file and / server/like-front/target/like-front-1.0.0.jar file are generated. These two jar file packages are required in the following steps.
 
 ```
 cd /www/wwwroot/icecms/server
@@ -69,15 +106,15 @@ mvn clean install -Dmaven.test.skip=true -f pom.xml
 
 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-code-6.png)
 
-### [#](#项目运行) 项目运行
+### [#Project](#%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C) Run
 
-#### [#](#后台配置) 后台配置
+#### [#Backend](#%E5%90%8E%E5%8F%B0%E9%85%8D%E7%BD%AE) configuration
 
-*   **步骤 1**: 打开【网站】-【Java 项目】-【添加 Java 项目】，选择【Spring_boot】, 添加项目 / server/like-admin/target/like-admin-1.0.0.jar 包，设置 JDK。设置为开机自动启动，设置为前后端分开，后端 url 填写 "/api"，设置前端根目录为项目的 / public/admin，填写前台域名，然后【提交】。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-1-1.png)
-    
+- **Step 1** : Open [Website] - [Java Project] - [Add Java Project], select [Spring_boot], add the project / server/like-admin/target/like-admin-1.0.0.jar package, set JDK. Set it to start automatically at boot, set it to separate the front and back ends, fill in "/api" for the back end URL, set the front end root directory to the project's / public/admin, fill in the front end domain name, and then [Submit]. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-1-1.png)
+
     ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-1-2.png)
-    
-*   **步骤 2**: 在网站列表 Java 项目里面找到刚才添加的后台站点，点击【设置】-【伪静态】，填写下面伪静态信息，【保存】。
+
+- **Step 2** : Find the background site you just added in the Java project of the website list, click [Settings]-[Pseudo-static], fill in the pseudo-static information below, and click [Save].
 
 ```
 location / {
@@ -89,25 +126,24 @@ location / {
 
 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-2.png)
 
-*   **步骤 3**: 点击【SSL】-【Let's Encrypt】，选择【文件验证】，勾选域名，点击【申请】，等待完成 https 证书申请。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-3.png)
-*   **步骤 4**: 访问添加的后台域名即可访问后台，默认帐号 admin，密码为 123123，为了使用安全，请更改密码。 
+- **Step 3** : Click [SSL]-[Let's Encrypt], select [File Verification], check the domain name, click [Apply], and wait for the https certificate application to be completed. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-admin-3.png)
+- **Step 4** : Access the added backend domain name to access the backend. The default account is admin and the password is 123123. For security reasons, please change the password.
 
-#### [#](#前台配置) 前台配置
+#### [#Front](#%E5%89%8D%E5%8F%B0%E9%85%8D%E7%BD%AE) Desk Configuration
 
-提示
+hint
 
-注意前台前端根目录与后台有所不同，因为前台有 PC 端和手机端。
+Note that the root directory of the front-end is different from that of the back-end because the front-end has PC and mobile terminals.
 
-*   **步骤 1**: 打开【网站】-【Java 项目】-【添加 Java 项目】，选择【Spring_boot】, 添加项目 / server/like-front/target/like-front-1.0.0.jar 包，设置 JDK。设置为开机自动启动，设置为前后端分开，后端 url 填写 "/api"，设置前端根目录为项目的 / public，填写前台域名，然后【提交】。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-1-1.png)
-    
+- **Step 1** : Open [Website] - [Java Project] - [Add Java Project], select [Spring_boot], add the project / server/like-front/target/like-front-1.0.0.jar package, set JDK. Set it to start automatically at boot, set it to separate the front and back ends, fill in "/api" for the back end URL, set the front end root directory to the project's / public, fill in the front end domain name, and then [Submit]. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-1-1.png)
+
     ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-1-2.png)
-    
 
-提示
+hint
 
-注意前台的伪静态信息与后台有所不同，因为前台有 PC 端和手机端。
+Please note that the pseudo-static information on the front end is different from that on the back end because the front end has PC and mobile terminals.
 
-*   **步骤 2**: 在网站列表 Java 项目里面找到刚才添加的前台站点，点击【设置】-【伪静态】，填写下面伪静态信息，【保存】。
+- **Step 2** : Find the front-end site you just added in the Java project of the website list, click [Settings] - [Pseudo-static], fill in the pseudo-static information below, and click [Save].
 
 ```
 location /pc {
@@ -124,10 +160,10 @@ location /mobile {
 
 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-2.png)
 
-*   **步骤 3**: 点击【SSL】-【Let's Encrypt】，选择【文件验证】，勾选域名，点击【申请】，等待完成 https 证书申请。 ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-3.png)
+- **Step 3** : Click [SSL]-[Let's Encrypt], select [File Verification], check the domain name, click [Apply], and wait for the https certificate application to be completed. ![](https://doc.likeadmin.cn/docs/java/images/readme/bt-run-front-3.png)
 
-提示
+hint
 
-具体需要看产品是否含 PC 端或者手机端，每个产品不一样。
+It depends on whether the product contains PC or mobile version, which is different for each product.
 
-*   **步骤 4**:PC 端网页前台访问：https:// 添加的前台域名 / pc，即可访问 PC 端。如果该产品有手机网页端前台访问：https:// 添加的前台域名 / mobile，即可访问 PC 端。默认访问域名，会自动根据访问者使用 PC 或手机自动跳转。
+- **Step 4** : PC web front-end access: https:// added front-end domain name/pc, you can access the PC side. If the product has a mobile web front-end access: https:// added front-end domain name/mobile, you can access the PC side. The default access domain name will automatically jump according to whether the visitor uses a PC or a mobile phone.

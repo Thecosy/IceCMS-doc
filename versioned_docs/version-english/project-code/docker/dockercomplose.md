@@ -6,30 +6,28 @@ sidebar_label: docker complose
 
 # docker complose
 
-docker compose 是什么？
--------------------
+## What is docker-compose?
 
-compose、machine 和 swarm 是 docker 原生提供的三大编排工具。简称 docker 三剑客。
+Compose, machine and swarm are the three major orchestration tools provided by Docker. They are called the Docker Three Musketeers.
 
-Docker Compose 能够在 Docker 节点上，以单引擎模式 (Single-Engine Mode) 进行多容器应用的部 署和管理。多数的现代应用通过多个更小的微服务互相协同来组成一个完整可用的应用。
+Docker Compose can deploy and manage multi-container applications in single-engine mode on Docker nodes. Most modern applications use multiple smaller microservices to work together to form a complete and usable application.
 
-部署和管理繁多的服务是困难的。而这正是 Docker Compose 要解决的问题。Docker Compose 并不 是通过脚本和各种冗长的 docker 命令来将应用组件组织起来，而是通过一个声明式的配置文件描述整 个应用，从而使用一条命令完成部署。应用部署成功后，还可以通过一系列简单的命令实现对其完整声 明周期的管理。甚至，配置文件还可以置于版本控制系统中进行存储和管理。
+Deploying and managing numerous services is difficult. This is exactly the problem that Docker Compose aims to solve. Instead of organizing application components through scripts and various lengthy Docker commands, Docker Compose describes the entire application through a declarative configuration file, so that deployment can be completed with a single command. After the application is successfully deployed, its entire declaration lifecycle can also be managed through a series of simple commands. Configuration files can even be stored and managed in a version control system.
 
-docker compose 安装
------------------
+## Docker Compose Installation
 
-### Linux 上安装 Docker Compose
+### Install Docker Compose on Linux
 
-#### 下载
+#### download
 
 ```
-https://github.com/docker/compose 
+https://github.com/docker/compose
 下载最新版本
 
 
 ```
 
-#### 授权
+#### Authorization
 
 ```
 mv /data/docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
@@ -45,7 +43,7 @@ chmod 777 /usr/local/bin/docker-compose
 
 ```
 
-#### 检查安装情况以及版本
+#### Check the installation status and version
 
 ```
 docker-compose -v
@@ -57,7 +55,7 @@ docker-compose version
 
 ```
 
-#### 卸载 docker-compose
+#### Uninstall docker-compose
 
 ```
 rm -rf /usr/local/bin/docker-compose
@@ -67,26 +65,25 @@ reboot
 
 ```
 
-### yml 配置文件及常用指令
+### yml configuration files and common instructions
 
-Docker Compose 使用 YAML 文件来定义多服务的应用。YAML 是 JSON 的一个子集，因此也可以使用 JSON。
+Docker Compose uses YAML files to define multi-service applications. YAML is a subset of JSON, so JSON can also be used.
 
-Docker Compose 默认使用文件名 docker-compose.yml。当然，也可以使用 -f 参数指定具体文件。
+Docker Compose uses the file name docker-compose.yml by default. Of course, you can also use the -f parameter to specify a specific file.
 
-#### yaml 文件级
+#### yaml file level
 
-Docker Compose 的 YAML 文件包含 4 个一级 key:version、services、networks、volumes
+The Docker Compose YAML file contains 4 primary keys: version, services, networks, volumes
 
-*   version 是必须指定的，而且总是位于文件的第一行。它定义了 Compose 文件格式 (主要是 API) 的版本。注意，version 并非定义 Docker Compose 或 Docker 引擎的版本号。
-    
-*   services 用于定义不同的应用服务。上边的例子定义了两个服务: 一个名为 lagou-mysql 数据库服 务以及一个名为 lagou-eureka 的微服。Docker Compose 会将每个服务部署在各自的容器中。
-    
-*   networks 用于指引 Docker 创建新的网络。默认情况下，Docker Compose 会创建 bridge 网络。 这是一种单主机网络，只能够实现同一主机上容器的连接。当然，也可以使用 driver 属性来指定不 同的网络类型。
-    
-*   volumes 用于指引 Docker 来创建新的卷。
-    
+- version is required and is always the first line of the file. It defines the version of the Compose file format (mainly the API). Note that version does not define the version number of Docker Compose or Docker Engine.
 
-#### 配置文件
+- Services are used to define different application services. The example above defines two services: a database service named lagou-mysql and a microservice named lagou-eureka. Docker Compose will deploy each service in its own container.
+
+- networks is used to instruct Docker to create a new network. By default, Docker Compose will create a bridge network. This is a single-host network that can only connect containers on the same host. Of course, you can also use the driver attribute to specify different network types.
+
+- volumes is used to instruct Docker to create new volumes.
+
+#### Configuration Files
 
 ```
 version: '3'
@@ -126,37 +123,36 @@ volumes:
 
 ```
 
-docker compose 常用命令
--------------------
+## Docker Compose Common Commands
 
-### 启动服务
+### Start the service
 
 docker-compose up -d
 
-### 停止服务
+### Stop service
 
 docker-compose down
 
-### 列出所有运行容器
+### List all running containers
 
 docker-compose ps
 
-### 查看服务日志
+### View service logs
 
 docker-compose logs
 
-### 构建或
+### Build or
 
-docker-compose build 者重新构建服务
+docker-compose builder rebuilds the service
 
-### 启动服务
+### Start the service
 
 docker-compose start
 
-### 停止已运行的服务
+### Stop a running service
 
 docker-compose stop
 
-### 重启服务
+### Restart the service
 
 docker-compose restart

@@ -1,63 +1,60 @@
 ---
 id: vuex
-title: VUEX开发教程
-sidebar_label: VUEX开发教程
+title: VUEX Development Tutorial
+sidebar_label: VUEX Development Tutorial
 ---
 
-# VUEX开发教程
+# VUEX Development Tutorial
 
+Why do I want to make this collection of articles? There are so many tutorials about vuex on the market, and some great masters have even packaged vuex into a fancy way. On the one hand, I want to show you how to use vuex from the simplest and most basic point, and on the other hand, I also want to review vuex myself. Okay, without further ado, let's briefly introduce vuex. What exactly is it?
 
-为什么要做这篇文集呢？市面上关于 vuex 的教程多如牛毛，甚至 vuex 被某些大神都封装出花儿来了；一方面是想从最简单最基础的地方带大家使用一下 vuex，另一方面也是想让自己复习一下 vuex，好，不多废话了，接下来我们简单对 vuex 介绍一下，这究竟是个啥？
-
-第一步，如果你想了解一个技术，就去他的官网去看，准没错，进入官网，映入眼帘的就是 “vuex 是什么”：
+The first step is, if you want to understand a technology, go to its official website to see it, that's right, enter the official website, what comes into view is "What is vuex":
 
 ![](/img/icecms/202307/12.jpg)
 
-如图所示，它是一个程序里面的**状态管理模式**，它是**集中式**存储**所有**组件的状态的小仓库，并且保持我们存储的状态以一种**可以预测**的方式发生变化。对于可以预测，现在我不多做说明，相信在看完这篇文章之后，你就会有自己的理解。
+As shown in the figure, it is a **state management mode** in a program. It is a small warehouse that **centrally** stores the status of **all** components and keeps the status we store changing in a **predictable** way. I will not explain more about predictability now. I believe that after reading this article, you will have your own understanding.
 
-第一步，了解 Vuex
-===========
+# The first step is to understand Vuex
 
-### 🤯 想象一个场景
+### 🤯 Imagine a scenario
 
-如果你的项目里有很多页面（组件 / 视图），页面之间存在多级的嵌套关系，此时，这些页面假如都需要共享一个状态的时候，此时就会产生以下两个问题：
+If your project has many pages (components/views) and there are multiple levels of nested relationships between the pages, then if these pages need to share a state, the following two problems will arise:
 
-*   多个视图依赖同一个状态
-*   来自不同视图的行为需要变更同一个状态
+- Multiple views rely on the same state
+- Actions from different views need to modify the same state
 
-### 🤪 动动你的小脑袋你就会想到解决以上方法的方案:
+### 🤪 Use your brain and you will come up with solutions to the above problems:
 
-*   对于第一个问题，假如是多级嵌套关系，你可以使用父子组件传参进行解决，虽有些麻烦，但好在可以解决；对于兄弟组件或者关系更复杂组件之间，就很难办了，虽然可以通过各种各样的办法解决，可实在很不优雅，而且等项目做大了，代码就会变成屎山，实在令人心烦。
-*   对于第二个问题，你可以通过父子组件直接引用，或者通过事件来变更或者同步状态的多份拷贝，这种模式很脆弱，往往使得代码难以维护，而且同样会让代码变成屎山。
+- For the first problem, if it is a multi-level nested relationship, you can use parent-child component parameter passing to solve it. Although it is a bit troublesome, it can be solved at least. For brother components or components with more complex relationships, it is very difficult to deal with. Although it can be solved by various methods, it is really not elegant, and when the project becomes bigger, the code will become a pile of shit, which is really annoying.
+- For the second question, you can directly reference parent-child components, or use events to change or synchronize multiple copies of the state. This model is very fragile, often making the code difficult to maintain, and also turning the code into a shit mountain.
 
-### 😇 此时，既然思考到了这里，如果换一种思路呢：
+### 😇 Now that we have thought about this, what if we change our thinking:
 
-*   把各个组件都需要依赖的同一个状态抽取出来，在全局使用单例模式进行管理。
-*   在这种模式下，任何组件都可以直接访问到这个状态，或者当状态发生改变时，所有的组件都获得更新。
+- Extract the same state that each component needs to depend on, and manage it globally using the singleton pattern.
+- In this mode, any component can directly access the state, or all components are updated when the state changes.
 
-### 👶 这时候，Vuex 诞生了！
+### 👶 At this time, Vuex was born!
 
-这就是 Vuex 背后的基本思想，借鉴了 Flux、Redux。与其他模式不同的是，Vuex 是专门为 Vue 设计的状态管理库，以利用 Vue.js 的细粒度数据响应机制来进行高效的状态更新。
+This is the basic idea behind Vuex, which draws on Flux and Redux. Unlike other modes, Vuex is a state management library designed specifically for Vue to utilize Vue.js's fine-grained data response mechanism for efficient state updates.
 
-### 😨 接着，你就会看到下面这张官网的 vuex 使用周期图（看不懂没关系）：
+### 😨 Then, you will see the following vuex usage cycle diagram on the official website (it doesn’t matter if you don’t understand it):
 
 ![](/img/icecms/202307/13.jpg)
 
-### 🤩 什么时候应该用 vuex 呢？
+### 🤩 When should I use vuex?
 
-*   这个问题因人而异，如果你不需要开发大型的单页应用，此时你完全没有必要使用 vuex，比如你的页面就两三个，使用 vuex 后增加的文件比你现在的页面还要多，那就没这个必要了。
-*   假如你的项目达到了中大型应用的规模，此时您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。
+- This question varies from person to person. If you don't need to develop a large single-page application, there is no need to use vuex at this time. For example, if you only have two or three pages, and the files added after using vuex are more than your current pages, then there is no need to do it.
+- If your project reaches the scale of a medium-to-large application, you will probably consider how to better manage the state outside the component, and Vuex will become a natural choice.
 
-### 🤔 对于 vuex 的简单介绍就到这里，接下来，我们一起用起来吧！
+### 🤔 That’s all for this brief introduction to vuex. Next, let’s use it together!
 
-第二步，安装
-======
+# Step 2: Installation
 
-进入项目，在命令行中输入安装指令，回车
+Enter the project, enter the installation command in the command line, and press Enter
 
 `npm install vuex --save`
 
-然后配置 vuex，使其工作起来：在 src 路径下创建 store 文件夹，然后创建 index.js 文件，文件内容如下：
+Then configure vuex to make it work: create a store folder under the src path, and then create an index.js file with the following content:
 
 ```
 import Vue from 'vue';
@@ -85,7 +82,7 @@ export default store;
 
 ```
 
-修改 main.js：
+Modify main.js:
 
 ```
 import Vue from 'vue';
@@ -106,7 +103,7 @@ new Vue({
 
 ```
 
-最后修改 App.vue：
+Finally modify App.vue:
 
 ```
 <template>
@@ -125,11 +122,11 @@ export default {
 
 ```
 
-此时，启动项目`npm run dev`，即可在控制台输出刚才我们定义在 store 中的 name 的值。
+At this point, start the project `npm run dev` , and the value of name that we just defined in the store will be output in the console.
 
 ![](/img/icecms/202307/14.jpg)
 
-*   🤖 官方建议 1： 官方建议我们以上操作 this.$store.state.XXX 最好放在计算属性中，当然，我也建议你这么使用，这样可以让你的代码看起来更优雅一些，就像这样：
+- 🤖 Official suggestion 1: The official suggestion is that the above operation this.$store.state.XXX should be placed in a calculated property. Of course, I also recommend that you use it this way, which can make your code look more elegant, like this:
 
 ```
 export default {
@@ -146,9 +143,9 @@ export default {
 
 ```
 
-此时可以得到和上面一样的效果。
+At this time, you can get the same effect as above.
 
-*   🤖 官方建议 2： 是不是每次都写 this.$store.state.XXX 让你感到厌烦，你实在不想写这个东西怎么办，当然有解决方案，就像下面这样：
+- 🤖 Official suggestion 2: Are you tired of writing this.$store.state.XXX every time? What if you really don’t want to write this? Of course, there is a solution, as follows:
 
 ```
 <script>
@@ -166,7 +163,7 @@ export default {
 
 ```
 
-你甚至可以在解构的时候给它赋别名，取外号，就像这样：
+You can even give it an alias when destructuring, like this:
 
 ```
 ...mapState({ aliasName: 'name' }),  // 赋别名的话，这里接收对象，而不是数组
@@ -174,38 +171,36 @@ export default {
 
 ```
 
-### 🤗 至此，安装 vuex 并且初始化的工作就结束了，此时你可以很轻易的在项目的任意地方访问到仓库里的状态
+### 🤗 At this point, the installation and initialization of vuex is complete. At this point, you can easily access the status of the warehouse anywhere in the project.
 
-第三步，了解修饰器：Getter
-================
+# Step 3: Understand the modifier: Getter
 
-当你看到这里的时候，证明你上一步已经完美的创建好一个 vue 项目，并且将 vuex 安装了进去！
+When you see this, it proves that you have perfectly created a vue project in the previous step and installed vuex into it!
 
-好！接下来，我们介绍一个读取操作的 “修饰利器” ---Getter
+OK! Next, let's introduce a "modification tool" for read operations --- Getter
 
-*   🤨 设想一个场景，你已经将 store 中的 name 展示到页面上了，而且是很多页面都展示了，此时产品经理过来找事儿😡：
-    
-*   产品经理：所有的 name 前面都要加上 “hello”！
-    
-*   我：为什么？
-    
-*   产品经理：我提需求还需要为什么吗？
-    
-*   我：好，我加！
-    
+- 🤨 Imagine a scenario where you have displayed the name in the store on many pages, and the product manager comes to you to ask for help:
 
-这时候，你第一想到的是怎么加呢，emm... 在每个页面上，使用 this.$store.state.name 获取到值之后，进行遍历，前面追加 "hello" 即可。
+- Product Manager: Add “hello” before all names!
 
-🤦🏻‍♂️ 错！这样很不好，原因如下：
+- Me: Why?
 
-*   第一，假如你在 A、B、C 三个页面都用到了 name，那么你要在这 A、B、C 三个页面都修改一遍，多个页面你就要加很多遍这个方法，造成代码冗余，很不好；
-*   第二，假如下次产品经理让你把 “hello” 改成 “fuck” 的时候，你又得把三个页面都改一遍，这时候你只能抽自己的脸了...
+- Product Manager: Do I need to give a reason when I raise a demand?
 
-👏🏻 吸取上面的教训，你会有一个新的思路：我们可以直接在 store 中对 name 进行一些操作或者加工，从源头解决问题！那么具体应该怎么写呢？这时候，本次将要介绍的这个 Getter 利器闪亮登场！
+- Me: Okay, I’ll join!
 
-🤡 怎么用呢？不废话，show code！
+At this time, the first thing you think of is how to add it, emm... On each page, use this.$store.state.name to get the value, traverse it, and append "hello" to the front.
 
-首先，在 store 对象中增加 getters 属性
+🤦🏻‍♂️ Wrong! This is bad for the following reasons:
+
+- First, if you use name on pages A, B, and C, then you have to modify it on all three pages. You have to add this method many times for multiple pages, which causes code redundancy, which is not good.
+- Second, if the product manager asks you to change "hello" to "fuck" next time, you have to change all three pages again, and you can only slap yourself in the face...
+
+👏🏻 Learning from the above lessons, you will have a new idea: we can directly operate or process the name in the store to solve the problem from the source! So how should we write it specifically? At this time, the Getter tool that will be introduced this time makes a shining debut!
+
+🤡 How to use it? No nonsense, show code!
+
+First, add getters to the store object
 
 ```
 import Vue from 'vue';
@@ -237,7 +232,7 @@ export default store;
 
 ```
 
-在组件中使用：
+Use in component:
 
 ```
 export default {
@@ -251,13 +246,13 @@ export default {
 
 ```
 
-然后查看控制台：
+Then check the console:
 
 ![](/img/icecms/202307/15.jpg)
 
-没有问题的
+No problem
 
-🤖 官方建议： 是不是每次都写 this.$store.getters.XXX 让你感到厌烦，你实在不想写这个东西怎么办，当然有解决方案，官方建议我们可以使用 mapGetters 去解构到计算属性中，就像使用 mapState 一样，就可以直接使用 this 调用了，就像下面这样：
+🤖 Official suggestion: Are you tired of writing this.$store.getters.XXX every time? What if you really don’t want to write this? Of course, there is a solution. The official suggestion is that we can use mapGetters to deconstruct into calculated properties, just like using mapState, and then we can directly use this to call, as shown below:
 
 ```
 <script>
@@ -277,9 +272,9 @@ export default {
 
 ```
 
-此时可以得到和之前一样的效果。
+At this point you can get the same effect as before.
 
-当然，和 mapState 一样你也可以取别名，取外号，就像下面这样：
+Of course, like mapState, you can also give it an alias or nickname, like this:
 
 ```
 ...mapGetters({ aliasName: 'getMessage' }),  // 赋别名的话，这里接收对象，而不是数组
@@ -287,16 +282,15 @@ export default {
 
 ```
 
-🤗 OK，当你看到这里，你已经成功的把 Getter 用起来了，你也能明白在什么时候应该用到 getters，你可以通过计算属性访问（缓存），也可以通过方法访问（不缓存），你甚至可以在 getters 的方法里面再调用 getters 方法，当然你也实现了像 state 那样，使用 mapGetters 解构到计算属性中，这样你就可以很方便的使用 getters 啦！
+🤗 OK, when you see this, you have successfully used Getter, and you can also understand when to use getters. You can access through calculated properties (cached) or through methods (not cached). You can even call getters methods inside getters methods. Of course, you have also implemented deconstruction into calculated properties using mapGetters like state, so that you can use getters very conveniently!
 
-😎 读取值的操作我们有 “原生读（state）” 和 “修饰读（getters）”，接下来就要介绍怎么修改值了！
+😎 For reading values, we have "native read (state)" and "modified read (getters). Next, we will introduce how to modify the value!
 
-第四步，了解如何修改值：Mutation
-====================
+# Step 4: Learn how to modify values: Mutation
 
-🤗 OK！首先恭喜你看到了这里，至此，我们已经成功访问到了 store 里面的值，接下来我来介绍一下怎么修改 state 里面的值。
+🤗 OK! Congratulations on getting to this point. So far, we have successfully accessed the value in the store. Next, I will introduce how to modify the value in the state.
 
-*   说到修改值，有的同学就会想到这样写：
+- When it comes to modifying values, some students will think of writing like this:
 
 ```
 // 错误示范
@@ -305,15 +299,15 @@ this.$store.state.XXX = XXX;
 
 ```
 
-🤪 首先，这里我先明确的说明：这是错误的写法！这是错误的写法！这是错误的写法！
+🤪 First of all, let me make it clear here: This is wrong! This is wrong! This is wrong!
 
-为什么上面是错误的写法？因为这个 store 仓库比较奇怪，你可以随便拿，但是你不能随便改，我举个例子：
+Why is the above wrong? Because this store repository is strange. You can take it at will, but you can't change it at will. Let me give you an example:
 
-🤔 假如你打开微信朋友圈，看到你的好友发了动态，但是动态里有个错别字，你要怎么办呢？你可以帮他改掉吗？当然不可以！我们只能通知他本人去修改，因为是别人的朋友圈，你是无权操作的，只有他自己才能操作，同理，在 vuex 中，我们不能直接修改仓库里的值，必须用 vuex 自带的方法去修改，这个时候，Mutation 闪亮登场了！
+🤔 If you open WeChat Moments and see that your friend has posted a dynamic, but there is a typo in the dynamic, what will you do? Can you help him correct it? Of course not! We can only notify him to modify it, because it is someone else's Moments, you have no right to operate, only he can operate it. Similarly, in vuex, we cannot directly modify the value in the warehouse, we must use vuex's own method to modify it. At this time, Mutation makes a shining debut!
 
-😬 把问题解释清楚之后，我们准备完成一个效果：我们先输出 state 中的 number 的默认值 0，然后我们在 vue 组件里通过提交 Mutations 改变 number 的默认值 0，改成我们想修改的值，然后再输出出来，这样就可以简单练习怎么使用 Mutations 了。不说废话，上代码。
+😬 After explaining the problem clearly, we are ready to complete an effect: we first output the default value 0 of number in state, and then we change the default value 0 of number to the value we want to modify by submitting mutations in the vue component, and then output it, so that we can simply practice how to use mutations. No more nonsense, on to the code.
 
-*   修改 store/index.js
+- Modify store/index.js
 
 ```
 import Vue from 'vue';
@@ -340,7 +334,7 @@ export default store;
 
 ```
 
-*   修改 App.vue
+- Modify App.vue
 
 ```
 <script>
@@ -356,14 +350,13 @@ export default {
 
 ```
 
-*   运行项目，查看控制台：
+- Run the project and check the console:
 
 ![](/img/icecms/202307/16.png.jpeg)
 
-*   🤡 以上是简单实现 mutations 的方法，是没有传参的，如果我们想传不固定的参数怎么办？接下来教你解决
-    
-*   修改 store/index.js
-    
+- 🤡 The above is a simple method to implement mutations, which does not pass parameters. What if we want to pass non-fixed parameters? Next, we will teach you how to solve it.
+
+- Modify store/index.js
 
 ```
 import Vue from 'vue';
@@ -392,7 +385,7 @@ export default store;
 
 ```
 
-*   修改 App.vue
+- Modify App.vue
 
 ```
 <script>
@@ -408,16 +401,15 @@ export default {
 
 ```
 
-*   运行项目，查看控制台：
+- Run the project and check the console:
 
 ![](/img/icecms/202307/17.png.jpeg)
 
-没有问题！
+No problem!
 
-*   注意：上面的这种传参的方式虽然可以达到目的，但是并不推荐，官方建议传递一个对象进去，这样看起来更美观，对象的名字你可以随意命名，但我们一般命名为 payload，代码如下：
-    
-*   修改 store/index.js
-    
+- Note: Although the above method of passing parameters can achieve the purpose, it is not recommended. The official recommendation is to pass an object in, which looks more beautiful. You can name the object as you like, but we usually name it payload. The code is as follows:
+
+- Modify store/index.js
 
 ```
 mutations: {
@@ -433,7 +425,7 @@ mutations: {
 
 ```
 
-*   修改 App.vue
+- Modify App.vue
 
 ```
 <script>
@@ -449,7 +441,7 @@ export default {
 
 ```
 
-*   此时可以得到和之前一样的效果，并且代码更加美观！
+- Now you can get the same effect as before, and the code is more beautiful!
 
 `😱 这里说一条重要原则：Mutations里面的函数必须是同步操作，不能包含异步操作！（别急，后面会讲到异步）`
 
@@ -457,9 +449,9 @@ export default {
 
 `😱 这里说一条重要原则：Mutations里面的函数必须是同步操作，不能包含异步操作！（别急，后面会讲到异步）`
 
-好的，记住这个重要原则，我们再说一个小技巧：
+Okay, remember this important principle, let's talk about a little trick:
 
-*   🤖 官方建议：就像最开始的 mapState 和 mapGetters 一样，我们在组件中可以使用 mapMutations 以代替 this.$store.commit('XXX')，是不是很方便呢？
+- 🤖 Official suggestion: Just like the initial mapState and mapGetters, we can use mapMutations in components instead of this.$store.commit('XXX'). Isn't it convenient?
 
 ```
 <script>
@@ -478,10 +470,9 @@ export default {
 
 ```
 
-*   此时可以得到和之前一样的效果，并且代码又美观了一点！
-    
-*   当然你也可以给它叫别名，取外号，就像这样：
-    
+- Now you can get the same effect as before, and the code is a little more beautiful!
+
+- Of course you can also give it an alias or nickname, like this:
 
 ```
 methods: {
@@ -491,19 +482,17 @@ methods: {
 
 ```
 
-*   🤔 OK，关于 Mutation 的介绍大致就是这样，另外你也掌握了在定义 mutations 方法的时候有无参数应该怎么写；并且听取了官方建议，使用 mapMutations 解构到你的组件内部的 methods 里，这样你就可以很简单的使用 mutations 方法啦！
-    
-*   🤪 上面提到，Mutations 只能进行同步操作，所以，我们马上开始下一节，看看使用 Actions 进行异步操作的时候应该注意什么！
-    
+- 🤔 OK, that’s about it for the introduction to Mutation. In addition, you have also mastered how to write with or without parameters when defining mutation methods. And you have listened to the official advice and used mapMutations to deconstruct into the methods inside your component, so that you can easily use mutation methods!
 
-第五步，了解异步操作：Actions
-==================
+- 🤪 As mentioned above, Mutations can only perform synchronous operations, so let’s start the next section right away to see what we should pay attention to when using Actions for asynchronous operations!
 
-😆 OK！本节我们来学习使用 Actions，Actions 存在的意义是假设你在修改 state 的时候有异步操作，vuex 作者不希望你将异步操作放在 Mutations 中，所以就给你设置了一个区域，让你放异步操作，这就是 Actions
+# Step 5: Understand asynchronous operations: Actions
 
-😛 我们直接上一个代码
+😆 OK! In this section, we will learn to use Actions. The purpose of Actions is to assume that you have asynchronous operations when modifying the state. The author of Vuex does not want you to put asynchronous operations in Mutations, so he set up an area for you to put asynchronous operations. This is Actions.
 
-*   修改 store/index.js
+😛 Let's go straight to the code
+
+- Modify store/index.js
 
 ```
 const store = new Vuex.Store({
@@ -534,7 +523,7 @@ const store = new Vuex.Store({
 
 ```
 
-*   修改 App.vue
+- Modify App.vue
 
 ```
 async mounted() {
@@ -546,15 +535,15 @@ async mounted() {
 
 ```
 
-*   运行项目，查看控制台：
+- Run the project and check the console:
 
 ![](/img/icecms/202307/18.png.jpeg)
 
-🤓 看了例子，是不是明白了，action 就是去提交 mutation 的，什么异步操作都在 action 中消化了，最后再去提交 mutation 的。
+🤓 After reading the example, do you understand that action is used to submit mutations? All asynchronous operations are digested in action, and finally the mutation is submitted.
 
-😼 当然，你可以模仿 mutation 进行传参，就像下面这样：
+😼 Of course, you can imitate mutation to pass parameters, like this:
 
-*   修改 store/index.js
+- Modify store/index.js
 
 ```
 actions: {
@@ -572,7 +561,7 @@ actions: {
 
 ```
 
-*   修改 App.vue
+- Modify App.vue
 
 ```
 async mounted() {
@@ -584,13 +573,13 @@ async mounted() {
 
 ```
 
-*   运行项目，查看控制台
+- Run the project and view the console
 
 ![](/img/icecms/202307/19.png.jpeg)
 
-没有任何问题！
+No problem!
 
-*   🤖 官方建议 1：你如果不想一直使用 this.$store.dispatch('XXX') 这样的写法调用 action，你可以采用 mapActions 的方式，把相关的 actions 解构到 methods 中，用 this 直接调用：
+- 🤖 Official suggestion 1: If you don't want to always use this.$store.dispatch('XXX') to call actions, you can use mapActions to deconstruct related actions into methods and call them directly with this:
 
 ```
 <script>
@@ -608,7 +597,7 @@ export default {
 
 ```
 
-当然，你也可以取别名，取外号，就像下面这样：
+Of course, you can also give it an alias or nickname, like this:
 
 ```
 ...mapActions({ setNumAlias: 'setNum' }),   // 赋别名的话，这里接收对象，而不是数组
@@ -616,7 +605,7 @@ export default {
 
 ```
 
-*   🤖 官方建议 2：在 store/index.js 中的 actions 里面，方法的形参可以直接将 commit 解构出来，这样可以方便后续操作：
+- 🤖 Official suggestion 2: In actions in store/index.js, the method parameters can directly deconstruct commit, which can facilitate subsequent operations:
 
 ```
 actions: {
@@ -634,24 +623,23 @@ actions: {
 
 ```
 
-*   🤠 OK，看到这里，你应该明白 action 在 vuex 的位置了吧，什么时候该用 action，什么时候不用它，你肯定有了自己的判断，最主要的判断条件就是我要做的操作是不是异步，这也是 action 存在的本质。当然，你不要将 action 和 mutation 混为一谈，action 其实就是 mutation 的上一级，在 action 这里处理完异步的一些操作后，后面的修改 state 就交给 mutation 去做了。
+- 🤠 OK, after reading this, you should understand the position of action in vuex. You must have your own judgment on when to use action and when not to use it. The most important judgment condition is whether the operation I want to do is asynchronous, which is also the essence of the existence of action. Of course, you should not confuse action with mutation. Action is actually the parent level of mutation. After processing some asynchronous operations in action, the subsequent modification of state is left to mutation.
 
-第六步，按属性进行拆分
-===========
+# Step 6: Split by attributes
 
-🤯 接下来我们想象一下，目前我们介绍的 store/index.js 里面的内容是非常少的，如果你是一个稍微有些规格的项目，那么你将会得到一个成百上千行的 index.js，然后查找一些东西就会非常费劲，我们建议你的一个文件内的行数尽量不要超过 200 行，不然对于调试来说没有好处。既然问题出来了，我们看一下怎么拆分一下。
+🤯 Next, let's imagine that the content of store/index.js we introduced so far is very small. If you are a slightly larger project, you will get an index.js with hundreds or thousands of lines, and it will be very difficult to find something. We recommend that the number of lines in your file should not exceed 200, otherwise it will not be good for debugging. Now that the problem has come up, let's see how to split it up.
 
-🤒 我们看到，一个 store/index.js 里面大致包含 state/getters/mutations/actions 这四个属性，我们可以彻底点，index.js 里面就保持这个架子，把里面的内容四散到其他文件中。
+🤒 We can see that a store/index.js contains roughly four properties: state/getters/mutations/actions. We can be thorough and keep this framework in index.js and spread the contents to other files.
 
 ![](/img/icecms/202307/20.png)
 
-于是我们可以这样拆分：
+So we can split it like this:
 
-新建四个文件，分别是`state.js` `getters.js` `mutations.js` `actions.js`：
+Create four new files, namely `state.js` `getters.js` `mutations.js` `actions.js` :
 
 ![](/img/icecms/202307/21.png)
 
-*   1.  拆出来`state`放到`state.js`中：
+- 1. Remove `state` and put it in `state.js` :
 
 ```
 // state.js
@@ -669,7 +657,7 @@ export const state = {
 
 ```
 
-*   2.  拆出来`getters`放到`getters.js`中：
+- 1. Remove `getters` and put them in `getters.js` :
 
 ```
 // getters.js
@@ -683,7 +671,7 @@ export const getters = {
 
 ```
 
-*   3.  拆出来`mutations`放到`mutations.js`中：
+- 1. Separate `mutations` and put them in `mutations.js` :
 
 ```
 // mutations.js
@@ -697,7 +685,7 @@ export const mutations = {
 
 ```
 
-*   4.  拆出来`actions`放到`actions.js`中：
+- 1. Remove `actions` and put them in `actions.js` :
 
 ```
 // actions.js
@@ -716,7 +704,7 @@ export const actions = {
 
 ```
 
-5.  组装到主文件里面：
+1. Assemble into the main file:
 
 ```
 import Vue from 'vue';
@@ -744,26 +732,25 @@ export default store;
 
 ```
 
-🤓 以上就是简单的进行了按属性进行拆分 store 里面的代码，这样就比较清晰了哈，你需要加什么就去哪里加，大家各干各的，互不影响。
+🤓 The above is a simple split of the store code by attributes. This makes it clearer. You can add whatever you need. Everyone does their own work without affecting each other.
 
-当然，你完全可以不这么做，引用官方文档中的一句话，“**需要多人协作的大型项目中，这会很有帮助。但如果你不喜欢，你完全可以不这样做**”。
+Of course, you don't have to do this at all. To quote a sentence from the official documentation, " **This can be very helpful in large projects that require multi-person collaboration. But if you don't like it, you don't have to do it at all** ."
 
-第七步，按功能进行拆分 - Module
-====================
+# Step 7: Split by function - Module
 
-😜 上面我们介绍如何拆分项目，采用的是按**属性**的方式去拆分，将 getters/actions/mutations 等属性拆分到不同的文件中。
+😜 Above we introduced how to split the project. We split it by **attributes** , splitting getters/actions/mutations and other attributes into different files.
 
-接下来，我们介绍一下按另外的一个维度去拆分我们的 store，‘按**功能**’，按功能拆分的话，就是我们的标题 **Module(模块)** 。
+Next, let's introduce another dimension to split our store, 'by **function** '. If we split by function, it is our title **Module** .
 
-🤖 我们先来看下官方文档是怎么介绍 Module 的：
+🤖 Let's first take a look at how the official documentation introduces Module:
 
 ![](/img/icecms/202307/22.png)
 
-*   看了图中的描述，你或许已经区分了这里使用的**按功能拆分 Module** 和我们上次介绍的**按属性拆分**的异同了；就像图中的场景一样，我们有一个总 store，在这里面根据不同的功能，我们加了两个不同的 store，每个 store 里面维护自己的 state，以及自己的 actions/mutations/getters。
-    
-*   🤡 不说废话，我们用代码实现一下
-    
-*   1.  我们在之前的 store 上，增加一个新的仓库 store2，主要代码如下：
+- After reading the description in the figure, you may have distinguished the differences and similarities between **the module splitting by function** used here and **the splitting by attribute** we introduced last time; just like the scenario in the figure, we have a main store, in which we add two different stores according to different functions, and each store maintains its own state and its own actions/mutations/getters.
+
+- 🤡 Let’s stop talking nonsense and implement it with code
+
+- 1. We add a new warehouse store2 on the previous store. The main code is as follows:
 
 ```
 // store2.js
@@ -782,7 +769,7 @@ export default store2;
 
 ```
 
-*   2.  然后在 store 中引入我们新创建的 store2 模块：
+- 1. Then introduce our newly created store2 module in the store:
 
 ```
 import Vue from 'vue';
@@ -808,7 +795,7 @@ export default store;
 
 ```
 
-*   3.  访问 state - 我们在 App.vue 测试访问 store2 模块中的 state 中的 name，结果如下：
+- 1. Access state - We test access to the name in the state of the store2 module in App.vue, and the results are as follows:
 
 ```
 <template>
@@ -826,7 +813,7 @@ export default {
 
 ```
 
-我们通过下面的代码可以了解到在不同的属性里是怎么访问 **模块内的状态** 或者 **根状态**：
+We can see how to access the state or **root state** **in the module** in different properties through the following code:
 
 ```
 mutations: {
@@ -858,11 +845,10 @@ actions: {
 
 ```
 
-以上是对 module 的简单介绍，其实这里就是一种思想，分而治之，将复杂的进行拆分，可以更有效的管理。
+The above is a brief introduction to the module. In fact, this is a kind of thought, divide and conquer, split the complex, and manage it more effectively.
 
-其实以上并不是 module 的全部，还有一些比如`命名空间`、`模块注册全局 action`、`带命名空间的绑定函数`、`模块动态注册`、`模块重用`等方法这里就没介绍，如果你在项目中使用到了，再进行查阅即可，有时候不需要完全理解，知道有这个东西就行，知道出了问题的时候该去哪查资料就够啦。😊
+In fact, the above is not all about modules. There are some other methods such as`命名空间`,`模块注册全局action` ,`带命名空间的绑定函数`,`模块动态注册`,`模块重用`, etc. which are not introduced here. If you use them in your project, you can check them out. Sometimes you don’t need to fully understand them. Just know that they exist and where to look for information when problems arise. 😊
 
-第八步，总结
-======
+# Step 8. Summary
 
-🤗 好！大致对 vuex 的讲解就到这里了，看到这里你肯定对 vuex 不陌生了，你会安装它，配置它，读取 state 的值，甚至修饰读 (Getter)，然后你会修改里面的值了 (Mutation)，假如你有异步操作并且需要修改 state，那你就要使用 Action，这样，你就可以在你的项目中用起来 vuex 啦！加油吧！🤔
+🤗 OK! That’s the general explanation of vuex. You must be familiar with vuex now. You can install it, configure it, read the value of state, and even modify it (Getter). Then you can modify the value inside (Mutation). If you have asynchronous operations and need to modify the state, you have to use Action. In this way, you can use vuex in your project! Come on! 🤔

@@ -1,66 +1,64 @@
 ---
 id: idea_environment_config
-title: IDEA 开发环境准备
-sidebar_label: IDEA 开发环境准备
+title: IDEA development environment preparation
+sidebar_label: IDEA development environment preparation
 ---
 
-# IDEA 开发环境准备
+# IDEA development environment preparation
 
-## 1、jdk 配置
+## 1. jdk configuration
 
-jdk 的下载安装参考：[文档](/docs/project-code/environment/jdk-config)
+Download and install jdk reference: [Documentation](/docs/project-code/environment/jdk-config)
 
-在 IDEA 中配置 jdk
+Configure JDK in IDEA
 
-setting 是 idea 配置，Project Structure 是项目配置
+Setting is idea configuration, Project Structure is project configuration
 
 ![](/img/icecms/202302/jdk_image/img_2.png)
 
-点击 Project Structure 进入项目配置，选择你安装的 jdk,再点击 apply 应用
+Click Project Structure to enter the project configuration, select the JDK you installed, and then click Apply
 
 ![](/img/icecms/202302/jdk_image/img_3.png)
 
-点击 Modules,选择安装的 jdk,再点击应用
+Click Modules, select the installed jdk, and then click Apply
 
 ![](/img/icecms/202302/jdk_image/img_4.png)
 
-SDKs 的配置，选择你安装的 jdk
+SDKs configuration, select the jdk you installed
 
 ![](/img/icecms/202302/jdk_image/img_5.png)
 
-## 2、maven 配置
+## 2. Maven configuration
 
-maven 的下载安装参考：[文档](/docs/project-code/environment/maven_config.md)
+Download and install Maven: [Documentation](/docs/project-code/environment/maven_config.md)
 
-maven 在 IDEA 中的配置
+Maven configuration in IDEA
 
-打开 idea 中 setting，如下图所示：
+Open the setting in idea, as shown below:
 
 ![](/img/icecms/202302/maven_img/img_15.png)
 
-配置 maven 路径
+Configure Maven path
 
 ![](/img/icecms/202302/maven_img/img_16.png)
 
-## 3、tomcat 配置
+## 3. Tomcat configuration
 
+IDEA configures tomcat startup
 
-IDEA 配置 tomcat 启动
-
-
-第一步打开 idea，点击 Run -> EDit Configurations
+The first step is to open idea and click Run -&gt; EDit Configurations
 
 ![](/img/icecms/202302/tomcat_img/img_3.png)
 
-进去之后，点击 + 号，下拉选择 Tomcat Server -> local
+After entering, click the + sign, drop down and select Tomcat Server -&gt; local
 
 ![](/img/icecms/202302/tomcat_img/img_18.png)
 
-选择你下载的 tomcat 解压后的路径，
+Select the path where you unzipped the tomcat file you downloaded.
 
 ![](/img/icecms/202302/tomcat_img/img_19.png)
 
-再点击添加要部署的 war 包,再点击 apply 应用
+Then click Add war package to be deployed, and then click Apply
 
 ![](/img/icecms/202302/tomcat_img/img_22.png)
 
@@ -68,28 +66,28 @@ IDEA 配置 tomcat 启动
 
 ![](/img/icecms/202302/tomcat_img/img_23.png)
 
-配置完 Deployment,再来看 server,URL 地址已经被修改
+After configuring the Deployment, look at the server again, the URL address has been changed
 
 ![](/img/icecms/202302/tomcat_img/img_24.png)
 
-IDEA 启动配置的 tomcat 9
+IDEA starts the configured tomcat 9
 
 ![](/img/icecms/202302/tomcat_img/img_21.png)
 
-启动成功，控制台出现中文乱码问题
+The startup is successful, but Chinese garbled characters appear on the console
 
 ![](/img/icecms/202302/tomcat_img/img_25.png)
 
-打开：apache-tomcat-9.0.65 -> conf -> logging.properties
+Open: apache-tomcat-9.0.65 -&gt; conf -&gt; logging.properties
 
-找到下图所示内容注释掉，并在下面重新添加把 UTF-8 修改为 GBK
+Find the content shown in the figure below, comment it out, and add it again below to change UTF-8 to GBK
 
 ![](/img/icecms/202302/tomcat_img/img_26.png)
 
-重新启动 tomcat，控制台乱码问题解决
+Restart tomcat to solve the garbled console problem
 
 ![](/img/icecms/202302/tomcat_img/img_27.png)
 
-tomcat 启动成功
+tomcat started successfully
 
 ![](/img/icecms/202302/tomcat_img/img_28.png)

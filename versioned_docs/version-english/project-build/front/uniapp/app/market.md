@@ -1,92 +1,85 @@
 ---
 id: market
-title: 上架安卓应用市场所需资质汇总
-sidebar_label: 上架安卓应用市场所需资质汇总
+title: Summary of qualifications required for listing on Android App Market
+sidebar_label: Summary of qualifications required for listing on Android App Market
 ---
 
-# 上架安卓应用市场所需资质汇总
+# Summary of qualifications required for listing on Android App Market
 
-一、名词说明
-1. 计算机软件著作权证书
-      本资质是用于证明该APP版权所有，申请需提供源码文档、使用手册和申请表，营业执照等信息。
+1. Explanation of terms
 
+1. Computer Software Copyright Certificate This qualification is used to prove the copyright of the APP. Applicants need to provide source code documents, user manuals and application forms, business licenses and other information.
 
 ![ueditor_upload16251256346129581625125635.png](/img/icecms/202301/1736bdde357b20dd.png "ueditor_upload16251256346129581625125635.png")
 
+1. The APP electronic copyright certification certificate is the electronic version of the software copyright. You can apply for it on "Easy Copyright". It is recommended to apply immediately after getting the paper software copyright certificate. It takes about 15 days.
 
-2. APP电子版权认证证书
-      是软著的电子版本。可在“易版权”申请，建议拿到软著纸质证书后立刻申请，需要15天左右。
-3. 增值电信业务经营许可证书
-      简称ICP证书，涉及经营性网站均需要改资质，不同地区的申请费用不同。
-      以上资质申请，短说官方均可提供代理申请服务，具体咨询客服。
+2. The Value-added Telecommunications Business License is referred to as the ICP Certificate. All commercial websites need to change their qualifications. The application fees vary in different regions. For the above qualification applications, the official website of Duanshuo can provide agent application services. Please consult customer service for details.
 
-4. ICP备案
-      指域名备案，域名备案主体和软著等证书主体需一致。
-3.《安全评估报告》
-      在全国互联网安全服务管理平台直接申请，具体操作参考如下：https://www.yuque.com/thisky/ulwd0g/iupn17
- 
-二、各大应用市场所需资质
+3. ICP filing refers to domain name filing. The domain name filing entity and the software copyright and other certificate entities must be consistent. 3. "Security Assessment Report" Apply directly on the National Internet Security Service Management Platform. The specific operation reference is as follows: https://www.yuque.com/thisky/ulwd0g/iupn17
 
-1.华为应用市场
+2. Qualifications required by major application markets
 
-（1）免责函.zip（华为官方有模板，可以下载）
+1. Huawei AppGallery
 
-（2）《计算机软件著作权证书》或《APP电子版权证书》
+(1) Disclaimer.zip (Huawei has a template that can be downloaded)
 
-（3）如涉及经营性信息服务，提供增值电信业务经营许可证
+(2) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certificate"
 
-（4）ICP备案截图加盖公章
+(3) If it involves commercial information services, provide a value-added telecommunications business license
 
-（5）《安全评估报告》加盖公章
+(4) Screenshot of ICP filing with official seal
 
-（6）《安全评估报告》在全国互联网安全服务管理平台的提交结果截图
+(5) Safety Assessment Report is stamped with the official seal
 
-2.OPPO
+(6) Screenshot of the submission result of the Security Assessment Report on the National Internet Security Service Management Platform
 
-（1）《计算机软件著作权证书》或《APP电子版权证书》
+2. OPPO
 
-（2）ICP备案
+(1) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certificate"
 
-3.Vivo
+(2) ICP filing
 
-（1）《计算机软件著作权证书》或《APP电子版权证书》
+3. Vivo
 
-（2）ICP备案
+(1) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certificate"
 
-（3）vivo承诺函
+(2) ICP filing
 
-4.腾讯应用宝
+(3) Vivo's letter of commitment
 
-（1）《营业执照》
+4. Tencent App Store
 
-（2）ICP许可证或ICP备案
+(1) Business License
 
-（3）《计算机软件著作权证书》或 《APP电子版权证书》
+(2) ICP license or ICP filing
 
-（4）《互联网信息服务安全承诺书》：互联网信息服务安全承诺书模板
+(3) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certificate"
 
-（5）《互联网信息服务安全评估报告》及在全国互联网安全服务管理平台的提交结果截图
+(4) "Internet Information Service Security Commitment Letter": Internet Information Service Security Commitment Letter Template
 
-5.360手机助手
+(5) Screenshot of the Internet Information Service Security Assessment Report and the submission results to the National Internet Security Service Management Platform
 
-（1）《APP电子版权认证证书》（软著的电子版）
+5.360 Mobile Assistant
 
-（2）《ICP证》（即增值电信业务经营许可证）
+(1) "APP Electronic Copyright Certification Certificate" (electronic version of software copyright)
 
-（3）《ICP备案证明》
+(2) ICP Certificate (i.e. Value-added Telecommunications Business License)
 
-6.小米应用商店
+(3) ICP Registration Certificate
 
-（1）《计算机软件著作权证书》或《APP电子版权认证证书》
+6. Xiaomi App Store
 
-（2）ICP证或ICP备案截图
+(1) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certification Certificate"
 
-（3）需提供《免责承诺函》通用
+(2) Screenshot of ICP certificate or ICP filing
 
-7.百度手机助手
+(3) A "Letter of Disclaimer" is required.
 
-（1）《计算机软件著作权证书》或《APP电子版权证书》
+7. Baidu Mobile Assistant
 
-（2）ICP备案
+(1) "Computer Software Copyright Certificate" or "APP Electronic Copyright Certificate"
 
-（3）营业执照
+(2) ICP filing
+
+(3) Business license

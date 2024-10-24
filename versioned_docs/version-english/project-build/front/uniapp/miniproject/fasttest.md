@@ -1,77 +1,67 @@
 ---
 id: fasttest
-title: 小程序首次提审操作指南
-sidebar_label: 小程序首次提审操作指南
+title: Mini Program First Review Operation Guide
+sidebar_label: Mini Program First Review Operation Guide
 ---
 
-# 小程序首次提审操作指南
+# Mini Program First Review Operation Guide
 
-> 小程序首次提审操作指南
-在开始小程序之前，需先注册一个小程序。
-如您有已认证的公众号（服务号），可参考腾讯官方的手册，在服务号中快速注册一个小程序。https://kf.qq.com/touch/wxappfaq/170427RRbmMr170427bIVryQ.html
-注册好后，请完成以下操作：
+> Mini Program First Review Operation Guide Before starting a mini program, you need to register a mini program. If you have a certified public account (service account), you can refer to Tencent's official manual to quickly register a mini program in the service account. https://kf.qq.com/touch/wxappfaq/170427RRbmMr170427bIVryQ.html After registration, please complete the following operations:
 
-## 1、小程序信息填写
+## 1. Fill in the mini program information
 
- 如果您的小程序是首次注册的，那么需要填写下小程序的基本信息，如名称、图标、描述、服务类目等。
+If you are registering your mini program for the first time, you need to fill in the basic information of the mini program, such as name, icon, description, service category, etc.
 
 ![image.png](/img/icecms/202301/1736bd28c35912c8.png "image.png")
 
-### 1.1 社交->社区/论坛
+### 1.1 Social -&gt; Community/Forum
 
- 服务类目的话，需要填写“社交->社区/论坛”，选择《非经营性互联网信息服务备案核准》，上传一张在ICP域名备案截图。但是该域名的主体需要和小程序的主体一致。（备案信息查询网站：https://beian.miit.gov.cn/#/Integrated/index），如下图实例即可
-![image-1.png](/img/icecms/202301/1736bd2d483408fc.png "image-1.png")
-![image-2.png](/img/icecms/202301/1736bd317feb1d27.png "image-2.png")
-实例
-## 2、填充内容
+For service category, you need to fill in "Social-&gt;Community/Forum", select "Non-profit Internet Information Service Registration Approval", and upload a screenshot of the ICP domain name registration. However, the subject of the domain name must be the same as the subject of the mini program. (Registration information query website: https://beian.miit.gov.cn/#/Integrated/index), as shown in the example below ![image-1.png](/img/icecms/202301/1736bd2d483408fc.png "image-1.png")![image-2.png](/img/icecms/202301/1736bd317feb1d27.png "image-2.png") Examples
 
-先确保小程序里的内容填充，没有什么页面是空白的；
-然后检查下内容里面是否还有带有明显的测试文案，如“测试”、“test”、“111222”。
+## 2. Fill in the content
 
-## 3、服务类目
+First, make sure that the content in the mini program is filled and no page is blank; then check whether there is any obvious test text in the content, such as "test", "test", "111222".
 
- 检查下小程序的服务类目有没有申请“社交->社区/论坛”。没有申请的话，可以去小程序详情那里进行添加，需要的资质可看1.1
-![image-3.png](/img/icecms/202301/1736bd3740e19257.png "image-3.png")
+## 3. Service categories
 
-## 4、小程序提审
+Check if the service category of the mini program has applied for "Social-&gt;Community/Forum". If not, you can add it in the mini program details. The required qualifications can be found in 1.1 ![image-3.png](/img/icecms/202301/1736bd3740e19257.png "image-3.png")
 
- 在“版本管理”那里找到“想天徐工”发布的版本，然后点击“提交审核”。
-![image-4.png](/img/icecms/202301/1736bd3c9b221d12.png "image-4.png")
-### 4.1 UGC场景信息安全说明
+## 4. Mini Program Review
 
-首次小程序提审的时候，没有刻意去填写UGC说明的话，会弹出去填写UGC说明的窗口。
-如下图填写即可。机制说明：使用平台建议的内容安全API，并且也有人工审核把关
-![image-5.png](/img/icecms/202301/1736bd3fa5e923a6.png "image-5.png")
-### 4.2 填写提交信息
+Find the version released by "Xiangtian Xugong" in "Version Management" and click "Submit for Review". ![image-4.png](/img/icecms/202301/1736bd3c9b221d12.png "image-4.png")
 
-没有特殊情况的话，选填的可以不用填写。
-版本描述那边写个“新版本提交”，“新增功能”等等，没什么硬性要求。
-填写好后，就可以提交审核了。
-![image-6.png](/img/icecms/202301/1736bd428578c566.png "image-6.png")
-### 4.3 更新用户隐私保护协议
-在提交版本信息的时候，可能会出现要求您更新隐私保护协议。您可根据下图进行填写，如果出现其他的收集要求可在相关售后群咨询我们。
-![image-7.png](/img/icecms/202301/1736bd4585295cf1.png "image-7.png")
+### 4.1 UGC scenario information security description
 
-## 5、发布
+If you do not fill in the UGC description when the Mini Program is first reviewed, a window will pop up to fill in the UGC description. Fill it in as shown below. Mechanism description: Use the content security API recommended by the platform, and there is also manual review and approval ![image-5.png](/img/icecms/202301/1736bd3fa5e923a6.png "image-5.png")
 
- 由于我们是社交类目，所以第一次提审的时间是1+7个自然日，1天的微信内部审核（实际可能就一两个小时），7天的属地网信部门二次审核，7天后会发通知，让您预上线，这时候您就可以登录到小程序平台的版本管理那里发布了。
- 后续再提审版本的话，就只需要重复填写下提交信息就是行，并且只有微信内部审核，不会进入二审。
+### 4.2 Fill in submission information
 
-## 附录：常见提审失败原因
-### 1、因类目原因导致失败
+If there are no special circumstances, you don't need to fill in the optional fields. Write "New version submission", "New features", etc. in the version description. There is no hard requirement. After filling it out, you can submit it for review. ![image-6.png](/img/icecms/202301/1736bd428578c566.png "image-6.png")
 
-#### 1.2 因缺少XXX类目导致审核失败
+### 4.3 Update User Privacy Protection Agreement
 
- 有些客户是有商城或者积分商城的，而该商城里上架了些食品、服饰等商品，这种就需要对应的添加类目了。有些类目是需要资质的，如果您没有达到该资质的要求，就需要下架处理，然后再提审。
-### 2、因没有接入安全api导致失败
+When submitting version information, you may be asked to update the privacy protection agreement. You can fill it out according to the picture below. If there are other collection requirements, you can consult us in the relevant after-sales group. ![image-7.png](/img/icecms/202301/1736bd4585295cf1.png "image-7.png")
 
- 我们系统实际是接入小程序提供的安全api接口的，但由于可能会存在打包失误导致没有接入，所以需要去测试校验下。
- 在小程序测试版里发布一篇以下内容的帖子。
+## 5. Release
 
-### 3、因有些界面没有内容导致失败
+Since we are a social category, the first review time is 1+7 natural days, 1 day of internal review by WeChat (actually it may take only one or two hours), 7 days of secondary review by the local cybersecurity and informatization department, and after 7 days, you will be notified to pre-release. At this time, you can log in to the version management of the mini program platform to release it. If you want to review the version later, you only need to fill in the submission information again, and it will only be reviewed by WeChat internally, and will not enter the second review.
 
-您需要去该界面那里填充点数据。
-如果是版块、频道这些的话，也可以先禁用掉，等审核通过了再放出来。
+## Appendix: Common reasons for failed trials
 
-### 4、因有测试数据导致失败
-您就需要去删掉相关测试内容，然后再检查下有没有其他的测试内容。
+### 1. Failure due to category reasons
+
+#### 1.2 Review failed due to lack of XXX category
+
+Some customers have a shopping mall or a points mall, and the mall has some food, clothing and other products on the shelves, which requires corresponding categories to be added. Some categories require qualifications. If you do not meet the qualification requirements, you need to remove the products from the shelves and then submit them for review.
+
+### 2. Failure due to lack of access to the security API
+
+Our system actually accesses the security API interface provided by the mini program, but due to packaging errors, it may not be connected, so we need to test and verify it. Post a post with the following content in the mini program beta version.
+
+### 3. Failure due to lack of content on some interfaces
+
+You need to go to this interface to fill in some data. If it is a section or channel, you can also disable it first and release it after it is approved.
+
+### 4. Failure due to test data
+
+You need to delete the relevant test content and then check whether there is other test content.

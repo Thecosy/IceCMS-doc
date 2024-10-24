@@ -1,19 +1,19 @@
 ---
 title: Introduction
-slug: /
+slug: "/"
 ---
 
 ## Project Overview
 
-IceCMS Uniapp Mini Program/H5/APP version is a social forum Q&A posting/BBS content management project based on a front-end and back-end separation architecture.
+IceCMS Uniapp Mini Program/H5/APP version is a social forum Q&amp;A posting/BBS content management project based on a front-end and back-end separation architecture.
 
 The project consists of the Uniapp user client (compatible with H5, WeChat Mini Program, and APP), the Vue-based admin panel (which includes complete RBAC permission handling and web pages), and the Java-based back-end.
 
-It is developed using the following technology stack: **SpringBoot2, MybatisPlus, Shiro, JWT, Redis, Vue, Uniapp, and MySQL5.7**.
+It is developed using the following technology stack: **SpringBoot2, MybatisPlus, Shiro, JWT, Redis, Vue, Uniapp, and MySQL5.7** .
 
 The project is available in both Open Source and Standard versions, and this documentation is for the Standard version, though parts of it are applicable to the Open Source version as well.
 
-(QQ Group: *951286996*)
+(QQ Group: *951286996* )
 
 **Official Website:** [https://doc.macwk.cc](https://doc.macwk.cc)
 
@@ -41,43 +41,50 @@ Not yet available.
 
 ### 4. Admin Panel:
 
-[https://www.macwk.cc/admin](https://www.macwk.cc/admin)  
-Account: `admin`  
-Password: `123123`
+[https://www.macwk.cc/admin](https://www.macwk.cc/admin)
+ Account: `admin`
+ Password: `123123`
 
 ## 🌈 IceCMS Content Management System 🍦 Changelog
 
 ### 2023-11-11
 
 #### New Features
+
 - **[New]** Added support for Next.js.
 - **[New]** SEO optimization.
 - **[New]** Added support for image hosting.
 
 #### Improvements
+
 - **[Improved]** UI enhancements.
 - **[Improved]** Switched the admin panel template.
 
 #### Bug Fixes
+
 - **[Fixed]** Resolved image upload errors in the admin panel.
 
 ### 2023-10-22
 
 #### New Features
+
 - **[New]** Added image upload functionality, allowing users to share moments in the community.
 - **[New]** Added support for more platforms, including a Mini Program version, making it easier for users to join discussions anywhere.
 
 #### Improvements
+
 - **[Improved]** Enhanced mobile interface for a better user experience.
 - **[Improved]** Optimized the admin panel for more efficient community management.
 - **[Improved]** Enhanced the comment system.
 
 #### Bug Fixes
+
 - **[Fixed]** Fixed several known bugs, improving system stability and security.
 
 ### 2023-09
 
 #### New Features
+
 - **[New]** Added membership features.
 - **[New]** Implemented points functionality.
 - **[New]** Membership purchase functionality.
@@ -87,6 +94,7 @@ Password: `123123`
 ### 2023-07
 
 #### New Features
+
 - **[New]** Implemented article "Like" functionality.
 - **[New]** Added temporary login email verification.
 - **[New]** Implemented user profile center.
@@ -95,12 +103,14 @@ Password: `123123`
 - **[New]** Enabled resource search and front-end categorization.
 
 #### Improvements
+
 - **[Improved]** Enhanced the article banner display.
 - **[Improved]** Set resource download pricing.
 
 ### 2023-05
 
 #### New Features
+
 - **[New]** Added upload progress bar for images.
 - **[New]** Implemented image-to-text conversion.
 - **[New]** Front-end login functionality.
@@ -108,6 +118,7 @@ Password: `123123`
 - **[New]** Enabled comments and view tracking.
 
 #### Improvements
+
 - **[Improved]** Implemented lazy loading for images.
 - **[Improved]** Enhanced comment display.
 - **[Improved]** Displayed user avatars in the top right after login.
@@ -115,6 +126,7 @@ Password: `123123`
 ### 2023-04
 
 #### Improvements
+
 - **[Improved]** Enabled user logout from the front end.
 - **[Improved]** Optimized the Planet front end.
 - **[Improved]** Added categorization and search features.
@@ -124,12 +136,14 @@ Password: `123123`
 ### 2023-02
 
 #### New Features
+
 - **[New]** Implemented Planet admin panel.
 - **[New]** Added membership levels and tags.
 - **[New]** Enabled group creation and user information management in the admin panel.
 - **[New]** Added resource "Like" and comment features.
 
 #### Improvements
+
 - **[Improved]** Optimized deletion to also remove related comments.
 - **[Improved]** Set up VUEX storage and resource download links.
 - **[Improved]** Enhanced the resource download page.

@@ -1,36 +1,30 @@
 ---
 id: flow
-title: 微信小程序流量主配置（可选）
-sidebar_label: 微信小程序流量主配置（可选）
+title: WeChat applet traffic main configuration (optional)
+sidebar_label: WeChat applet traffic main configuration (optional)
 ---
 
-# 微信小程序流量主配置（可选）
+# WeChat applet traffic main configuration (optional)
 
-## 1、开通流量主
+## 1. Open the traffic master
 
-点击“推广”里的“流量主”，进入到流量主。需满足三个条件才能开通。
-○
-累计独立访客（UV）不低于 1000
-○
-存在刷粉行为或有严重违规记录的小程序不予申请
-○
-同一个收款账户最多允许关联 50 个账号开户主体
+Click "Traffic Master" in "Promotion" to enter the Traffic Master. Three conditions must be met to activate. ○ The cumulative number of unique visitors (UV) is not less than 1,000 ○ Mini programs with fan-brushing behavior or serious violations will not be applied for ○ The same payment account is allowed to be associated with a maximum of 50 account opening entities
 
 ![image.png](/img/icecms/202301/1736bd9ac2088ac1.png "image.png")
 
+## 2. Create a new ad space
 
-## 2、新建广告位
+In "Ad Management", click "Create a New Ad Slot". ![image-1.png](/img/icecms/202301/1736bd9c2adcd866.png "image-1.png")
 
-在“广告管理”里“新建广告位”。
-![image-1.png](/img/icecms/202301/1736bd9c2adcd866.png "image-1.png")
+```
+选择广告位类型，其中“视频贴片广告”是没有用的，其他的六个类型都是可以选择的。“原生模板广告”的话，是自己DIY一个广告位样式。其他广告位的样式均可在右侧的手机模型中看到。
+最后填写下广告位名称，点击“确认”就生成了一个广告位。
+```
 
-	选择广告位类型，其中“视频贴片广告”是没有用的，其他的六个类型都是可以选择的。“原生模板广告”的话，是自己DIY一个广告位样式。其他广告位的样式均可在右侧的手机模型中看到。
-	最后填写下广告位名称，点击“确认”就生成了一个广告位。
 ![image-2.png](/img/icecms/202301/1736bd9d90360bb7.png "image-2.png")
 
+## 3. Get the ad slot ID
 
-## 3、获取广告位ID
-
-在“广告管理”页面里，选择不同类型的广告位，获取相关广告位的广告位ID。
+On the "Advertising Management" page, select different types of ad slots and obtain the ad slot IDs of the relevant ad slots.
 
 ![image-3.png](/img/icecms/202301/1736bd9f33dc3ea1.png "image-3.png")

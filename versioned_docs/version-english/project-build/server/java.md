@@ -1,80 +1,70 @@
 ---
 id: java
-title: java部署
-sidebar_label: java部署
+title: Java deployment
+sidebar_label: Java deployment
 ---
 
-# java部署
+# Java deployment
 
-线上部署：
+Online deployment:
 
-1.打包：
+1. Packaging:
 
-后端打包：
-先clean再install，找到target下的jar包上传到服务器。
-![alt icecms](/img/icecms/ac6bb5242adb7e09aa70f85c9c0ca54c.webp)
+Backend packaging: clean first and then install, find the jar package under the target and upload it to the server.![alt icecms](/img/icecms/ac6bb5242adb7e09aa70f85c9c0ca54c.webp)
 
-![alt icecms](/img/icecms/2796d0913cb67ebfd65c0d7463f37279.webp)
-![alt icecms](/img/icecms/8e1d97959f70fe46f098a276236971df.webp)
+![alt icecms](/img/icecms/2796d0913cb67ebfd65c0d7463f37279.webp)![alt icecms](/img/icecms/8e1d97959f70fe46f098a276236971df.webp)
 
-上传后执行：
+Execute after uploading:
 
-nohup java -jar project-fast.jar --spring.profiles.active=prod &
-即可运行后端服务。
+nohup java -jar project-fast.jar --spring.profiles.active=prod &amp; to run the backend service.
 
-uniapp H5打包：
+uniapp H5 packaging:
 
 ![alt icecms](/img/icecms/fa0a21316ab9719160b825413f52db40.webp)
 
-打包前记得utils/api.js下配置你的线上域名
+Before packaging, remember to configure your online domain name in utils/api.js
 
-![alt icecms](/img/icecms/769dc0fc97e9f3fe51baeae6cfeb7160.webp)
-后台管理系统打包：
+![alt icecms](/img/icecms/769dc0fc97e9f3fe51baeae6cfeb7160.webp) Backend management system packaging:
 
-![alt icecms](/img/icecms/92de25918db9f3a003db55fe91976943.webp)
-![alt icecms](/img/icecms/749f47fb948df9f3786c68e708c18132.webp)
+![alt icecms](/img/icecms/92de25918db9f3a003db55fe91976943.webp)![alt icecms](/img/icecms/749f47fb948df9f3786c68e708c18132.webp)
 
-2. 部署
+1. deploy
 
-（1）准备几个子域名（按你自己的需要来）
+(1) Prepare several subdomains (according to your needs)
 
-提示：如下的子域名前缀你可以自定义，我只是为了演示。
-后端api服务：api.xxx.com （这个必须有）
+Tip: You can customize the following subdomain prefixes, I just use it for demonstration. Backend API service: api.xxx.com (this is required)
 
-h5端：h5.xxx.com （如果你不需要h5用户端就不用）
+h5 client: h5.xxx.com (not required if you don’t need h5 client)
 
-后台管理系统: admin.xxx.com (这个必须有)
+Backend management system: admin.xxx.com (this is required)
 
-去阿里云或者腾讯云用你们公司（注意：如果你上线小程序必须用你公司的域名，h5不要求）已备案的域名申请SSL证书。需要申请的数目按如上要求。申请证书免费。
+Go to Alibaba Cloud or Tencent Cloud and apply for an SSL certificate using your company's registered domain name (note: if you launch a mini program, you must use your company's domain name, but h5 does not require it). The number of certificates you need to apply for is as required above. Applying for a certificate is free.
 
 ![alt icecms](/img/icecms/e069619ba193f1cc096292dcbd136f27.webp)
 
-（2）安装宝塔
+(2) Install the pagoda
 
-用宝塔部署要快点。本项目暂不支持容器部署。这是只说明宝塔部署。
-按照宝塔安装手册要求安装好以后，需要安装nginx，redis，mysql5.7。
+It is faster to use Baota deployment. This project does not support container deployment yet. This only explains Baota deployment. After installing according to the Baota installation manual, you need to install nginx, redis, and mysql5.7.
 
-还有java运行环境，打开黑窗口执行yum命令安装。不然jar包跑不起来。
-安装JDK 1.8 (yum -y install java-1.8.0-openjdk)
+There is also a java runtime environment. Open the black window and execute the yum command to install it. Otherwise, the jar package will not run. Install JDK 1.8 (yum -y install java-1.8.0-openjdk)
 
-然后创建站点
+Then create the site
 
 ![alt icecms](/img/icecms/1464db3701041c4df45d30bc81c0bc00.webp)
 
-下载ssl证书（用nginx版本）并填写
+Download the ssl certificate (using the nginx version) and fill in
 
 ![alt icecms](/img/icecms/a6ab6bdaec1aa6d6d3b7982d6a5799cc.webp)
 
-对于后端api服务域名api.xxx.com，需要配置nginx，直接看第（3）步。
-对于admin.xxx.com和h5.xxx.com，不用配置，只要按如下图指定目录即可。
+For the backend API service domain name api.xxx.com, you need to configure nginx, just go to step (3). For admin.xxx.com and h5.xxx.com, no configuration is required, just specify the directory as shown below.
 
 ![alt icecms](/img/icecms/20957d2cc869b6d6059a23d9ad186304.webp)
 
-（3）nginx配置
+(3) nginx configuration
 
 ![alt icecms](/img/icecms/fd3905933641df3a2ae552a7edc45762.webp)
 
-不要直接复制粘贴！！！对应的域名改成你自己的！！！主要就是该location/里面的代理端口。配置完成后，访问：api.xxx.com 出现如图所示即为配置成功。
+Do not copy and paste directly!!! Change the corresponding domain name to your own!!! The main thing is the proxy port in the location/. After the configuration is completed, visit: api.xxx.com. If the figure shows up, the configuration is successful.
 
 ```json
 
@@ -140,7 +130,7 @@ server
     # {
     #     expires      12h;
     #     error_log off;
-    #     access_log /dev/null; 
+    #     access_log /dev/null;
     # }
   location / {
 		proxy_pass http://127.0.0.1:8080;
@@ -156,5 +146,4 @@ server
 }
 ```
 
-访问接口进行测试
-api接口文档地址：http://你的ip地址:8181/doc.html
+Access the interface to test the API interface document address: http://your ip address:8181/doc.html

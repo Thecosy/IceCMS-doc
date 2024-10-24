@@ -1,20 +1,20 @@
 ---
 id: maven_config
-title: Maven 下载及配置
-sidebar_label: Maven 下载及配置
+title: Maven download and configuration
+sidebar_label: Maven download and configuration
 ---
 
-# Maven 下载及配置
+# Maven download and configuration
 
+## 1. Maven download
 
-## 1、Maven 下载
-Maven 官网地址：[https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
+Maven official website address: [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
 
-进入 Maven 官网，点击 archives 
+Go to the Maven official website and click archives
 
 ![](/img/icecms/202302/maven_img/img.png)
 
-下载版本 3.6.2
+Download version 3.6.2
 
 ![](/img/icecms/202302/maven_img/img_1.png)
 
@@ -22,85 +22,86 @@ Maven 官网地址：[https://maven.apache.org/download.cgi](https://maven.apach
 
 ![](/img/icecms/202302/maven_img/img_3.png)
 
-找到下载的压缩包并解压
+Find the downloaded compressed package and unzip it
 
 ![](/img/icecms/202302/maven_img/img_4.png)
 
-## 2、配置环境变量
+## 2. Configure environment variables
 
-在电脑左下角搜索框输入：控制面板
+In the search box on the lower left corner of the computer, enter: Control Panel
 
 ![](/img/icecms/202302/jdk_image/jdk_8.png)
 
-控制面板 -> 系统与安全 -> 系统
+Control Panel -&gt; System and Security -&gt; System
 
 ![](/img/icecms/202302/jdk_image/jdk_9.png)
 
-高级系统设置 -> 高级 -> 环境变量
+Advanced System Settings -&gt; Advanced -&gt; Environment Variables
 
 ![](/img/icecms/202302/jdk_image/jdk_10.png)
 
-新建环境变量，变量名为 MAVEN_HOME，变量值为 maven 解压后所在的路径
+Create a new environment variable named MAVEN_HOME and set the value to the path where Maven is unzipped.
 
 ![](/img/icecms/202302/maven_img/img_5.png)
 
-双击 Path，进入界面后，点击编辑文本
+Double-click Path, enter the interface, and click Edit Text
 
 ![](/img/icecms/202302/maven_img/img_6.png)
 
-## 3、验证 maven 是否安装配置成功
+## 3. Verify that Maven is installed and configured successfully
 
-按win+r 快捷键 打开命令窗口，输入 cmd 指令，点击确定
+Press the win+r shortcut key to open the command window, enter the cmd command, and click OK
 
 ![](/img/icecms/202302/jdk_image/img.png)
 
-输入查看版本指令：
+Enter the command to view the version:
 
-    mvn -version
+```
+mvn -version
+```
 
 ![](/img/icecms/202302/maven_img/img_7.png)
 
-setting 文件配置，自定义 maven 仓库（如果不自定义有默认的仓库）
+Setting file configuration, custom Maven repository (if not customized, there is a default repository)
 
-在磁盘中创建一个文件夹，名称为 maven_repository (可以自定义根据自己的习惯起名)。
+Create a folder on disk named maven_repository (you can customize the name according to your own habits).
 
 ![](/img/icecms/202302/maven_img/img_8.png)
 
-打开 maven 的安装目录，选择 conf 文件夹中的 setting.xml 文件
+Open the Maven installation directory and select the setting.xml file in the conf folder
 
 ![](/img/icecms/202302/maven_img/img_9.png)
 
-编辑文件 settings.xml
+Edit the file settings.xml
 
-找到 settings.xml 中的 localRepository 配置，修改成创建的 maven_repository 文件夹的目录
+Find the localRepository configuration in settings.xml and modify it to the directory of the created maven_repository folder
 
-如：D:\idea\maven\maven_repository
+For example: D:\idea\maven\maven_repository
 
 ![](/img/icecms/202302/maven_img/img_10.png)
 
-检验下是否已经设置成功，控制台输入：
+To check whether the settings have been successful, enter the following command in the console:
 
-    mvn help:system，
+```
+mvn help:system，
+```
 
 ![](/img/icecms/202302/maven_img/img_11.png)
 
 ![](/img/icecms/202302/maven_img/img_12.png)
 
-出现BUILD SUCCESS 说明执行成功
+If BUILD SUCCESS appears, it means the execution is successful.
 
-找到新建的maven_repository文件夹查看里面是否有 org 文件夹
+Find the newly created maven_repository folder and check if there is an org folder in it
 
-如果里面生成文件，即说明修改成功。
+If a file is generated inside, it means the modification is successful.
 
 ![](/img/icecms/202302/maven_img/img_13.png)
 
-修改 Maven 的下载镜像地址为阿里源
+Change the Maven download mirror address to Alibaba source
 
-安装好Maven时，要及时的修改Maven下载的镜像地址
+After installing Maven, you should promptly modify the mirror address downloaded by Maven
 
-这里添加的是阿里云中央镜像
+The image added here is the Alibaba Cloud Central Image
 
 ![](/img/icecms/202302/maven_img/img_14.png)
-
-
-

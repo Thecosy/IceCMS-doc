@@ -1,18 +1,16 @@
 ---
 id: config
-title: nuxt配置
-sidebar_label: nuxt配置
+title: nuxt configuration
+sidebar_label: nuxt configuration
 ---
 
-# 配置
+# Configuration
 
-Nuxt.js
-=======
+# Nuxt.js
 
-vue 单页应用要做 SEO， Nuxt.js 的 SSR 服务端渲染可以很好的做到，小米官网和掘金都有使用 Nuxt。
+If you want to do SEO for vue single-page applications, Nuxt.js's SSR server-side rendering can do it very well. Xiaomi's official website and Nuggets both use Nuxt.
 
-一、安装
-----
+## 1. Installation
 
 ```
 npx create-nuxt-app <项目名>
@@ -20,7 +18,7 @@ npx create-nuxt-app <项目名>
 
 ```
 
-在这可能有报一个错误：
+There may be an error reported here:
 
 ```
 npm ERR! code ENOLOCAL
@@ -33,17 +31,17 @@ Install for create-nuxt-app@latest failed with code 1
 
 ```
 
-原因是 node_cache 路径有空格
+The reason is that the node_cache path has spaces
 
-cmd 输入
-
-```
-npm config list 
-
+cmd input
 
 ```
+npm config list
 
-可以看到
+
+```
+
+You can see
 
 ```
 cache = "C:\Program Files\nodejs\node_cache"
@@ -52,7 +50,7 @@ prefix = "C:\Program Files\nodejs\node_global"
 
 ```
 
-再次输入
+Enter again
 
 ```
 "C:\Program~1\nodejs\node_cache"
@@ -60,7 +58,7 @@ prefix = "C:\Program Files\nodejs\node_global"
 
 ```
 
-如果改掉路径了直接创建项目：
+If you change the path and create the project directly:
 
 ```
 npx create-nuxt-app 项目名称
@@ -68,21 +66,19 @@ npx create-nuxt-app 项目名称
 
 ```
 
-后续会让选择一些框架和配置，参考 [www.nuxtjs.cn/guide/insta…](https://link.juejin.cn?target=https%3A%2F%2Fwww.nuxtjs.cn%2Fguide%2Finstallation "https://www.nuxtjs.cn/guide/installation")
+Later, you will be asked to choose some frameworks and configurations, refer to [www.nuxtjs.cn/guide/install](https://link.juejin.cn?target=https%3A%2F%2Fwww.nuxtjs.cn%2Fguide%2Finstallation "https://www.nuxtjs.cn/guide/installation")
 
-创建完成 输入 npm run dev 启动项目
+After the creation is complete, enter npm run dev to start the project.
 
 ![](/img/icecms/202307/1.png)
 
-二、路由
-----
+## 2. Routing
 
-#### 1、路由跳转
+#### 1. Route jump
 
 ![](/img/icecms/202307/2.png)
 
-
-nuxt 路由跳转标签 nuxt-link 会渲染成 a 标签
+nuxt routing jump label nuxt-link will be rendered as a label
 
 ```
 <nuxt-link to="/">首页</nuxt-link>
@@ -90,9 +86,9 @@ nuxt 路由跳转标签 nuxt-link 会渲染成 a 标签
 
 ```
 
-#### 2、嵌套路由
+#### 2. Nested Routes
 
-nuxt 会将 pages 文件夹下 vue 文件自动生成路由， 可以再. nuxt 文件夹下 router.js 看到生成的路由文件
+nuxt will automatically generate routes for the vue files in the pages folder. You can see the generated routing files in router.js in the nuxt folder.
 
 ```
 pages/
@@ -104,30 +100,29 @@ pages/
 
 ```
 
-index.vue 文件中要有标签显示子路由页面
+The index.vue file should have a tag to display the sub-route page
 
-子路由要放在父页面同名的文件夹下。
+Subroutes should be placed in a folder with the same name as the parent page.
 
 ![](/img/icecms/202307/3.png)
 
 ![](/img/icecms/202307/4.png)
 
-#### 3、动态路由
+#### 3. Dynamic Routing
 
-在 Nuxt.js 里面定义带参数的动态路由，需要创建对应的**以下划线作为前缀**的 Vue 文件 或 目录。
+To define dynamic routes with parameters in Nuxt.js, you need to create corresponding Vue files or directories **with an underscore as the prefix** .
 
-命名的文件或目录为参数名 
+The named file or directory is the parameter name
 
 ![](/img/icecms/202307/5.png)
 
 ![](/img/icecms/202307/6.png)
 
-三、插件的引入
--------
+## 3. Introduction of plugins
 
-### Nuxt 中使用 scss
+### Using scss in Nuxt
 
-使用 npm 安装
+Install using npm
 
 ```
 npm install --save-dev node-sass sass-loader@10 fibers @nuxtjs/style-resources
@@ -135,7 +130,7 @@ npm install --save-dev node-sass sass-loader@10 fibers @nuxtjs/style-resources
 
 ```
 
-在 nuxt.config.js 文件中配置
+Configure in nuxt.config.js file
 
 ```
 buildModules: [
@@ -153,17 +148,17 @@ styleResources: {
 
 ```
 
-重新运行一下项目 npm run dev 即可使用
+Re-run the project npm run dev to use it
 
-### Nuxt 中使用 echarts
+### Using echarts in Nuxt
 
-npm 引入
+npm import
 
 `npm install echarts`
 
-#### 配置
+#### Configuration
 
-在 plugins 中新建一个 js 文件
+Create a new js file in plugins
 
 echarts.js:
 
@@ -176,7 +171,7 @@ Vue.prototype.$echarts = echarts // 引入组件（将echarts注册为全局）
 
 ```
 
-nuxt.config.js 配置
+nuxt.config.js configuration
 
 ```
 plugins: [
@@ -186,7 +181,7 @@ plugins: [
 
 ```
 
-#### 使用
+#### use
 
 ```
 let radarChart = this.$echarts.init(document.getElementById("ElementId"));
@@ -195,14 +190,13 @@ radarChart.setOption(...);
 
 ```
 
-四、asyncData 获取数据
-----------------
+## 4. asyncData gets data
 
-#### 1、基本使用
+#### 1. Basic use
 
-asyncData return 里面定义的双向绑定的数据; 因为在组件渲染前执行 asyncData, 所以在里面不能获取 this。
+The two-way binding data defined in asyncData return; because asyncData is executed before the component is rendered, this cannot be obtained in it.
 
-axios 使用 nuxt 推荐使用他内置的 [axios.nuxtjs.org/](https://link.juejin.cn?target=https%3A%2F%2Faxios.nuxtjs.org%2F "https://axios.nuxtjs.org/")。
+Axios uses nuxt. It is recommended to use its built-in [axios.nuxtjs.org/](https://link.juejin.cn?target=https%3A%2F%2Faxios.nuxtjs.org%2F "https://axios.nuxtjs.org/") .
 
 ```
 async asyncData({$axios}) {
@@ -217,11 +211,11 @@ async asyncData({$axios}) {
 
 ```
 
-#### 2、无法验证证书错误
+#### 2. Unable to verify certificate error
 
 `如果接口是http公网IP地址的形式， 有可能会报无法验证证书错误`
 
-在 plugins 下面新建 js 文件
+Create a new js file under plugins
 
 ```
 //解决接口无法验证证书问题
@@ -235,7 +229,7 @@ export default function ({ $axios }) {
 
 ```
 
-nuxt.config.js 配置
+nuxt.config.js configuration
 
 ```
 plugins: [
@@ -245,12 +239,11 @@ plugins: [
 
 ```
 
-五、nuxt 打包部署
------------
+## 5. Nuxt packaging and deployment
 
-#### 1、配置
+#### 1. Configuration
 
-在项目 package.json 配置， 位置和 scripts 同一级
+In the project package.json configuration, the location is at the same level as scripts
 
 ```
 "config": {
@@ -263,9 +256,9 @@ plugins: [
 
 ```
 
-运行 npm run build 命令打包；
+Run the npm run build command to package;
 
-然后将项目中这几个文件夹放在服务器站点上
+Then put these folders in the project on the server site
 
 ```
 -- .nuxt
@@ -276,12 +269,12 @@ plugins: [
 
 ```
 
-#### 2、可能报错
+#### 2. Possible error
 
-在服务器运行 npm i 时候有可能会报错误
+When running npm i on the server, an error may be reported
 
 ```
- ERROR 
+ ERROR
 ​
   Error: No SSR build! Please start with `nuxt start --spa` or build using `nuxt build --universal`
 ​
@@ -289,7 +282,7 @@ npm ERR! code ELIFECYCLE
 npm ERR! errno 1
 npm ERR! nuxt-ssr-demo@1.0.0 start: `PORT=7001 nuxt start`
 npm ERR! Exit status 1
-npm ERR! 
+npm ERR!
 npm ERR! Failed at the nuxt-ssr-demo@1.0.0 start script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 ​
@@ -299,33 +292,33 @@ npm ERR!     /root/.npm/_logs/2018-05-08T06_20_58_553Z-debug.log
 
 ```
 
-然后我的服务器负载就满了......
+Then my server was fully loaded...
 
-原因大概是 centos 的默认配置的虚拟内存不够导致的；
+The reason is probably that the default configuration of centos does not have enough virtual memory;
 
-可以参考 [github.com/jackieli123…](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fjackieli123723%2Fjackieli123723.github.io%2Fissues%2F59 "https://github.com/jackieli123723/jackieli123723.github.io/issues/59")
+You can refer to [github.com/jackieli123…](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fjackieli123723%2Fjackieli123723.github.io%2Fissues%2F59 "https://github.com/jackieli123723/jackieli123723.github.io/issues/59")
 
-也可以把部署的文件夹放在本地再运行 npm install 将生成的 node_moudles 压缩上传到服务器上（我是这么干的）；
+You can also put the deployed folder locally and run npm install to compress the generated node_modules and upload them to the server (this is what I did);
 
-打开文件夹所在位置的终端 输入 npm run start 运行；
+Open the terminal where the folder is located and enter npm run start to run;
 
-使用服务器公网 IP 测试访问：[http://IP 地址: 配置的端口 /](https://link.juejin.cn?target=http%3A%2F%2FIP%25E5%259C%25B0%25E5%259D%2580%3A%25E9%2585%258D%25E7%25BD%25AE%25E7%259A%2584%25E7%25AB%25AF%25E5%258F%25A3%2F "http://IP%E5%9C%B0%E5%9D%80:%E9%85%8D%E7%BD%AE%E7%9A%84%E7%AB%AF%E5%8F%A3/")
+Use the server's public IP to test access: [http://IP address: configured port/](https://link.juejin.cn?target=http%3A%2F%2FIP%25E5%259C%25B0%25E5%259D%2580%3A%25E9%2585%258D%25E7%25BD%25AE%25E7%259A%2584%25E7%25AB%25AF%25E5%258F%25A3%2F "http://IP%E5%9C%B0%E5%9D%80:%E9%85%8D%E7%BD%AE%E7%9A%84%E7%AB%AF%E5%8F%A3/")
 
-ps: 记得开放服务器防火墙，和宝塔安全规则
+ps: Remember to open the server firewall and Baota security rules
 
-但是当关闭当前终端的时候就访问不了了，
+But when you close the current terminal, you can no longer access it.
 
-可以使用 PM2 守护进程；
+You can use PM2 daemon;
 
-#### 3、PM2 守护进程
+#### 3. PM2 Daemon
 
-**安装**
+**Install**
 
-使用宝塔安装, 自带 node 环境；软件商店搜索 PM2 安装就行；
+Use pagoda to install, which comes with node environment; just search PM2 in software store to install;
 
-安装好之后新建站点将打包好的文件上传；
+After installation, create a new site and upload the packaged files;
 
-**运行**
+**run**
 
 ```
 pm2 start npm --name "项目名称" -- run start
@@ -333,44 +326,43 @@ pm2 start npm --name "项目名称" -- run start
 
 ```
 
-**其他相关命令**
+**Other related commands**
 
-pm2 list 显示所有进程
+pm2 list shows all processes
 
-`pm2 stop all` 停止所有进程
+`pm2 stop all` stops all processes
 
-`pm2 stop 0` 停止 id 为 0 的进程
+`pm2 stop 0` stops the process with id 0
 
-`pm2 delete 0` 删除 id 为 0 的进程
+`pm2 delete 0` deletes the process with id 0
 
-`pm2 startup` 创建开机自启动命令
+`pm2 startup` creates a boot-up command
 
-`pm2 restart all` 重启所有应用
+`pm2 restart all` restarts all applications
 
-六、nuxt SEO 初配置
---------------
+## 6. Initial configuration of nuxt SEO
 
-#### 1、关键词和标题
+#### 1. Keywords and titles
 
-这里以 bilibili 举例
+Here we take bilibili as an example
 
 ![](/img/icecms/202307/7.png)
 
-在 nuxt 中配置
+Configuration in nuxt
 
 ![](/img/icecms/202307/8.png)
 
-#### 2、sitemap 站点地图
+#### 2. Sitemap
 
-sitemap 就是网站上各网页的列表，可以让搜索引擎更快收录到资料库中。 一般是 xml 文件，百度的 txt 文件好像也可以；
+Sitemap is a list of web pages on a website, which allows search engines to index them faster. It is usually an XML file, but Baidu's TXT file seems to work too.
 
-**nuxt 中配置站点地图**
+**Configure sitemap in nuxt**
 
-安装 @nuxtjs/sitemap
+Install @nuxtjs/sitemap
 
 `npm i @nuxtjs/sitemap -D`
 
-在 nuxt.config.js 中添加进去
+Add it in nuxt.config.js
 
 ```
 modules: [
@@ -380,7 +372,7 @@ modules: [
 
 ```
 
-并在与 modules 同级添加配置
+And add configuration at the same level as modules
 
 ```
 ​
@@ -411,30 +403,30 @@ modules: [
 
 ```
 
-npm run dev 测试 会生成站点地图
+npm run dev test will generate a sitemap
 
 ![](/img/icecms/202307/9.png)
 
-配置参数查看官网 [www.npmjs.com/package/@nu…](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40nuxtjs%2Fsitemap%23usage "https://www.npmjs.com/package/@nuxtjs/sitemap#usage")
+For configuration parameters, please refer to the official website [www.npmjs.com/package/@nu…](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40nuxtjs%2Fsitemap%23usage "https://www.npmjs.com/package/@nuxtjs/sitemap#usage")
 
-#### 3、chrome 收录
+#### 3. Chrome included
 
-谷歌 seo 控制台 [search.google.com/search-cons…](https://link.juejin.cn?target=https%3A%2F%2Fsearch.google.com%2Fsearch-console%2Fwelcome%3Faction%3Dinspect%26utm_medium%3Dreferral%26utm_campaign%3D9012289 "https://search.google.com/search-console/welcome?action=inspect&utm_medium=referral&utm_campaign=9012289")
+Google SEO Console [search.google.com/search-cons…](https://link.juejin.cn?target=https%3A%2F%2Fsearch.google.com%2Fsearch-console%2Fwelcome%3Faction%3Dinspect%26utm_medium%3Dreferral%26utm_campaign%3D9012289 "https://search.google.com/search-console/welcome?action=inspect&utm_medium=referral&utm_campaign=9012289")
 
-第一次进去会验证网站的所有权
+The first time you enter, you will verify the ownership of the website
 
-将 google 给你生成的 html 文件放在 static 目录下就行
+Just put the HTML file generated by Google in the static directory
 
-**测试生成的站点地图是否可用**
+**Test whether the generated sitemap is usable**
 
 ![](/img/icecms/202307/10.png)
 
-在这输入输入 sitemap.xml 提交就行。
+Just enter the sitemap.xml here and submit it.
 
-**请求编入索引**
+**Request indexing**
 
 ![](/img/icecms/202307/11.png)
 
-接下来等待谷歌爬虫收录网站。
+Next, wait for Google crawler to index the website.
 
-排名和用户搜索点击量和网站内容相关。
+Rankings are related to user search clicks and website content.

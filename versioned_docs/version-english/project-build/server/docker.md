@@ -1,39 +1,31 @@
 ---
 id: docker
-title: docker部署
-sidebar_label: docker部署
+title: Docker deployment
+sidebar_label: Docker deployment
 ---
 
-# docker部署
+# Docker deployment
 
-本文主要以图文的形式讲解在Linux环境下的部署，涉及在Docker容器中安装MySQL，以及SpringBoot应用部署，基于CenterOS7.6。
+This article mainly explains the deployment in the Linux environment in the form of pictures and texts, involving the installation of MySQL in the Docker container and the deployment of SpringBoot applications based on CenterOS7.6.
 
-# Docker环境安装
-安装yum-utils：
+# Docker environment installation
 
-`yum install -y yum-utils device-mapper-persistent-data lvm2`
-为yum源添加docker仓库位置：
-`yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
+Install yum-utils:
 
-安装docker：
+`yum install -y yum-utils device-mapper-persistent-data lvm2` Add the docker repository location to the yum source: `yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
+
+Install docker:
 
 `yum install docker-ce`
 
-启动docker：
+Start Docker:
 
 `systemctl start docker`
 
-## 创建容器
-   1.运行Mysql容器
-    `docker run -d -p 0:3389 \
-    --name MySQL \
-    thecosy/icemysql:latest`
-    2.运行Spring容器
-    `docker run -d -p 8181:8181 \
-    --name springboot-admin \
-    --link MySQL:db \
-    thecosy/icecms:latest`
-说明：
--p 挂载的容器内的端口为8181，对应配置文件中声明的端口号
-# 访问接口进行测试
-api接口文档地址：http://你的ip地址:8181/doc.html
+## Create a container
+
+1. Run the Mysql container `docker run -d -p 0:3389 \ --name MySQL \ thecosy/icemysql:latest` 2. Run the Spring container `docker run -d -p 8181:8181 \ --name springboot-admin \ --link MySQL:db \ thecosy/icecms:latest` Note: -p The port in the mounted container is 8181, which corresponds to the port number declared in the configuration file
+
+# Access the interface for testing
+
+API interface document address: http://youripaddress:8181/doc.html

@@ -1,20 +1,20 @@
 ---
-title: 开发环境要求
+title: Development environment requirements
 ---
 
-# 部署环境要求
+# Deployment environment requirements
 
-# 服务端
+# Server
 
-|  运行环境 | 要求版本  |  推荐版本 |
-| ------------ | ------------ | ------------ |
-|  JDK |  >=1.8 |  1.8 |
-| Mysql  |  >=5.7 | 5.7  |
-| nginx或 apache  |  无限制 | 1.20.x  |
-| Redis  |  >=6.0 | 7.0.0  |
+Operating Environment | Required version | Recommended version
+--- | --- | ---
+JDK | &gt;=1.8 | 1.8
+Mysql | &gt;=5.7 | 5.7
+nginx or apache | No restrictions | 1.20.x
+Redis | &gt;=6.0 | 7.0.0
 
-# 前端
+# front end
 
-|  运行环境 | 要求版本  |  推荐版本 |
-| ------------ | ------------ | ------------ |
-|  Node.js |  >=14.18.1 |  14.18.1 |
+Operating Environment | Required version | Recommended version
+--- | --- | ---
+Node.js | &gt;=14.18.1 | 14.18.1
