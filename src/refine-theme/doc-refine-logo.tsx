@@ -1,6 +1,7 @@
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { openFigma } from "../utils/open-figma";
 
 interface Props {
@@ -8,6 +9,9 @@ interface Props {
 }
 
 export const DocRefineLogo = ({ className }: Props) => {
+    const location = useLocation();
+    const isEnglish = location.pathname.includes("english");
+
     return (
         <div
             className={clsx(
@@ -50,7 +54,7 @@ export const DocRefineLogo = ({ className }: Props) => {
                         "text-base font-normal",
                     )}
                 >
-                    文档
+                    {isEnglish ? "Docs" : "文档"}
                 </span>
             </Link>
         </div>
@@ -66,7 +70,12 @@ const Logo = (props: React.SVGProps<SVGSVGElement>) => (
         fill="none"
         {...props}
     >
-          <image x="0" y="0" width="22" height="22" xlinkHref="https://res.cloudinary.com/dxl1idlr5/image/upload/v1705229488/ai-image-3_v6qncz.png"></image>
-
+        <image
+            x="0"
+            y="0"
+            width="22"
+            height="22"
+            xlinkHref="https://res.cloudinary.com/dxl1idlr5/image/upload/v1705229488/ai-image-3_v6qncz.png"
+        />
     </svg>
 );

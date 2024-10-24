@@ -112,7 +112,7 @@ export const MENU_ITEMS: MenuItemType[] = [
         label: "关于",
         items: [
             {
-                label: "About Refine",
+                label: "About IceCMS",
                 description: "Team & company information.",
                 link: "/about",
                 icon: AboutUsIcon,

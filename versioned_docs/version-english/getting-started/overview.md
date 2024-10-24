@@ -47,6 +47,50 @@ Not yet available.
 
 ## 🌈 IceCMS Content Management System 🍦 Changelog
 
+### 2024-08-25
+
+#### New Features
+- 【New】Implemented password recovery feature
+- 【New】Added support for dark mode
+
+### 2024-06-06
+
+#### Improvements
+- 【Improved】Optimized the user interface on the mini-program version
+- 【Improved】Added a progress indicator for pull-to-refresh in circles
+
+### 2024-05-04
+
+#### New Features
+- 【New】Integrated payment configuration
+
+#### Security Enhancements
+- 【Security】Applied XSS injection attack filtering for APIs
+
+### 2024-04-01
+
+#### Security Enhancements
+- 【Security】Enhanced security validation for certain APIs
+
+#### New Features
+- 【New】Added new styling for backend features
+
+### 2024-03-12
+
+#### New Features
+- 【New】Avatar upload functionality is now available in the Pro version
+- 【New】Added support for image uploads
+- 【New】Implemented email verification feature
+
+### 2024-01-04
+
+#### Bug Fixes
+- 【Fixed】Resolved a bug related to checking if a file is published
+
+#### New Features
+- 【New】Added default avatar for new users
+- 【New】Enabled password change functionality
+
 ### 2023-11-11
 
 #### New Features
