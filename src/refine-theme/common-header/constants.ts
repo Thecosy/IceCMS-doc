@@ -54,7 +54,7 @@ export const MENU_ITEMS: MenuItemType[] = [
             {
                 label: "仓库",
                 description: "Gtihub存储库。",
-                link: "https://github.com/refinedev/awesome-refine",
+                link: "https://github.com/Thecosy/IceCMS",
                 icon: AwesomeIcon,
             },
             {
