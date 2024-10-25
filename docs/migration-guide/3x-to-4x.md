@@ -1,10 +1,7 @@
 ---
-title: Migrating from 3.x.x to 4.x.x
-sidebar_label: 3.x.x to 4.x.x
+title: Migrating from 2.x.x to 3.x.x
+sidebar_label: 2.x.x to 3.x.x
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import CodeBlock from '@theme/CodeBlock';
+## Introduction
 
-### Motivation behind the release
