@@ -27,6 +27,8 @@ function Home() {
                 <meta name="algolia-site-verification"  content="798BB9F15E5FBF3A" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3837281701440180"
      crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3837281701440180"
+     crossorigin="anonymous"></script>
                 <link
                     rel="preload"
                     href="https://refine.new/embed-form"
