@@ -206,16 +206,79 @@ module.exports = {
                 },
             ]
         },
-        // Migration Guide
-        {
-            type: "category",
-            label: "指南 🚀",
-            className: "category-as-header",
-            items: [
-                "migration-guide/3x-to-4x",
-                "migration-guide/auth-provider",
-                "migration-guide/router-provider",
-            ],
-        }
+                // Migration Guide
+                {
+                    type: "category",
+                    label: "Pro版",
+                    className: "category-as-header",
+                    items: [
+                        {
+                            type: "category",
+                            label: "购买",
+                            link: {
+                                type: "generated-index",
+                                title: "purchase",
+                                slug: "/purchase",
+                            },
+                            items: [
+                                "business/purchase/howtopurchase",
+                                "business/purchase/licensinginformation",
+                                "business/purchase/disclaimer",
+                                "business/purchase/rirghtsexplanation",
+                            ],
+                        },
+                        {
+                            type: "category",
+                            label: "用户",
+                            link: {
+                                type: "generated-index",
+                                title: "user",
+                                slug: "/user",
+                            },
+                            items: [
+                                "business/user/typicalusers",
+                              
+                            ],
+                        },
+                        {
+                            type: "category",
+                            label: "售后",
+                            link: {
+                                type: "generated-index",
+                                title: "aftersales",
+                                slug: "/aftersales",
+                            },
+                            items: [
+                                "business/aftersales/ticketfeedback",
+                              
+                            ],
+                        },
+                        {
+                            type: "category",
+                            label: "技术栈",
+                            link: {
+                                type: "generated-index",
+                                title: "techstack",
+                                slug: "/techstack",
+                            },
+                            items: [
+                                "business/techstack/techstack",
+                              
+                            ],
+                        },
+                    ],
+                },
+                // Migration Guide
+                {
+                    type: "category",
+                    label: "指南 🚀",
+                    className: "category-as-header",
+                    items: [
+                        "migration-guide/3x-to-4x",
+                        "migration-guide/auth-provider",
+                        "migration-guide/router-provider",
+                    ],
+                }
+
     ],
 };
