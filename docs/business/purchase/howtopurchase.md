@@ -10,15 +10,15 @@ sidebar_label: 如何购买
 
 ## 你可能关心的问题
 
-+   [体验一下TduckPro的功能](https://pro.tduckcloud.com/) 或者 [获取演示账号](https://doc.tduckcloud.com/functionDesc/account.html)
++   [体验一下IceCMSPro的功能](https://pro.tduckcloud.com/) 或者 [获取演示账号](https://doc.tduckcloud.com/functionDesc/account.html)
     
-+   [TduckPro使用了哪些技术栈？](https://doc.tduckcloud.com/buyPro/technology.html)
++   [IceCMSPro使用了哪些技术栈？](https://doc.tduckcloud.com/buyPro/technology.html)
     
 +   [需要遵循的权益规则？](https://doc.tduckcloud.com/buyPro/authorize.html)
     
 +   [如果出现bug问题，应该怎么进行反馈处理？](https://doc.tduckcloud.com/buyPro/workOrder.html)
     
-+   [想查看一下TduckPro的全量功能清单 >>](https://docs.qq.com/sheet/DSUhoR2pOc2RuZ0Va?tab=BB08J3)
++   [想查看一下IceCMSPro的全量功能清单 >>](https://docs.qq.com/sheet/DSUhoR2pOc2RuZ0Va?tab=BB08J3)
     
 
 ## 购买问题 Question
@@ -57,7 +57,7 @@ sidebar_label: 如何购买
 
 ### 8.是否包含移动端填写界面？
 
-首先，您需要了解一下 [TduckPro和TduckUniapp介绍](https://doc.tduckcloud.com/functionDesc/index.html) ，TduckPro默认套餐包含了H5填写功能，TduckUniapp为单独产品需要单独购买；Uniapp可以打包小程序/app进行表单管理和填写 [Uniapp使用说明](https://doc.tduckcloud.com/functionDesc/uniappDesc.html)
+首先，您需要了解一下 [IceCMSPro和IceCMSUniapp介绍](https://doc.tduckcloud.com/functionDesc/index.html) ，IceCMSPro默认套餐包含了H5填写功能，IceCMSUniapp为单独产品需要单独购买；Uniapp可以打包小程序/app进行表单管理和填写 [Uniapp使用说明](https://doc.tduckcloud.com/functionDesc/uniappDesc.html)
 
 ## 关于发票
 
