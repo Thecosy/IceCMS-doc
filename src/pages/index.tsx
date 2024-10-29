@@ -34,6 +34,7 @@ function Home() {
                     href="https://refine.new/embed-form"
                     as="document"
                 />
+                <script src="//code.tidio.co/x5phdqkzuehlfprdoggduqg9ggynxlwk.js" async></script>
             </Head>
             <CommonLayout description="Build React-based internal tools, admin panels, dashboards & B2B apps with unmatched flexibility.">
                 <div className={clsx()}>
