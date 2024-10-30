@@ -26,7 +26,7 @@ export const LandingFooter = () => {
                     "text-gray-900 dark:text-gray-0",
                 )}
             >
-                Refine Development Inc.
+                IceCMS Development Inc.
             </div>
             <div
                 className={clsx(
@@ -36,10 +36,10 @@ export const LandingFooter = () => {
                     "text-gray-600 dark:text-gray-400",
                 )}
             >
-                256 Chapman Road STE 105-4 Newark, DE 19702
+                版权所有©️誉天信息工作室
             </div>
             <a
-                href="mailto:info@refine.dev"
+                href="mailto:23339097@qq.com"
                 className={clsx(
                     "font-normal",
                     "text-sm",
@@ -49,7 +49,7 @@ export const LandingFooter = () => {
                     "hover:no-underline",
                 )}
             >
-                info@refine.dev
+                23339097@qq.com
             </a>
         </div>
     );
@@ -329,6 +329,8 @@ export const LandingFooter = () => {
                             "font-normal",
                         )}
                     >
+                                  <span><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2024042954号-2</a></span>
+
                         {
                             "© 2024, 从IceCMS出发，前往您所去的任何地方 "
                         }
