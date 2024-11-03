@@ -16,7 +16,7 @@ IceCMS管理后台使用前后端分离技术开发，在二次开发的时候�
 
 ![](/img/icecms/878c15b03c8c962179d858cbb0b3f03a.png)
 
-步骤2: node环境安装。 打开https://nodejs.org/en/download/releases/open in new window，下载对应的版本安装包，下载msi后缀文件，方便安装。node版本大于v14.18.0，避免编译出现未知错误。
+步骤2: node环境安装。 打开https://nodejs.org/en/download/releases/open in new window，下载对应的版本安装包，下载msi后缀文件，方便安装。node版本大于v14.18.0，推荐16.19.1，避免编译出现未知错误。
 
 ![](/img/icecms/6574c6100064cfa4e626daf43bbb5cec.png)
 

@@ -10,7 +10,7 @@ sidebar_label: 快速发布
 **一：搭建 nginx+node+npm+pm2 环境**
 
 我们的 nginx 版本是 1.12  
-node 版本是 v8.11.1  
+node 版本是 16.19.1
 npm 版本是 5.6.0  
 pm2 版本是 2.10.2
 
