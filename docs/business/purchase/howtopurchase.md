@@ -6,7 +6,7 @@ sidebar_label: 如何购买
 
 ## 购买步骤 step
 
-![](https://doc.tduckcloud.com/assets/img4.f18a8cda.png)
+<!-- ![](https://doc.tduckcloud.com/assets/img4.f18a8cda.png) -->
 
 ## 你可能关心的问题
 
