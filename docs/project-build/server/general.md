@@ -1,8 +1,11 @@
 ---
-id: java
-title: java部署
-sidebar_label: java部署
+id: general
+title: 通用部署②
+sidebar_label: 通用部署②
 ---
+### 说明 [](https://doc.likeadmin.cn/java/deployment/general.html#%E8%AF%B4%E6%98%8E)
+
+本系统部署需要启动两个服务，一个用户前台服务，一个管理后台服务。同时对应着两个域名。  
 
 # java部署
 

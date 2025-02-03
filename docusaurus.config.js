@@ -175,10 +175,14 @@ const siteConfig = {
         },
         image: "img/refine_social.png",
         algolia: {
-            appId: "GPWXCCSB9H",
-            apiKey: "824dfa995db5bc16b143e72cfe32d311",
+            appId: "KVC523MV4F",
+            apiKey: "4ba21bc1c5a4a6d9151a21a16ea10ade",
             indexName: "icecms",
-            contextualSearch: true,
+            // lang: "zh",
+            contextualSearch: false,
+            // searchPagePath: false,
+            // contextualSearch: false,
+            // searchParameters: {}
         },
         metadata: [
             {
