@@ -1,37 +1,39 @@
-IceCMS-doc
+# IceCMS-doc
 
+IceCMS-doc 是 IceCMS 项目的官方文档站点，基于 Docusaurus 2 构建。Docusaurus 2 是一个现代化且功能强大的静态站点生成器，专为轻松创建高质量的文档网站而设计。
 
-# Website
+## 安装
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+安装项目依赖：
 
-## Installation
-
-```console
+```bash
 yarn install
 ```
 
-## Local Development
+## 本地开发
 
-```console
+启动本地开发服务器：
+
+```bash
 yarn start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+此命令将启动本地开发服务器，并在默认浏览器中打开站点。大多数更改会即时生效，无需重启服务器。
 
-## Build
+## 构建
 
-```console
+构建生产环境的静态站点：
+
+```bash
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+此命令会在 `build` 目录中生成静态文件，可以使用任何静态站点托管服务进行部署。
 
-## Deployment
+## 部署
 
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+部署到 GitHub Pages：
+
+```bash
+GIT_USER=<你的 GitHub 用户名> USE_SSH=true yarn deploy
 ```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-

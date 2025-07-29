@@ -1,8 +1,152 @@
 ---
-title: 操作步骤
-sidebar_label: Migrating Router Provider
+title: 架构概述
+sidebar_label: 架构概述
 ---
 
-## Motivation behind the changes
+## 概述
 
-Our motivation behind the changes to `routerProvider` and route handling was to increase flexibility and ease of use.
+IceCMS 是一个现代化的内容管理系统，采用微服务启发式架构构建，旨在为内容发布、资源共享和社区互动提供一个强大的平台。本文档全面概述了 IceCMS 的架构、组件及其交互方式。
+
+## 架构设计
+
+IceCMS 遵循三层架构模式，明确区分以下层次：
+
+![](/img/architecture/1.png)
+
+1. **表示层**：负责用户界面和交互。
+2. **业务逻辑层**：处理核心业务逻辑。
+3. **数据层**：管理数据存储和访问。
+
+## 容器化与部署
+
+系统使用 Docker 进行容器化，便于各组件的部署和扩展。
+
+- 参考文件：`docker-compose.yml`、`pom.xml`
+
+## 后端架构
+
+IceCMS 的后端基于 Spring Boot (v2.3.5) 构建，采用模块化方法，清晰分离关注点：
+
+后端组织为两个主要模块：
+
+![](/img/architecture/2.png)
+
+
+1. **IceCMS-main**：包含主应用程序入口的核心应用模块。
+IceCMS-ment：包含大部分业务逻辑、控制器、服务和数据访问组件
+关键组件
+
+控制器：处理HTTP请求和响应，分为两类：
+
+后端控制器：面向管理员的内容管理API
+前端控制器：面向用户的内容消费API
+服务：实现文章、资源和用户管理等领域的业务逻辑
+
+映射器：使用MyBatis Plus ORM框架与数据库接口
+
+实体：表示数据库表和业务对象的Java POJO
+
+安全：使用Shiro框架和JWT进行认证和授权
+
+参考资料：IceCMS-ment结构，ShiroConfig.java
+
+前端架构
+
+IceCMS提供两个独立的前端应用：
+
+管理前端 (Vue.js)
+
+管理面板使用Vue.js和Element Plus构建，遵循现代组件化架构：
+
+![](/img/architecture/3.png)
+
+
+管理前端的主要功能包括：
+
+基于角色的访问控制
+内容管理界面
+用户管理
+系统设置
+资源管理
+参考资料：IceCMS-front-admin结构
+
+用户前端 (Nuxt3)
+
+用户界面网站使用Nuxt3构建，提供服务器端渲染功能，以优化SEO和性能：
+
+![](/img/architecture/4.png)
+
+
+用户前端提供的界面包括：
+
+内容浏览和消费
+用户认证
+评论和互动
+资源下载
+社区功能
+参考资料：IceCMS-front-nuxt3结构
+
+数据层
+
+数据库架构
+
+系统使用MySQL作为主要数据库，包含以下表：
+
+用户和认证
+文章和内容
+资源和文件
+评论和互动
+系统设置
+标签和分类
+外部存储
+
+大文件和媒体存储在腾讯云对象存储（COS）中，通过后端服务集成。
+
+参考资料：TencentCOS.java
+
+部署架构
+
+IceCMS使用Docker进行容器化，包含三个主要容器：
+
+![](/img/architecture/5.png)
+
+
+icecms-api：包含Spring Boot后端应用
+icecms-sql：运行MySQL数据库
+icecms-vue：通过Nginx提供前端应用
+这种容器化方法便于部署和扩展，并确保组件之间的清晰隔离。
+
+参考资料：docker-compose.yml
+
+集成点
+
+系统与多个外部服务集成：
+
+邮件服务：用于通知和用户通信
+腾讯云服务：
+云对象存储（COS）用于文件存储
+短信服务用于通知
+微信：用于认证和社交功能
+参考资料：MailUtils.java，TencentCloudSMSUtils.java，WeChatUtils.java
+
+通信流程
+
+系统中的典型请求流程：
+
+用户与前端（Vue或Nuxt3）交互
+前端向后端发起API调用
+后端控制器接收请求
+通过Shiro/JWT进行认证/授权
+控制器委托给相应的服务
+服务执行业务逻辑
+服务使用映射器与数据库交互
+响应通过链路返回给用户
+总结
+
+IceCMS采用现代化、模块化架构，明确区分前端、后端和数据层。容器化部署方法使其易于设置和扩展。系统设计允许：
+
+通过独立的前端应用区分管理员和用户关注点
+后端模块化，服务边界清晰
+灵活的数据存储，结合关系数据库和云对象存储
+安全的认证和授权
+这一架构为新功能扩展提供了坚实基础，同时保持了可维护性和性能。
