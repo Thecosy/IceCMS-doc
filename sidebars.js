@@ -84,8 +84,16 @@ module.exports = {
                                     type: "category",
                                     label: "小程序配置",
                                     items: [
+                                         "project-build/front/uniapp/miniproject/register",
+                                        "project-build/front/uniapp/miniproject/getAppSecret",
+                                        "project-build/front/uniapp/miniproject/setAppSecret",
+                                        "project-build/front/uniapp/miniproject/pay",
+                                        "project-build/front/uniapp/miniproject/payset",
                                         "project-build/front/uniapp/miniproject/fasttest",
                                         "project-build/front/uniapp/miniproject/flow",
+
+
+
                                     ],
                                 },
                                 {
