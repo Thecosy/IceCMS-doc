@@ -1,126 +1,158 @@
 ---
-id: auth-provider
-title: 常见问题
-sidebar_label: 常见问题
+title: 管理面板基础
+sidebar_label: 管理面板基础
 ---
 
-## 常见问题
+IceCMS管理面板提供了一个全面的管理界面，用于管理您的内容、用户、资源和系统设置。本指南将带您了解关键功能以及如何有效地导航管理界面。
 
-## 1.文件上传不了/图片不显示？
+## 访问管理面板
 
-请参照文档中的[文件存储配置](https://doc.tduckcloud.com/proDeploy/fileConfigure.html)，完成系统的文件上传设置后重试。
+要访问管理面板，请导航至您安装的管理URL（通常是your-domain.com/admin）。您将看到一个登录界面，需要输入您的管理员凭据。
 
-## 2.部署后访问表单出现 "系统未知错误，请反馈系统管理员"
+## 登录界面
 
-![](http://doc-oss.tduckcloud.com/doc/202302041331372.png)
+登录页面提供了几个选项：
 
-部署后访问表单出现此类问题时，请检查：系统配置>微信公众号参数是否已经完成配置，若没有配置请随意填写任意值，保存后刷新表单即可解决
+- **用户名/密码登录**：在主表单中输入您的管理员凭据
+- **主题切换**：使用右上角的开关在浅色和深色模式之间切换
+- **语言选择**：通过下拉菜单选择可用语言（英文/中文）
 
-![](http://doc-oss.tduckcloud.com/doc/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_02d60921-d90c-4a4d-a879-7007c86f5e70.png)
+## 仪表盘概览
 
-## 3.出现 appid 未配置？
+成功登录后，您将被引导至仪表盘（欢迎页面），该页面提供了您网站活动和性能指标的全面概览。
 
-+   首先在系统设置中检查是否正确配置了：已经认证的服务号
-+   检查微信公众号（服务号）后台是否配置了服务器域名/等参数
-+   参考文档：[微信公众号配置](https://doc.tduckcloud.com/proDeploy/othersConfigure.html)
+### 关键仪表盘元素
 
-## 4.访问前端，请求出现502？
+仪表盘显示了几项重要的数据可视化内容：
 
-一般为nginx未配置正确，请检查Ng的配置，文档地址：[pro部署](https://doc.tduckcloud.com/proDeploy/)
+- **统计卡片** - 显示关键指标，如用户数量、内容项、评论和产品，并带有趋势指示器
+- **分析概览** - 显示每周数据比较的条形图
+- **概率指示器** - 显示解决率的进度条
+- **数据统计** - 带有可过滤数据的详细表格
+- **最新活动** - 显示您网站上最近的操作和事件的时间线
 
-## 5.doc/tduck-pro.sql 里的默认用户密码是啥？
+## 主要导航区域
 
-admin/12345678
+管理面板分为几个主要部分，每个部分处理您内容管理系统不同的方面：
 
-## 6.sys\_notice没有这张表/数据库文件怎么执行？
+### 内容管理
 
-![4fd8e96c6826e9c1dba66d657ec1856.png](http://doc-oss.tduckcloud.com/doc/1642571966349-4b84fc31-65e2-4a27-9783-34ef8f47411e.png)
+此部分允许您管理网站上所有基于文本的内容：
 
-## 7.文件已经能存到阿里云的oss上，在前台点击查看文件的时候，系统提示404，请问这个问题有没有谁遇到过？
+- **文章列表**：查看、编辑或删除已发布的文章
+- **分类管理**：通过创建和管理分类来组织内容
+- **评论管理**：审核用户评论
+- **创建文章**：使用富文本编辑器添加新内容
 
-一定是域名配置有问题，请检查第三方参数与域名设置
+### 资源管理
 
-## 8.执行maven时候报错？
+处理多媒体和可下载资源：
 
-initializationError(com.tduck.cloud.activiti.service.impl.ActivitiExpressionTest): Invalid test class 'com.tduck.cloud.activiti.service.impl.ActivitiExpressionTest'😦..)  
-test(com.tduck.cloud.api.web.controller.system.ElasticsearchTest): Elasticsearch exception \[type=resource\_already\_exists\_exception, reason=index \[test001/TqWgcRKvT0G\_yN0is1Cylw\] already exists\]; nested exception is \[test001/TqWgcRKvT0G\_yN0is1Cylw\] ElasticsearchStatusException\[Elasticsearch exception \[type=resource\_already\_exists\_exception, reason=index \[test001/TqWgcRKvT0G\_yN0is1Cylw\] already exists\]\]  
-![image.png](http://doc-oss.tduckcloud.com/doc/1642561569011-5c1f715a-e79e-4d00-8717-dfbdb77c072e.png)  
-跳过单元测试即可
+- **资源列表**：管理已上传的文件和资源
+- **资源分类**：将资源组织到可浏览的分类中
+- **评论**：审核资源项上的评论
+- **创建资源**：上传和发布新资源
 
-## 9.点击文件的时候，先跳转这个网址，后面再报404错误？
+### 社区管理
 
-OSS域名没有配置域名的时候是不是没带https://
+管理社区功能和用户生成的内容：
 
-## 10.本地文件存储如何配置？
+- **分类管理**：组织社区部分
+- **社区管理**：审核社区帖子和活动
+- **内容管理**：审查和审核用户提交的内容
 
-![10dd410131513be3bf58716a6c23fca.png](http://doc-oss.tduckcloud.com/doc/1642561642893-117fb5e9-a4ba-43db-8062-27e34722d9b7.png)
+### 用户管理
 
-## 11.短信如何配置？
+控制用户账户和权限：
 
-以阿里云为例，首先到阿里云申请短信之后，需要将模板code填入tduck短信配置
+- **用户列表**：查看和管理注册用户
+- **管理员信息**：管理管理员账户
+- **角色管理**：定义用户角色和权限
 
-![1642571759(1).png](http://doc-oss.tduckcloud.com/doc/1642571762026-d4663513-9b24-4182-b407-f137c5c52c46.png)  
-再填入appkey、secret等参数即可
+### 商店管理
 
-## 12.在部署的时候vue端只能部署在ROOT目录下吗？
+如果启用了电子商务，管理您的在线商店：
 
-不是！可以自己改的，如图
+- **商店概览**：查看销售统计和性能指标
+- **订单管理**：处理和跟踪客户订单
+- **会员管理**：管理商店客户
+- **支付设置**：配置支付方式和选项
 
-![6bfdb49e88f0860e888b32529a186d3.png](http://doc-oss.tduckcloud.com/doc/1642572209140-2cb5fd31-7d94-44a4-9f6f-3012c25e1b68.png)
+### 系统设置
 
-## 13.数据库连接报错 什么url 密码不对 ？
+配置系统范围内的选项：
 
-首先检查指定的是哪个配置文件，然后检查密码和数据库地址是否正确
+- **网站信息**：设置一般网站信息和元数据
+- **标签设置**：管理用于内容组织的全局标签
+- **图片上传**：配置图片上传设置和存储选项
 
-![e147e6dd7d6cbae942c604c3a30af6b.png](http://doc-oss.tduckcloud.com/doc/1642572296113-60c5e5b2-ea4f-4bc6-932a-c915111aa17c.png)
+## 常见任务
 
+### 创建和编辑内容
 
-## 14.支持什么邮箱，exchange支持吗，腾讯邮箱支持吗？
+1. 导航至内容管理 → 创建文章
+2. 填写标题，选择分类，并添加标签
+3. 使用富文本编辑器创建带有格式、图片和链接的内容
+4. 发布前预览您的内容
+5. 点击“发布”使其上线，或点击“保存草稿”以供以后使用
 
-邮箱是通过\_SMTP 协议发送的，支持该协议的所有邮箱都支持\_
+### 管理用户
 
-## 15. 异常：`java.security.InvalidKeyException: Illegal key size`
+1. 转到用户管理 → 用户列表
+2. 通过姓名、电子邮件或注册日期搜索或过滤用户
+3. 点击用户以查看其详细信息
+4. 根据需要编辑用户信息、更改角色或停用账户
+5. 对于批量操作，选择多个用户并使用操作下拉菜单
 
-### 问题描述
+### 自定义网站设置
 
-代码出现以下异常：
+1. 导航至设置 → 网站信息
+2. 修改网站标题、描述、标志和其他品牌元素
+3. 配置SEO设置和社交媒体集成
+4. 保存更改以在整个网站应用
+### 使用数据表界面
 
-```
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wxPayController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wxPayServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'wxPayClient' defined in class path resource [com/ttice/icepayment/config/WxPayConfig.class]: Unsatisfied dependency expressed through method 'getWxPayClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getVerifier' defined in class path resource [com/ttice/icepayment/config/WxPayConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wechat.pay.contrib.apache.httpclient.auth.ScheduledUpdateCertificatesVerifier]: Factory method 'getVerifier' threw exception; nested exception is java.lang.IllegalArgumentException: java.security.InvalidKeyException: Illegal key size
-        at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-5.2.10.RELEASE.jar!/:5.2.10.RELEASE]
-```
+管理面板的许多部分使用数据表来显示和管理信息：
 
-### 问题原因
+- **搜索**：使用搜索框过滤结果
+- **过滤**：点击过滤图标显示高级过滤选项
+- **排序**：点击列标题按该列排序
+- **分页**：使用分页控件在不同结果页面之间导航
+- **批量操作**：使用复选框选择多个项目以一次性执行操作
+- **导出**：使用导出按钮将数据导出到CSV或Excel
+## 主题和语言偏好
 
-如果密钥大于 128 位，会抛出 `java.security.InvalidKeyException: Illegal key size` 异常。这是因为密钥长度受限制，Java 运行时环境读取的是受限的 `policy` 文件。这些文件位于 `${java_home}/jre/lib/security` 目录下，这种限制是由于美国对软件出口的控制。
+您可以通过以下方式自定义您的管理体验：
 
-### 解决方案
+- **更改主题**：使用顶部导航栏中的主题开关在浅色和深色模式之间切换
+- **设置语言**：从顶部栏中的语言下拉菜单选择您偏好的语言
 
-1. **下载 Oracle 官方的 JCE 文件（JDK 8 对应版本）**：
-   - 下载链接（可能需要登录 Oracle 账户）：[https://www.oracle.com/java/technologies/javase-jce8-downloads.html](https://www.oracle.com/java/technologies/javase-jce8-downloads.html)
+## 安全最佳实践
 
-2. **替换文件**：
-   - 解压下载的文件后，替换以下两个文件：
-     - `local_policy.jar`
-     - `US_export_policy.jar`
+为了维护管理面板的安全：
 
-3. **覆盖 JDK 路径下的目录**：
-   - 将上述文件覆盖到 `${JAVA_HOME}/jre/lib/security/` 目录下。
+- **使用强密码**：为所有管理员账户创建复杂、唯一的密码
+- **定期更新**：将您的IceCMS安装更新到最新版本
+- **会话管理**：不使用管理面板时请登出
+- **权限控制**：仅为每个管理员角色分配必要的权限
+- **访问日志**：定期审查管理员访问日志以发现可疑活动
+## 故障排除
 
-4. **重启项目**。
+常见问题及其解决方案：
 
-或者，可以采取以下替代方案：
+| 问题 | 解决方案 |
+|------|----------|
+| 登录问题 | 验证凭据，检查大写锁定，必要时使用密码重置 |
+| 仪表盘加载缓慢 | 检查网络连接，优化数据库，减少仪表盘小部件 |
+| 内容无法发布 | 验证您有发布权限，检查验证错误 |
+| 上传失败 | 检查文件大小限制，验证支持的文件格式，确保已配置存储 |
+## 下一步
 
-- **减少密钥长度**：
-  ```java
-  private static byte[] formatData(byte[] data) {
-      return DigestUtils.md5(data);
-  }
-  ```
+掌握管理面板的基础知识后，您可能想要探索：
 
-- **启用无限制强度管辖策略（适用于 Java 1.8.0_151 及以上版本）**：
-  - 在 `jre/lib/security` 文件夹中找到文件 `java.security`。
-  - 找到定义 Java 安全性属性 `crypto.policy` 的行，将其值从 `limited` 改为 `unlimited`：
-    ```
-    crypto.policy=unlimited
-    ```
+- 创建自定义内容类型和字段
+- 设置高级用户权限
+- 配置自动化内容工作流
+- 与外部服务和API集成
+
+请参考配置指南以获取更多高级选项和自定义内容。

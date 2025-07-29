@@ -177,6 +177,8 @@ module.exports = {
                     items: [
                         "project-code/nuxt/config",
                         "project-code/nuxt/nuxtstart",
+                        "project-code/nuxt/nuxtfront",
+
                     ],
                 },
                 {
@@ -202,6 +204,19 @@ module.exports = {
                     items: [
                         "project-code/interface/code",
                         "project-code/interface/allinterface",
+                    ],
+                },
+                  {
+                    type: "category",
+                    label: "性能",
+                    link: {
+                        type: "generated-index",
+                        title: "Performance",
+                        slug: "/Performance",
+                    },
+                    items: [
+                        "project-code/performance/code",
+                        "project-code/performance/Optimization",
                     ],
                 },
             ]
@@ -275,6 +290,7 @@ module.exports = {
                     className: "category-as-header",
                     items: [
                         "migration-guide/3x-to-4x",
+                        "migration-guide/userguide",
                         "migration-guide/auth-provider",
                         "migration-guide/router-provider",
                     ],
