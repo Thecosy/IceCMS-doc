@@ -1,7 +1,7 @@
 ---
 id: general
-title: 通用部署②
-sidebar_label: 通用部署②
+title: 通用部署③
+sidebar_label: 通用部署③
 ---
 ### 说明 [](https://doc.likeadmin.cn/java/deployment/general.html#%E8%AF%B4%E6%98%8E)
 

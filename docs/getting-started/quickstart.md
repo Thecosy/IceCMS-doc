@@ -83,7 +83,7 @@ uniapp端运行到小程序以后不要着急微信登录，这时会报错“op
 	  try_files $uri $uri/ /index.html;
 	}
 
-后台账号：admin 密码：123123
+后台账号：admin admin123
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

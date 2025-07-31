@@ -119,6 +119,7 @@ module.exports = {
                     },
                     items: [
                         "project-build/server/baota",
+                        "project-build/server/1panel",
                         "project-build/server/general",
                         "project-build/server/docker",
                     ],

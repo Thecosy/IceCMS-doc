@@ -1,7 +1,7 @@
 ---
 id: baota
-title: 宝塔面板部署①
-sidebar_label: 宝塔面板部署①
+title: 宝塔面板部署②
+sidebar_label: 宝塔面板部署②
 ---
 
 # 宝塔部署
@@ -56,7 +56,7 @@ sidebar_label: 宝塔面板部署①
 
 获取更大更多优惠活动，咨询服务器相关问题，请加微信。 -->
 
-<!-- ![描述](https://doc.likeadmin.cn/docs/images/general/server/wechat.jpg) -->
+<!-- ![描述](/img/baota/wechat.jpg) -->
 
 ## 服务器环境设置 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE)
 
@@ -68,7 +68,7 @@ sidebar_label: 宝塔面板部署①
 安装软件的时候，使用极速安装，一定要使用Mysql5.7，否则无法使用。  
 建议使用JDK1.8。
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/env.png)
+![alt baota](//img/baota/env.png)
 
 -   **步骤2**:  
     点击【终端】，登录root帐号，根据系统运行命令安装maven。
@@ -85,7 +85,7 @@ shell
 <span><span>apt-get</span><span> install</span><span> maven</span></span>
 ```
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/maven.png)
+![alt baota](//img/baota/maven.png)
 
 ## 数据库导入数据 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE)
 
@@ -100,7 +100,7 @@ shell
 
 likeadmin 本身是免费开源的，采用 MIT 许可证，允许任意商业用途，可以用于二次开发以制作项目和产品。然而，基于 likeadmin 开发的产品软件是否可以商用，请咨询具体软件产品的软件开发者，以免引发法律问题。
 
-在`/www/wwwroot/`目录下新建项目文件夹，然后上传源码压缩包该目录，解压源码压缩包。 ![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/update-code.png)
+在`/www/wwwroot/`目录下新建项目文件夹，然后上传源码压缩包该目录，解压源码压缩包。 ![alt baota](//img/baota/update-code.png)
 
 ## 配置并编译项目 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E9%85%8D%E7%BD%AE%E5%B9%B6%E7%BC%96%E8%AF%91%E9%A1%B9%E7%9B%AE)
 
@@ -109,24 +109,24 @@ likeadmin 本身是免费开源的，采用 MIT 许可证，允许任意商业�
 一般情况下，编译jar在本地环境进行。不要在生产环境服务器编译，避免影响服务器其他运行的项目。
 
 -   **步骤1**:  
-    复制`server/like-admin/src/main/resources/application-dev-example.yml`文件为`application-dev.yml`文件，打开`application-dev.yml`文件的内容，上传目录、配置好域名、Mysql、Redis,保存文件。 ![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/config-1.png)
+    复制`server/like-admin/src/main/resources/application-dev-example.yml`文件为`application-dev.yml`文件，打开`application-dev.yml`文件的内容，上传目录、配置好域名、Mysql、Redis,保存文件。 ![alt baota](//img/baota/config-1.png)
 
 注意
 
 1.注意`upload-directory`配置的目录在服务器上真实存在，勿漏掉配置后面的"/"符号。  
 2.记得保存修改的配置文件。
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/config-2.png)
+![alt baota](//img/baota/config-2.png)
 
 -   **步骤2**:  
-    复制`server/like-front/src/main/resources/application-dev-example.yml`文件为`application-dev.yml`文件，打开`application-dev.yml`文件的内容，上传目录、Mysql、Redis,保存文件。 ![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/config-3.png)
+    复制`server/like-front/src/main/resources/application-dev-example.yml`文件为`application-dev.yml`文件，打开`application-dev.yml`文件的内容，上传目录、Mysql、Redis,保存文件。 ![alt baota](//img/baota/config-3.png)
 
 注意
 
 1.注意`upload-directory`配置的目录在服务器上真实存在，勿漏掉配置后面的"/"符号。  
 2.记得保存修改的配置文件。
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/config-4.png)
+![alt baota](//img/baota/config-4.png)
 
 -   **步骤3**:
 
@@ -142,7 +142,7 @@ sh
 <span><span>mvn</span><span> clean</span><span> install</span><span> -Dmaven.test.skip=true</span></span>
 ```
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/build.png)
+![alt baota](//img/baota/build.png)
 
 ## 添加前台站点 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E6%B7%BB%E5%8A%A0%E5%89%8D%E5%8F%B0%E7%AB%99%E7%82%B9)
 
@@ -160,7 +160,7 @@ java服务端口号不要与其他运行程序重复，否则会有冲突，导�
 2.如果在境内服务器，域名必须备案，否则申请也会被拦截。  
 3.域名有解析到服务器并备案，如果失败，请多次重试，还有问题，可以到宝塔面板论坛反馈。[https://www.bt.cn/bbs/portal.php](https://www.bt.cn/bbs/portal.php) 。
 
-点击【SSL】->【Let's Encrypt】->【文件验证】，选择域名后，点击【申请证书】。 ![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-ssl-1.png)![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-ssl-2.png)
+点击【SSL】->【Let's Encrypt】->【文件验证】，选择域名后，点击【申请证书】。 ![alt baota](//img/baota/site-ssl-1.png)![alt baota](//img/baota/site-ssl-2.png)
 
 ### 配置站点前端 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E9%85%8D%E7%BD%AE%E7%AB%99%E7%82%B9%E5%89%8D%E7%AB%AF)
 
@@ -210,7 +210,7 @@ nginx
 <span><span>    #PROXY-LOCAl-END</span></span>
 ```
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-front-proxy.png)
+![alt baota](//img/baota/site-front-proxy.png)
 
 ### 访问地址 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80)
 
@@ -233,7 +233,7 @@ java服务端口号不要与其他运行程序重复，否则会有冲突，导�
 2.如果在境内服务器，域名必须备案，否则申请也会被拦截。  
 3.域名有解析到服务器并备案，如果失败，请多次重试，还有问题，可以到宝塔面板论坛反馈。[https://www.bt.cn/bbs/portal.php](https://www.bt.cn/bbs/portal.php) 。
 
-点击【SSL】->【Let's Encrypt】->【文件验证】，选择域名后，点击【申请证书】。 ![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-ssl-1.png)![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-ssl-2.png)
+点击【SSL】->【Let's Encrypt】->【文件验证】，选择域名后，点击【申请证书】。 ![alt baota](//img/baota/site-ssl-1.png)![alt baota](//img/baota/site-ssl-2.png)
 
 ### 配置站点前端 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E9%85%8D%E7%BD%AE%E7%AB%99%E7%82%B9%E5%89%8D%E7%AB%AF-1)
 
@@ -273,7 +273,7 @@ nginx
 <span><span>    #PROXY-LOCAl-END</span></span>
 ```
 
-![](https://doc.likeadmin.cn/docs/images/java/deployment/bt/site-admin-proxy.png)
+![alt baota](//img/baota/site-admin-proxy.png)
 
 ### 访问地址 [](https://doc.likeadmin.cn/java/deployment/bt.html#%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80-1)
 

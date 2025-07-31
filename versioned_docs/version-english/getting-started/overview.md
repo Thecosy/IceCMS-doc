@@ -43,7 +43,7 @@ Not yet available.
 
 [https://www.macwk.cc/admin](https://www.macwk.cc/admin)
  Account: `admin`
- Password: `123123`
+ Password: `admin123`
 
 ## 🌈 IceCMS Content Management System 🍦 Changelog
 
