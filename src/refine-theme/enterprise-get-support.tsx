@@ -1,11 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
 import { ClockIcon } from "./icons/clock";
 import { SlackIcon } from "../assets/integration-icons";
 import { CommonThemedImage } from "./common-themed-image";
 import './css/style.css';
 
+const Modal = ({ onClose }) => (
+    <div
+        className={clsx(
+            "fixed inset-0 z-50 flex items-center justify-center",
+            "bg-black bg-opacity-50",
+        )}
+        onClick={onClose}
+    >
+        <div
+            className="relative bg-white dark:bg-gray-800 rounded-lg p-6"
+            onClick={(e) => e.stopPropagation()}
+        >
+            <button
+                onClick={onClose}
+                className={clsx(
+                    "absolute top-2 right-2 text-gray-500 dark:text-gray-400",
+                    "hover:text-gray-800 dark:hover:text-gray-200",
+                    "transition-colors",
+                )}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                </svg>
+            </button>
+            <img
+                src="https://img3.icecmspro.com/e18c72d0-ca9a-425b-a136-6baaa4c07fe2.jpg"
+                alt="Author QR Code"
+                className="mx-auto w-80"
+            />
+        </div>
+    </div>
+);
+
 export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         
         <div className={clsx("flex flex-col", "not-prose", className)}>
@@ -77,7 +123,7 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                               </svg></div>
                               <div className="mb-4">
                                 <div className="text-lg font-bold mb-1" >捐赠版</div>
-                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">199</span><span className="text-gray-6001 pl-2">/不限根域名（限时特价）
+                                <div className="inline-flex items-baseline mb-2"><span className="text-3xl font-bold">￥</span><span className="text-4xl font-bold">249</span><span className="text-gray-6001 pl-2">/不限根域名（限时特价）
                               
                                 </span></div>
                                 <div className="text-base text-gray-500">适合个人使用</div>
@@ -104,7 +150,7 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                                 <li className="flex items-center mb-2"><svg className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0" viewBox="0 0 12 12" xmlns="https://www.w3.org/2000/svg">
                                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z">
                                   </path>
-                                </svg><span>持续更新中...</span></li>
+                                </svg><span>优先更新 持续更新中...</span></li>
                               </ul>
                               <div className="border-t border-gray-200 pt-5 mt-6"><a href="https://mbd.pub/o/bread/Y56bmJ9s" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style={{ outline: 'none' }}>立即购买</a>
                               </div>
@@ -129,7 +175,15 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                                   </path>
                                 </svg><span>定制化服务</span></li>
                               </ul>
-                              <div className="border-t border-gray-200 pt-5 mt-6"><a target="_blank" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" href="https://wpa.qq.com/msgrd?v=3&amp;uin=873019219&amp;site=qq&amp;menu=yes&amp;jumpflag=1" style={{ outline: 'none' }}>联系作者</a></div>
+                               <div className="border-t border-gray-200 pt-5 mt-6">
+                                    <button
+                                        className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full"
+                                        onClick={() => setIsModalOpen(true)}
+                                        style={{ outline: 'none' }}
+                                    >
+                                        联系作者
+                                    </button>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -315,6 +369,7 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                     </div>
                 </div>
             </div>
+            {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 };

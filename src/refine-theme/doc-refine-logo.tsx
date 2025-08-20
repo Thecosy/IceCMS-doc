@@ -75,7 +75,7 @@ const Logo = (props: React.SVGProps<SVGSVGElement>) => (
             y="0"
             width="22"
             height="22"
-            xlinkHref="https://res.cloudinary.com/dxl1idlr5/image/upload/v1705229488/ai-image-3_v6qncz.png"
+            xlinkHref="https://img3.icecmspro.com/string/e3ca36f1-0ea5-4706-8bb5-993cd10201e6.png"
         />
     </svg>
 );

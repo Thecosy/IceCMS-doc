@@ -20,7 +20,7 @@ export const EnterpriseGetInTouchButton: FC<Props> = (props) => {
             )}
         >
             <Link
-                href="https://s.refine.dev/enterprise"
+                href="/docs/getting-started/quickstart/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clsx(

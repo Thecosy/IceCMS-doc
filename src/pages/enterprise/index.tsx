@@ -10,6 +10,7 @@ import { EnterpriseGetInTouchCta } from "@site/src/refine-theme/enterprise-get-i
 import { EnterpriseFlexibility } from "@site/src/refine-theme/enterprise-flexibility";
 import { EnterpriseDataSource } from "@site/src/refine-theme/enterprise-data-source";
 import { EnterpriseFrequentUpdates } from "@site/src/refine-theme/enterprise-frequent-updates";
+import { EnterpriseChangelog } from "@site/src/refine-theme/enterprise-changelog";
 import { LandingTrustedByDevelopers } from "@site/src/refine-theme/landing-trusted-by-developers";
 import { EnterpriseFaq } from "@site/src/refine-theme/enterprise-faq";
 import { EnterpriseTable } from "@site/src/refine-theme/enterprise-table";
@@ -81,9 +82,7 @@ const Enterprise: React.FC = () => {
                                 "w-full landing-lg:max-w-[792px] mx-auto",
                             )}
                         />
-                        <EnterpriseFrequentUpdates
-                            className={clsx(sectionPadding, sectionWidth)}
-                        />
+                      
                         <div className={clsx("w-full", "overflow-hidden")}>
                             <EnterpriseTable
                                 className={clsx(sectionWidth, sectionPadding)}
@@ -92,6 +91,17 @@ const Enterprise: React.FC = () => {
                         <LandingTrustedByDevelopers
                             className={clsx(sectionPadding, sectionWidth)}
                         />
+                          <EnterpriseFrequentUpdates
+                            className={clsx(sectionPadding, sectionWidth)}
+                        />
+                        <EnterpriseChangelog
+                            className={clsx(
+                                sectionPadding,
+                                "px-4 landing-sm:px-10 landing-lg:px-0",
+                                "w-full landing-lg:max-w-[792px] mx-auto",
+                            )}
+                        />
+                        
                         <EnterpriseFaq
                             className={clsx(
                                 sectionPadding,

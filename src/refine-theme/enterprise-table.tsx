@@ -490,28 +490,28 @@ const tableData = [
         title: "支持",
         items: [
             {
-                description: "Support Level",
-                community: <TableText>Community Support</TableText>,
-                enterprise: <TableText>Priority Support</TableText>,
+                description: "支持级别",
+                community: <TableText>社区支持</TableText>,
+                enterprise: <TableText>优先支持</TableText>,
                 valueType: {
                     community: "text",
                     enterprise: "text",
                 },
             },
             {
-                description: "Support Channels",
-                community: <TableText>Community Channels</TableText>,
-                enterprise: <TableText>Private Support Channel</TableText>,
+                description: "支持渠道",
+                community: <TableText>社区渠道</TableText>,
+                enterprise: <TableText>私人支持渠道</TableText>,
                 valueType: {
                     community: "text",
                     enterprise: "text",
                 },
             },
             {
-                description: "SLA",
+                description: "服务等级协议 (SLA)",
                 community: <CrossIcon />,
                 enterprise: (
-                    <TableText>Response time within one business day</TableText>
+                    <TableText>一个工作日内响应</TableText>
                 ),
                 valueType: {
                     community: "icon",
@@ -521,14 +521,14 @@ const tableData = [
         ],
     },
     {
-        title: "身份访问管理",
+        title: "身份与访问管理",
         items: [
             {
-                description: "Integrated Providers",
+                description: "集成提供商",
                 community: <CrossIcon />,
                 enterprise: (
                     <TableText>
-                        Okta, Azure AD, Amazon Cognito & Google Cloud Identity
+                        Okta, Azure AD, Amazon Cognito 和 Google Cloud Identity
                     </TableText>
                 ),
                 valueType: {
@@ -537,7 +537,7 @@ const tableData = [
                 },
             },
             {
-                description: "Single Sign-On",
+                description: "单点登录 (SSO)",
                 community: <CrossIcon />,
                 enterprise: <CheckIcon />,
                 valueType: {
@@ -546,7 +546,7 @@ const tableData = [
                 },
             },
             {
-                description: "Multi Factor Authentication",
+                description: "多因素认证 (MFA)",
                 community: <CrossIcon />,
                 enterprise: <CheckIcon />,
                 valueType: {
@@ -555,9 +555,9 @@ const tableData = [
                 },
             },
             {
-                description: "Support for Authorization Services",
+                description: "授权服务支持",
                 community: <CrossIcon />,
-                enterprise: <TableText>ACL, RBAC & ABAC models</TableText>,
+                enterprise: <TableText>ACL, RBAC 和 ABAC 模型</TableText>,
                 valueType: {
                     community: "icon",
                     enterprise: "text",
@@ -569,16 +569,16 @@ const tableData = [
         title: "数据提供者",
         items: [
             {
-                description: "Direct Database Access",
+                description: "直接数据库访问",
                 community: <CrossIcon />,
-                enterprise: <TableText>via API Generator</TableText>,
+                enterprise: <TableText>通过 API 生成器</TableText>,
                 valueType: {
                     community: "icon",
                     enterprise: "text",
                 },
             },
             {
-                description: "Supported Databases",
+                description: "支持的数据库",
                 community: <CrossIcon />,
                 enterprise: (
                     <TableText>
@@ -596,16 +596,16 @@ const tableData = [
         title: "更新",
         items: [
             {
-                description: "Release Frequency",
-                community: <TableText>Monthly</TableText>,
-                enterprise: <TableText>Continuous</TableText>,
+                description: "发布频率",
+                community: <TableText>每月</TableText>,
+                enterprise: <TableText>持续</TableText>,
                 valueType: {
                     community: "text",
                     enterprise: "text",
                 },
             },
             {
-                description: "Codemod Updates",
+                description: "Codemod 更新",
                 community: <CrossIcon />,
                 enterprise: <CheckIcon />,
                 valueType: {
@@ -616,10 +616,10 @@ const tableData = [
         ],
     },
     {
-        title: "专业的服务",
+        title: "专业服务",
         items: [
             {
-                description: "Trainings",
+                description: "培训",
                 community: <CrossIcon />,
                 enterprise: <CheckIcon />,
                 valueType: {
@@ -628,7 +628,7 @@ const tableData = [
                 },
             },
             {
-                description: "Code Reviews",
+                description: "代码审查",
                 community: <CrossIcon />,
                 enterprise: <CheckIcon />,
                 valueType: {
@@ -642,15 +642,15 @@ const tableData = [
         title: "许可",
         items: [
             {
-                description: "License",
+                description: "许可证",
                 community: (
                     <div className={clsx("h-full")}>
-                        <TableText>Open-source under MIT license</TableText>
+                        <TableText>基于 MIT 许可证的开源</TableText>
                     </div>
                 ),
                 enterprise: (
                     <div className={clsx("flex flex-col", "gap-6", "w-full")}>
-                        <TableText>Refine commercial license</TableText>
+                        <TableText>IceCMS 商业许可证</TableText>
                         <EnterpriseGetInTouchButton
                             className={clsx("hidden landing-sm:block")}
                             linkClassName={clsx("w-full")}

@@ -1,29 +1,18 @@
 import Head from "@docusaurus/Head";
-import { FooterRedditIcon as RedditIcon } from "@site/src/refine-theme/icons/footer-reddit";
-import { BlogFooter } from "@site/src/refine-theme/blog-footer";
 import { CommonHeader } from "@site/src/refine-theme/common-header";
 import { CommonLayout } from "@site/src/refine-theme/common-layout";
-import { Istanbul500Icon } from "@site/src/refine-theme/icons/500";
 import { GithubIcon } from "@site/src/refine-theme/icons/github";
-import { JoinUsIcon } from "@site/src/refine-theme/icons/join-us";
-import { MailIcon } from "@site/src/refine-theme/icons/mail";
-import { MarkerIcon } from "@site/src/refine-theme/icons/marker";
-import { OpenSourceIcon } from "@site/src/refine-theme/icons/open-source";
 import { DiscordIcon, TwitterIcon } from "@site/src/refine-theme/icons/popover";
+import { FooterRedditIcon as RedditIcon } from "@site/src/refine-theme/icons/footer-reddit";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import React from "react";
-import { backedBy } from "../../assets/backed-by";
-import { team } from "../../assets/team";
-import { useColorMode } from "@docusaurus/theme-common";
-import { YCombinatorCircleIcon } from "@site/src/refine-theme/icons/ycombinator-circle";
-import { CommonThemedImage } from "@site/src/refine-theme/common-themed-image";
+import { BlogFooter } from "@site/src/refine-theme/blog-footer";
 
 const About: React.FC = () => {
-    const { colorMode } = useColorMode();
     return (
         <>
-            <Head title="About | Refine">
+            <Head title="关于团队 | IceCMS">
                 <html data-page="about" data-customized="true" />
             </Head>
             <div className="refine-prose">
@@ -47,20 +36,17 @@ const About: React.FC = () => {
                             "text-xl md:text-[40px] md:leading-[56px]",
                         )}
                     >
-                        We&apos;re helping organizations to build better web
-                        applications, in{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r text-gradient-to-r from-[#0FBDBD] to-[#26D97F]">
-                            less time
-                        </span>
-                        , with{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r text-gradient-to-r from-[#FF9933] to-[#FF4C4D]">
-                            fewer resources
-                        </span>
-                        .
+                        团队介绍
                     </h1>
                 </div>
 
-                <div className={clsx("max-w-[1120px]", "mx-auto w-full")}>
+                <div
+                    className={clsx(
+                        "max-w-[1120px]",
+                        "mx-auto w-full",
+                        "px-4 sm:px-6 lg:px-8",
+                    )}
+                >
                     <div
                         className={clsx(
                             "flex flex-col xl:flex-row",
@@ -70,40 +56,35 @@ const About: React.FC = () => {
                         <div
                             className={clsx(
                                 "mx-auto flex items-center justify-center",
-                                "w-[328px] sm:w-[480px] md:w-[624px] lg:w-[912px] xl:w-[576px]",
+                                "w-full xl:w-[576px]",
                             )}
                         >
                             <img
                                 className="rounded-[12px]"
                                 src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/about/images/about.jpg"
+                                alt="IceCMS Team"
                             />
                         </div>
                         <div
                             className={clsx(
                                 "mx-auto flex flex-col xl:justify-center",
-                                "w-[328px] sm:w-[480px] md:w-[624px] lg:w-[912px] xl:w-[480px]",
-                                "text-gray-700",
+                                "w-full xl:w-[480px]",
+                                "text-gray-700 dark:text-gray-300",
                             )}
                         >
                             <div className={clsx("max-w-[642px]")}>
                                 <p className="text-xs sm:text-base">
-                                    Shortly after its initial release on
-                                    September 2021, Refine has gained attraction
-                                    of open-source community and has become
-                                    increasingly popular among web application
-                                    frameworks.
+                                    IceCMS（冰激凌内容管理系统）主要由一个由
+                                    NgShow
+                                    领导的小型但专注的团队开发和维护，其在
+                                    GitHub 上的用户名为
+                                    Thecosy。作为项目的主要架构师和开发者，NgShow
+                                    在创建这个在中国开发者社区中广受欢迎的灵活内容管理系统中发挥了关键作用。
                                 </p>
                                 <p className="text-xs sm:text-base">
-                                    With the aim of sustaining the growth and
-                                    expanding the user base, the project was
-                                    backed by prominent VC’s and angel investors
-                                    on May 2022.
-                                </p>
-                                <p className="text-xs sm:text-base">
-                                    Today, the US-based company has an
-                                    international team of 10+ members leading
-                                    the development of the open-core and
-                                    building new products for the ecosystem.
+                                    自项目启动以来，其发展势头稳步增强，目前在
+                                    GitHub 上拥有超过 1800 个星标和 260
+                                    多个分支——这些令人印象深刻的指标展示了社区对这一开源解决方案的浓厚兴趣。
                                 </p>
                             </div>
                         </div>
@@ -112,62 +93,114 @@ const About: React.FC = () => {
 
                 <div
                     className={clsx(
-                        "w-[328px] sm:w-[480px] md:w-[624px] lg:w-[912px] xl:w-[1120px]",
-                        "mx-auto mt-10 w-full md:mt-20 lg:mt-32",
-                        "flex flex-col xl:flex-row",
-                        "gap-4 xl:gap-16",
+                        "w-full",
+                        "px-4 sm:px-6 lg:px-8",
+                        "max-w-[1120px]",
+                        "mx-auto mt-10 md:mt-20 lg:mt-32",
                     )}
                 >
-                    <div
-                        className={clsx(
-                            "flex justify-center items-center",
-                            "w-[48px] h-[48px]",
-                            "md:w-[64px] md:h-[64px]",
-                            "rounded-full ",
-                            "bg-refine-red bg-opacity-10",
-                            "shrink-0",
-                            "xl:hidden",
-                        )}
-                    >
-                        <OpenSourceIcon className="text-refine-red" />
+                    <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                        <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                            技术栈
+                        </h2>
+                        <ul className="list-disc pl-5 space-y-2 text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                            <li>
+                                <strong>后端：</strong>Java、Spring Boot 和
+                                MyBatis
+                            </li>
+                            <li>
+                                <strong>安全：</strong>Apache Shiro
+                            </li>
+                            <li>
+                                <strong>前端：</strong>Vue.js
+                            </li>
+                            <li>
+                                <strong>跨平台：</strong>UniApp
+                                用于移动和迷你程序支持
+                            </li>
+                            <li>
+                                <strong>最新添加：</strong>Nuxt3 支持（2025 年 2
+                                月添加）
+                            </li>
+                        </ul>
+                        <p className="text-xs sm:text-base mt-4 text-gray-700 dark:text-gray-300">
+                            这种多样的技术选择揭示了团队对现代开发实践和跨平台解决方案的承诺。最近的
+                            new-version-for-nuxt3
+                            提交展示了他们致力于将平台更新为最新的前端框架。
+                        </p>
                     </div>
-                    <div className="flex flex-col gap-2 lg:flex-row lg:gap-8 xl:gap-16">
-                        <div
-                            className={clsx(
-                                "flex flex-col gap-6 lg:flex-row",
-                                "w-[328px] sm:w-[480px] md:w-[624px] lg:w-[912px] xl:w-[576px]",
-                            )}
-                        >
-                            <div
-                                className={clsx(
-                                    "justify-center items-center",
-                                    "w-[48px] h-[48px]",
-                                    "md:w-[64px] md:h-[64px]",
-                                    "rounded-full ",
-                                    "bg-refine-red bg-opacity-10",
-                                    "shrink-0",
-                                    "hidden xl:flex",
-                                )}
-                            >
-                                <OpenSourceIcon className="text-refine-red" />
-                            </div>
 
-                            <div>
-                                <p className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-300 md:text-lg lg:text-2xl">
-                                    Open-source contributions have always been a
-                                    major part of refine’s success.
-                                </p>
-
-                                <p className="text-xs sm:text-base text-gray-900 dark:text-gray-300">
-                                    We are grateful for all contributors who are
-                                    developing core features, making bug-fixes,
-                                    building community extensions, writing
-                                    documentation, reporting issues and giving
-                                    their constructive feedback.
-                                </p>
-                            </div>
+                    <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                            <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                                国际影响力
+                            </h2>
+                            <p className="text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                                尽管该项目似乎起源于中国，主要服务于中文开发者，但团队一直在努力扩大其国际影响力。2024年11月，他们添加了英文README，使项目更易于全球开发者社区访问。这一国际化努力得到了mt-gitlocalize的贡献，后者协助了翻译过程。
+                            </p>
                         </div>
-                        <div className="grid w-full shrink-0 grid-cols-2 gap-4 lg:w-[400px]">
+                        <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                            <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                                安全关注和社区响应
+                            </h2>
+                            <p className="text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                                团队通过处理漏洞报告展示了他们对安全的承诺。项目中已识别出多个安全问题（包括CVE-2023-36100），并且团队已努力解决这些关切。GitHub上活跃的问题部分显示了团队与社区的互动，回应了与安全漏洞、功能请求和错误修复相关的报告。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-10 md:mt-16 rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                        <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                            开发势头
+                        </h2>
+                        <p className="text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                            项目通过定期更新保持稳定的开发势头。近期的重要里程碑包括：
+                        </p>
+                        <ul className="list-disc pl-5 mt-4 space-y-2 text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                            <li>
+                                <strong>2025年6月：</strong>SQL更新（c0efc6d）
+                            </li>
+                            <li>
+                                <strong>2025年2月：</strong>
+                                管理页面改进和Nuxt3支持
+                            </li>
+                            <li>
+                                <strong>2024年7月：</strong>3.4.7版本发布
+                            </li>
+                            <li>
+                                <strong>2024年4月：</strong>3.2.5版本发布
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="mt-10 md:mt-16 rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                        <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                            商业模式
+                        </h2>
+                        <ul className="list-disc pl-5 space-y-2 text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                            <li>
+                                <strong>社区版：</strong>
+                                免费且开源，采用AGPL-3.0许可证
+                            </li>
+                            <li>
+                                <strong>专业版：</strong>
+                                具有额外功能和支持（在其官方网站提及）
+                            </li>
+                        </ul>
+                        <p className="text-xs sm:text-base mt-4 text-gray-700 dark:text-gray-300">
+                            这种双轨方法使他们能够在开源原则和可持续开发之间取得平衡。
+                        </p>
+                    </div>
+
+                    <div className="mt-10 md:mt-16 rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 sm:p-10">
+                        <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                            加入社区
+                        </h2>
+                        <p className="text-xs sm:text-base text-gray-700 dark:text-gray-300">
+                            开源贡献一直是 IceCMS
+                            成功的重要组成部分。我们感谢所有开发核心功能、修复错误、构建社区扩展、编写文档、报告问题并提供建设性反馈的贡献者。
+                        </p>
+                        <div className="grid w-full shrink-0 grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                             <a
                                 target="_blank"
                                 href="https://github.com/Thecosy/IceCMS"
@@ -281,344 +314,6 @@ const About: React.FC = () => {
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className={clsx(
-                        "lg:max-w-[912px] lg:py-32",
-                        "md:max-w-[624px] md:py-20",
-                        "sm:max-w-[480px] py-10",
-                        "max-w-[328px]",
-                        "w-full mx-auto",
-                    )}
-                >
-                    <h4
-                        className={clsx(
-                            "text-sm leading-6",
-                            "md:text-2xl md:leading-8",
-                            "text-center text-gray-800 dark:text-gray-200",
-                        )}
-                        style={{
-                            margin: 0,
-                        }}
-                    >
-                        Our Team
-                    </h4>
-
-                    <div
-                        className={clsx(
-                            "grid",
-                            "lg:grid-cols-[repeat(4,192px)] lg:gap-12",
-                            "md:grid-cols-[repeat(3,176px)]",
-                            "sm:grid-cols-[repeat(3,144px)]",
-                            "grid-cols-[repeat(2,144px)] gap-6",
-                            "align-top",
-                            "mt-6 md:mt-12 lg:mt-16",
-                        )}
-                    >
-                        {team.map(({ name, avatar, role1, role2 }) => (
-                            <div
-                                key={name}
-                                className="flex justify-start flex-col text-center not-prose"
-                            >
-                                <img
-                                    srcSet={`${avatar} 1500w`}
-                                    src={avatar}
-                                    alt={name}
-                                    className="w-full m-0 mb-6"
-                                />
-                                <span
-                                    className={clsx(
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "text-gray-900 dark:text-gray-0 font-semibold",
-                                    )}
-                                >
-                                    {name}
-                                </span>
-                                <span
-                                    className={clsx(
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "text-gray-500 dark:text-gray-400",
-                                    )}
-                                >
-                                    {role1}
-                                </span>
-                                {role2 && (
-                                    <span
-                                        className={clsx(
-                                            "text-xs leading-4",
-                                            "lg:text-base lg:leading-6",
-                                            "text-gray-500 dark:text-gray-400",
-                                        )}
-                                    >
-                                        {role2}
-                                    </span>
-                                )}
-                            </div>
-                        ))}
-                        <div
-                            className={clsx(
-                                "flex",
-                                "flex-col",
-                                "justify-between lg:justify-start",
-                                "text-center",
-                            )}
-                        >
-                            <div className="w-full not-prose m-0">
-                                <JoinUsIcon
-                                    className={clsx(
-                                        "m-0 w-full lg:mb-6",
-                                        "lg:h-[240px]",
-                                        "md:h-[220px]",
-                                        "h-[180px]",
-                                    )}
-                                    isDark={colorMode === "dark"}
-                                />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <a
-                                    target="_blank"
-                                    href="https://www.linkedin.com/company/refine-dev"
-                                    className={clsx(
-                                        "block",
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "no-underline hover:no-underline text-refine-link-light dark:text-refine-link-dark font-semibold mb-0",
-                                    )}
-                                    rel="noreferrer"
-                                >
-                                    Join our team!
-                                </a>
-                                <a
-                                    target="_blank"
-                                    href="https://www.linkedin.com/company/refine-dev"
-                                    className={clsx(
-                                        "block",
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "no-underline hover:no-underline text-refine-link-light dark:text-refine-link-dark m-0",
-                                    )}
-                                    rel="noreferrer"
-                                >
-                                    See open positions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    className={clsx(
-                        "lg:max-w-[912px] lg:py-16",
-                        "md:max-w-[624px] md:py-10",
-                        "sm:max-w-[480px] py-6",
-                        "max-w-[328px]",
-                        "w-full mx-auto",
-                    )}
-                >
-                    <h4
-                        className={clsx(
-                            "text-sm leading-6",
-                            "md:text-2xl md:leading-8",
-                            "text-center text-gray-800 dark:text-gray-200",
-                            "mb-8 lg:mb-16",
-                        )}
-                    >
-                        Backed by
-                    </h4>
-
-                    <div
-                        className={clsx(
-                            "flex justify-center items-center w-full gap-10",
-                            "rounded-xl",
-                            "py-6",
-                            "mb-16",
-                        )}
-                    >
-                        <div
-                            className={clsx(
-                                "flex flex-col justify-center items-center gap-6",
-                            )}
-                        >
-                            <div
-                                className={clsx(
-                                    "flex justify-center items-center",
-                                    "w-[144px] h-[144px]",
-                                    "md:w-[192px] md:h-[192px]",
-                                    "rounded-full",
-                                    "bg-gray-900 dark:bg-gray-0",
-                                    "shrink-0",
-                                )}
-                            >
-                                <YCombinatorCircleIcon />
-                            </div>
-                            <span
-                                className={clsx(
-                                    "text-xs md:text-base",
-                                    "text-gray-900 dark:text-gray-0",
-                                    "font-semibold",
-                                )}
-                            >
-                                Y Combinator
-                            </span>
-                        </div>
-
-                        <div
-                            className={clsx(
-                                "flex flex-col justify-center items-center gap-6",
-                            )}
-                        >
-                            <div
-                                className={clsx(
-                                    "flex justify-center items-center",
-                                    "w-[144px] h-[144px]",
-                                    "md:w-[192px] md:h-[192px]",
-                                    "rounded-full",
-                                    "bg-gray-900 dark:bg-gray-0",
-                                    "shrink-0",
-                                )}
-                            >
-                                <Istanbul500Icon className="text-gray-0 dark:text-gray-700 h-auto w-[102px] md:w-[136px]" />
-                            </div>
-                            <span
-                                className={clsx(
-                                    "text-xs md:text-base",
-                                    "text-gray-900 dark:text-gray-0",
-                                    "font-semibold",
-                                )}
-                            >
-                                500 Emerging Europe
-                            </span>
-                        </div>
-                    </div>
-
-                    <div
-                        className={clsx(
-                            "grid",
-                            "lg:grid-cols-[repeat(4,192px)] lg:gap-12",
-                            "md:grid-cols-[repeat(3,176px)]",
-                            "sm:grid-cols-[repeat(3,144px)]",
-                            "grid-cols-[repeat(2,144px)] gap-6",
-                            "align-top",
-                        )}
-                    >
-                        {backedBy.map(({ name, avatar, role1, role2 }) => (
-                            <div
-                                key={name}
-                                className="flex justify-start flex-col text-center"
-                            >
-                                <CommonThemedImage
-                                    className="w-full not-prose m-0 mb-6"
-                                    srcDark={avatar.dark}
-                                    srcLight={avatar.light}
-                                    srcSetDark={`${avatar.dark} 1500w`}
-                                    srcSetLight={`${avatar.light} 1500w`}
-                                    alt={name}
-                                />
-                                <span
-                                    className={clsx(
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "text-gray-900 dark:text-gray-0 font-semibold",
-                                    )}
-                                >
-                                    {name}
-                                </span>
-                                <span
-                                    className={clsx(
-                                        "text-xs leading-4",
-                                        "lg:text-base lg:leading-6",
-                                        "text-gray-500 dark:text-gray-400",
-                                    )}
-                                >
-                                    {role1}
-                                </span>
-                                {role2 && (
-                                    <span
-                                        className={clsx(
-                                            "text-xs leading-4",
-                                            "lg:text-base lg:leading-6",
-                                            "text-gray-500 dark:text-gray-400",
-                                        )}
-                                    >
-                                        {role2}
-                                    </span>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div
-                    className={clsx(
-                        "xl:max-w-[1016px] lg:py-16",
-                        "lg:max-w-[912px] lg:py-16",
-                        "md:max-w-[624px] md:py-10",
-                        "sm:max-w-[480px] py-8",
-                        "max-w-[328px]",
-                        "w-full mx-auto",
-                    )}
-                >
-                    <h4
-                        className={clsx(
-                            "text-sm leading-6",
-                            "md:text-2xl md:leading-8",
-                            "text-center text-gray-800 dark:text-gray-200",
-                            "mb-8 lg:mb-16",
-                        )}
-                    >
-                        We are Here
-                    </h4>
-
-                    <div className="flex flex-col md:gap-8 lg:flex-row lg:gap-10 xl:gap-24">
-                        <div className="w-full shrink-0 lg:order-last lg:h-[416px] lg:w-[624px]">
-                            <Link to="https://goo.gl/maps/D4NZ5gn6VsWaRtXT6">
-                                <img
-                                    className="m-0 p-0"
-                                    src="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/about/images/map.png"
-                                    srcSet="https://refine.ams3.cdn.digitaloceanspaces.com/website/static/about/images/map2x.png 1500w"
-                                />
-                            </Link>
-                        </div>
-                        <div className="flex justify-start flex-col items-start gap-8 lg:pt-12 pt-6">
-                            <div className="flex w-max items-center justify-center gap-6">
-                                <div
-                                    className={clsx(
-                                        "flex justify-center items-center",
-                                        "w-[48px] h-[48px]",
-                                        "rounded-full ",
-                                        "bg-refine-orange bg-opacity-10",
-                                        "shrink-0",
-                                    )}
-                                >
-                                    <MarkerIcon className="text-refine-orange" />
-                                </div>
-                                <span className="text-gray-700 dark:text-gray-300">
-                                    256 Chapman Road STE 105-4 <br />
-                                    Newark, DE 19702
-                                </span>
-                            </div>
-                            <div className="flex justify-center items-center gap-6">
-                                <div
-                                    className={clsx(
-                                        "flex justify-center items-center",
-                                        "w-[48px] h-[48px]",
-                                        "rounded-full ",
-                                        "bg-refine-pink bg-opacity-10",
-                                        "shrink-0",
-                                    )}
-                                >
-                                    <MailIcon className="text-refine-pink" />
-                                </div>
-                                <a
-                                    href="mailto:info@refine.dev"
-                                    className="text-gray-700 dark:text-gray-300 hover:no-underline no-underline"
-                                >
-                                    info@refine.dev
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>

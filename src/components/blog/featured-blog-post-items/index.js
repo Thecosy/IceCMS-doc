@@ -30,7 +30,7 @@ export const FeaturedBlogPostItems = ({ items }) => {
                     "font-semibold",
                 )}
             >
-                Featured Posts
+                Blog
             </h2>
 
             <div className="grid grid-cols-1 blog-md:grid-cols-2 blog-lg:gap-12 gap-8">

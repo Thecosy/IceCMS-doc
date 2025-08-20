@@ -49,7 +49,7 @@ export default function BlogPostItems({
                                 "font-semibold",
                             )}
                         >
-                            All Posts
+                            全部文章
                         </h2>
                         <p
                             className={clsx(
@@ -59,11 +59,7 @@ export default function BlogPostItems({
                                 "text-gray-500 dark:text-gray-400",
                             )}
                         >
-                            <b>Refine technical blog</b> - a resource for
-                            Refine, front-end ecosystem, and web development.
-                            Here, we publish insightful articles that demystify
-                            complex concepts, explore new trends, and provide
-                            helpful tips to enhance your coding journey.
+                            <b>technical blog</b> - 一个关于IceCMS、前端生态系统和网页开发的资源。我们在这里发布富有洞察力的文章，旨在解决复杂的概念、探索新趋势，并提供有用的技巧来提升您的编程之旅。
                         </p>
                     </div>
                     <TagsList tags={tags} />

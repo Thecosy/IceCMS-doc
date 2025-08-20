@@ -84,4 +84,4 @@ Key是api密钥
 小程序和App基本一样，就是appid和appserect需要是小程序或者移动应用的
 
 证书的话，根据后面要求上传
-![image-17.png](/img/icecms/202301/1736bf2e174fb9f3.png "image-17.png")
+![image-17.png](/img/icecms/202508/1736bf2e174fb9f3.png "image-17.png")

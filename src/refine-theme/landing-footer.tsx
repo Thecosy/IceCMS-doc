@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import { openFigma } from "../utils/open-figma";
 import { menuItems, secondaryMenuItems, socialLinks } from "./footer-data";
 import { HeartOutlinedIcon } from "./icons/heart-outlined";
@@ -7,7 +7,53 @@ import Link from "@docusaurus/Link";
 import { RefineLogoSingleIcon } from "./icons/refine-logo-single";
 import { PHBadgeIcon } from "./icons/ph-badge";
 
+const Modal = ({ onClose }) => (
+    <div
+        className={clsx(
+            "fixed inset-0 z-50 flex items-center justify-center",
+            "bg-black bg-opacity-50",
+        )}
+        onClick={onClose}
+    >
+        <div
+            className="relative bg-white dark:bg-gray-800 rounded-lg p-6"
+            onClick={(e) => e.stopPropagation()}
+        >
+            <button
+                onClick={onClose}
+                className={clsx(
+                    "absolute top-2 right-2 text-gray-500 dark:text-gray-400",
+                    "hover:text-gray-800 dark:hover:text-gray-200",
+                    "transition-colors",
+                )}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                </svg>
+            </button>
+            <img
+                src="https://img3.icecmspro.com/e18c72d0-ca9a-425b-a136-6baaa4c07fe2.jpg"
+                alt="Author QR Code"
+                className="mx-auto w-80"
+            />
+        </div>
+    </div>
+);
+
 export const LandingFooter = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const info = (
         <div
             className={clsx(
@@ -51,6 +97,25 @@ export const LandingFooter = () => {
             >
                 23339097@qq.com
             </a>
+            <button
+                onClick={() => setIsModalOpen(true)}
+                className={clsx(
+                    "font-normal",
+                    "text-sm",
+                    "leading-5",
+                    "text-left",
+                    "text-gray-600 dark:text-gray-400",
+                    "hover:text-gray-800 dark:hover:text-gray-300",
+                    "hover:no-underline",
+                    "appearance-none",
+                    "bg-transparent",
+                    "border-none",
+                    "p-0",
+                    "cursor-pointer",
+                )}
+            >
+                微信
+            </button>
         </div>
     );
 
@@ -145,6 +210,7 @@ export const LandingFooter = () => {
                             )}
                         >
                             <RefineLogoSingleIcon />
+                    
                         </Link>
                         <a
                             href="https://www.producthunt.com/posts/refine-3?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-refine&#0045;3"
@@ -207,36 +273,70 @@ export const LandingFooter = () => {
                                         "gap-2",
                                     )}
                                 >
-                                    {menu.items.map((item) => (
-                                        <a
-                                            href={item.href}
-                                            key={item.label}
-                                            {...(item.href.startsWith("http")
-                                                ? {
-                                                      target: "_blank",
-                                                      rel: "noopener noreferrer",
-                                                  }
-                                                : {})}
-                                            className={clsx(
-                                                "text-sm",
-                                                "leading-5",
-                                                "hover:no-underline",
-                                                "text-gray-600 dark:text-gray-400",
-                                                "hover:text-gray-800 dark:hover:text-gray-300",
-                                            )}
-                                        >
-                                            <div
+                                    {menu.items.map((item) => {
+                                        if (item.label === "联系我们") {
+                                            return (
+                                                <button
+                                                    key={item.label}
+                                                    onClick={() =>
+                                                        setIsModalOpen(true)
+                                                    }
+                                                    className={clsx(
+                                                        "text-sm",
+                                                        "leading-5",
+                                                        "text-left",
+                                                        "hover:no-underline",
+                                                        "text-gray-600 dark:text-gray-400",
+                                                        "hover:text-gray-800 dark:hover:text-gray-300",
+                                                    )}
+                                                >
+                                                    <div
+                                                        className={clsx(
+                                                            "flex",
+                                                            "items-center",
+                                                            "gap-2",
+                                                        )}
+                                                    >
+                                                        {item.label}
+                                                        {item.icon}
+                                                    </div>
+                                                </button>
+                                            );
+                                        }
+
+                                        return (
+                                            <a
+                                                href={item.href}
+                                                key={item.label}
+                                                {...(item.href.startsWith(
+                                                    "http",
+                                                )
+                                                    ? {
+                                                          target: "_blank",
+                                                          rel: "noopener noreferrer",
+                                                      }
+                                                    : {})}
                                                 className={clsx(
-                                                    "flex",
-                                                    "items-center",
-                                                    "gap-2",
+                                                    "text-sm",
+                                                    "leading-5",
+                                                    "hover:no-underline",
+                                                    "text-gray-600 dark:text-gray-400",
+                                                    "hover:text-gray-800 dark:hover:text-gray-300",
                                                 )}
                                             >
-                                                {item.label}
-                                                {item.icon}
-                                            </div>
-                                        </a>
-                                    ))}
+                                                <div
+                                                    className={clsx(
+                                                        "flex",
+                                                        "items-center",
+                                                        "gap-2",
+                                                    )}
+                                                >
+                                                    {item.label}
+                                                    {item.icon}
+                                                </div>
+                                            </a>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}
@@ -345,6 +445,7 @@ export const LandingFooter = () => {
                     </div>
                 </div>
             </div>
+            {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
         </footer>
     );
 };
