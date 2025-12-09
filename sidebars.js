@@ -171,8 +171,12 @@ module.exports = {
                         slug: "/docker",
                     },
                     items: [
+                        "project-code/docker/docker-install",
+                        "project-code/docker/docker-commands",
                         "project-code/docker/dockerfile",
                         "project-code/docker/dockercomplose",
+                        "project-code/docker/docker-network",
+                        "project-code/docker/docker-volume",
                     ],
                 },
                 {
