@@ -1,3 +1,9 @@
+---
+id: docker-redis-guide
+title: Docker Redis集成指南
+sidebar_label: Docker Redis集成指南
+---
+
 # IceCMS-Pro Docker Redis 集成指南
 
 ## 已完成的改动
@@ -77,7 +83,7 @@ spring:
 
 ```bash
 # 进入Docker目录
-cd C:\Users\31313\Documents\GitHub\IceCMS-Pro\IceCMS-Docker
+cd IceCMS-Docker
 
 # 启动所有服务
 docker-compose up -d
@@ -94,18 +100,6 @@ icecms-redis        redis:7-alpine      Up (healthy)
 icecms-fullstack    icecms-fullstack    Up
 ```
 
-### 方式2: PowerShell (Windows)
-
-```powershell
-cd C:\Users\31313\Documents\GitHub\IceCMS-Pro\IceCMS-Docker
-
-# 启动服务
-& 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' compose up -d
-
-# 查看日志
-& 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' compose logs -f
-```
-
 ## 验证Redis是否工作
 
 ### 1. 检查Redis容器状态
@@ -115,14 +109,14 @@ cd C:\Users\31313\Documents\GitHub\IceCMS-Pro\IceCMS-Docker
 docker ps | grep redis
 
 # 检查健康状态
-docker inspect icecms-redis | findstr Health
+docker inspect icecms-redis | grep Health
 ```
 
 ### 2. 连接Redis测试
 
 ```bash
-# Windows PowerShell
-& 'C:\Program Files\Docker\Docker\resources\bin\docker.exe' exec -it icecms-redis redis-cli
+# 进入Redis CLI
+docker exec -it icecms-redis redis-cli
 
 # 在redis-cli中
 > ping
@@ -377,12 +371,6 @@ docker-compose logs icecms-fullstack | grep -i cache
 # Redis available: true
 ```
 
-#### 检查Controller是否注入CacheUtil
-```bash
-# 查看日志
-docker-compose logs icecms-fullstack | grep -i "Autowired CacheUtil"
-```
-
 #### 手动测试接口
 ```bash
 # 第一次访问(慢)
@@ -394,54 +382,6 @@ docker exec -it icecms-redis redis-cli keys "mini:*"
 # 第二次访问(快)
 time curl http://localhost:8181/Mini/getCarousel
 ```
-
-### 问题4: Redis数据丢失
-
-Redis使用AOF持久化,重启不会丢失数据。
-
-#### 检查AOF是否启用
-```bash
-docker exec -it icecms-redis redis-cli config get appendonly
-```
-
-预期输出: `1) "appendonly" 2) "yes"`
-
-#### 检查AOF文件
-```bash
-docker exec -it icecms-redis ls -lh /data/
-```
-
-应该看到 `appendonly.aof` 文件
-
-#### 手动保存
-```bash
-docker exec -it icecms-redis redis-cli save
-```
-
-## 禁用Redis
-
-如果需要禁用Redis(不推荐):
-
-### 方式1: 修改环境变量
-
-编辑 `docker-compose.yml`:
-```yaml
-environment:
-  REDIS_ENABLED: "false"  # 改为false
-```
-
-重启服务:
-```bash
-docker-compose restart icecms-fullstack
-```
-
-### 方式2: 停止Redis服务
-
-```bash
-docker-compose stop icecms-redis
-```
-
-后端会自动降级到直接数据库查询。
 
 ## 性能对比
 
@@ -522,11 +462,7 @@ environment:
   REDIS_PASSWORD: production_password
 ```
 
-### 4. 配置Redis哨兵(高可用)
-
-使用Redis Sentinel实现主从复制和故障转移。
-
-### 5. 定期备份
+### 4. 定期备份
 
 设置定时任务每天备份Redis:
 ```bash

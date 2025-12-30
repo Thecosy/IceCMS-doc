@@ -11,6 +11,8 @@ module.exports = {
             items: [
                 "getting-started/overview",
                 "getting-started/quickstart",
+                "getting-started/quick-start-guide",
+                "getting-started/activation-guide",
                 {
                     type: "doc",
                     id: "tutorial/introduction/index",
@@ -80,6 +82,11 @@ module.exports = {
                             label: "Uniapp端",
                             items: [
                                 "project-build/front/uniapp/base",
+                                "project-build/front/uniapp/page-analysis",
+                                "project-build/front/uniapp/uniapp-progress",
+                                "project-build/front/uniapp/testing-guide",
+                                "project-build/front/uniapp/api-testing",
+                                "project-build/front/uniapp/interface-test-report",
                                 {
                                     type: "category",
                                     label: "小程序配置",
@@ -122,6 +129,9 @@ module.exports = {
                         "project-build/server/1panel",
                         "project-build/server/general",
                         "project-build/server/docker",
+                        "project-build/server/docker-quick-deploy",
+                        "project-build/server/docker-deploy",
+                        "project-build/server/docker-checklist",
                     ],
                 },
                 {
@@ -135,6 +145,7 @@ module.exports = {
                     items: [
                         "project-build/pay/ali",
                         "project-build/pay/we",
+                        "project-build/pay/payment-setup",
                     ],
                 },
             ],
@@ -177,6 +188,7 @@ module.exports = {
                         "project-code/docker/dockercomplose",
                         "project-code/docker/docker-network",
                         "project-code/docker/docker-volume",
+                        "project-code/docker/docker-redis-guide",
                     ],
                 },
                 {
@@ -230,6 +242,10 @@ module.exports = {
                     items: [
                         "project-code/performance/code",
                         "project-code/performance/Optimization",
+                        "project-code/performance/redis-guide",
+                        "project-code/performance/redis-cache-integration",
+                        "project-code/performance/redis-integration-summary",
+                        "project-code/performance/performance-optimization",
                     ],
                 },
             ]
@@ -306,6 +322,10 @@ module.exports = {
                         "migration-guide/userguide",
                         "migration-guide/auth-provider",
                         "migration-guide/router-provider",
+                        "migration-guide/project-summary",
+                        "migration-guide/cors-fix",
+                        "migration-guide/error-handling",
+                        "migration-guide/development-guide",
                     ],
                 }
 

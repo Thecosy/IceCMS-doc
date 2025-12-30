@@ -1,3 +1,9 @@
+---
+id: docker-checklist
+title: Docker部署清单
+sidebar_label: Docker部署清单
+---
+
 # IceCMS-Pro Docker 部署清单
 
 ## 部署前检查
@@ -304,9 +310,3 @@ docker-compose logs -f
 - **Java**: JDK 17
 - **Node.js**: 22
 - **SQL 版本**: 2025-11-10
-
-## 相关文档
-
-- 详细部署文档: [README.md](README.md)
-- 项目文档: [../README.md](../README.md)
-- Claude 指令: [../CLAUDE.md](../CLAUDE.md)
