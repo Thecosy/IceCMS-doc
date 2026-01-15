@@ -130,7 +130,9 @@ module.exports = {
                         "project-build/server/general",
                         "project-build/server/docker",
                         "project-build/server/docker-quick-deploy",
+                        "project-build/server/docker-hub-quickstart",
                         "project-build/server/docker-deploy",
+                        "project-build/server/docker-hub-deploy",
                         "project-build/server/docker-checklist",
                     ],
                 },
@@ -189,6 +191,19 @@ module.exports = {
                         "project-code/docker/docker-network",
                         "project-code/docker/docker-volume",
                         "project-code/docker/docker-redis-guide",
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "oauth",
+                    link: {
+                        type: "generated-index",
+                        title: "oauth",
+                        slug: "/oauth",
+                    },
+                    items: [
+                        "project-code/oauth/github-oauth",
+                        "project-code/oauth/google-oauth",
                     ],
                 },
                 {
