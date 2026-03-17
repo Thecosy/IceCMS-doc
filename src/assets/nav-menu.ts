@@ -101,9 +101,9 @@ export const POPOVERMENUS: NavMenu[] = [
                 icon: AboutUsIcon,
             },
             {
-                label: "Swag Store",
-                description: "T-shirts, caps, and more",
-                link: "https://store.refine.dev",
+                label: "购买授权",
+                description: "查看套餐、购买流程与授权规则",
+                link: "/store",
                 icon: RefineStoreIcon,
             },
             {
@@ -113,7 +113,7 @@ export const POPOVERMENUS: NavMenu[] = [
                 icon: RefineIcon,
             },
         ],
-        imageLink: "https://store.refine.dev",
+        imageLink: "/store",
         imageURL:
             "https://refine.ams3.cdn.digitaloceanspaces.com/website/static/landing/popovers/company.png",
     },

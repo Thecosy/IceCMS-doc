@@ -268,8 +268,8 @@ const siteConfig = {
                             to: "about",
                         },
                         {
-                            label: "Store 🎁",
-                            to: "https://store.refine.dev",
+                            label: "购买授权",
+                            to: "/store",
                         },
                     ],
                 },

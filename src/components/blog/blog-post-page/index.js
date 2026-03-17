@@ -19,6 +19,7 @@ import { Date, ReadingTime } from "@site/src/components/blog/common";
 import { BannerRandom } from "@site/src/components/banner/banner-random";
 
 import { Twitter } from "../icons";
+import { getBlogImageUrl } from "../get-image-url";
 
 export const BlogPostPageView = ({ children }) => {
     const { metadata, isBlogPostPage } = useBlogPost();
@@ -102,10 +103,7 @@ export const BlogPostPageView = ({ children }) => {
             <div>
                 <img
                     className="mb-2 w-full rounded-xl"
-                    src={`https://refine-web.imgix.net${frontMatter.image?.replace(
-                        "https://refine.ams3.cdn.digitaloceanspaces.com",
-                        "",
-                    )}?w=800`}
+                    src={getBlogImageUrl(frontMatter.image, "w=800")}
                     alt={title}
                 />
             </div>

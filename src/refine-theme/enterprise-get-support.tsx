@@ -152,7 +152,7 @@ export const EnterpriseGetSupport = ({ className }: { className?: string }) => {
                                   </path>
                                 </svg><span>优先更新 持续更新中...</span></li>
                               </ul>
-                              <div className="border-t border-gray-200 pt-5 mt-6"><a href="https://mbd.pub/o/bread/Y56bmJ9s" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style={{ outline: 'none' }}>立即购买</a>
+                              <div className="border-t border-gray-200 pt-5 mt-6"><a href="/store#plans" className="btn-sm text-white bg-blue-600 hover:bg-blue-700 w-full" style={{ outline: 'none' }}>立即购买</a>
                               </div>
                             </div>
                             <div className="relative flex flex-col h-full py-5 px-6 rounded shadow-xl aos-init aos-animate" data-aos="zoom-y-out" data-aos-delay="450">

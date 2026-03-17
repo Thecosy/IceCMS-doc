@@ -58,8 +58,8 @@ export const menuItems = [
                 href: "/about",
             },
             {
-                label: "商店",
-                href: "https://store.refine.dev",
+                label: "购买授权",
+                href: "/store",
             },
             {
                 label: "联系我们",

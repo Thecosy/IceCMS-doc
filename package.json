@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "server:start": "node back/icecms-doc-auth/index.js",
     "start": "docusaurus start",
+    "dev:full": "node scripts/dev-full.js",
     "dev:lean": "DISABLE_DOCGEN=true DISABLE_VERSIONING=true DISABLE_EXAMPLES=true DISABLE_CHECKLISTS=true npm run start",
     "dev:docs": "DISABLE_BLOG=true npm run dev:lean",
     "dev:blog": "DISABLE_DOCS=true LIVE_PREVIEW_URL=https://next.live-previews.refine.dev/preview npm run dev:lean",

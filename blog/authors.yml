@@ -221,6 +221,12 @@ frank_joseph:
   title: Software Developer
   image_url: /img/generic-profile.png
 
+icecms_team:
+  name: IceCMS Team
+  title: Product Updates
+  url: https://github.com/Thecosy/IceCMS
+  image_url: /img/generic-profile.png
+
 haider_ali:
   name: Haider Ali
   title: Software Developer

@@ -4,6 +4,10 @@ title: 如何购买
 sidebar_label: 如何购买
 ---
 
+## 在线购买入口
+
+[进入购买授权页](/store)
+
 ## 购买步骤 step
 
 <!-- ![](https://doc.tduckcloud.com/assets/img4.f18a8cda.png) -->

@@ -5,6 +5,7 @@ import BlogPostItemContainer from "@theme/BlogPostItem/Container";
 
 import { Date } from "@site/src/components/blog/common";
 import clsx from "clsx";
+import { getBlogImageUrl } from "@site/src/components/blog/get-image-url";
 
 export default function BlogPostItem({ className }) {
     const { metadata } = useBlogPost();
@@ -26,10 +27,7 @@ export default function BlogPostItem({ className }) {
                 <Link itemProp="url" to={permalink}>
                     <div className="not-prose relative m-0 h-40 hover:brightness-90">
                         <img
-                            src={`https://refine-web.imgix.net${frontMatter.image?.replace(
-                                "https://refine.ams3.cdn.digitaloceanspaces.com",
-                                "",
-                            )}?h=160`}
+                            src={getBlogImageUrl(frontMatter.image, "h=160")}
                             alt={title}
                             className="absolute inset-0 mt-0 h-full w-full rounded-[10px] object-cover transition duration-150"
                             loading="lazy"

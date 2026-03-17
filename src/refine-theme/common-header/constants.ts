@@ -118,9 +118,9 @@ export const MENU_ITEMS: MenuItemType[] = [
                 icon: AboutUsIcon,
             },
             {
-                label: "Swag Store",
-                description: "T-shirts, caps, and more!",
-                link: "https://store.refine.dev",
+                label: "购买授权",
+                description: "查看套餐、授权与交付规则。",
+                link: "/store",
                 icon: StoreIcon,
             },
             {

@@ -11,6 +11,7 @@ import { Menu } from "./common-header/menu";
 import { MobileMenuModal } from "./common-header/mobile-menu-modal";
 import { CommonThemeToggle } from "./common-theme-toggle";
 import { TopAnnouncement } from "./top-announcement";
+import { HeaderAccountEntry } from "./header-account-entry";
 
 import { LandingGithubStarButton } from "./landing-github-star-button";
 
@@ -82,16 +83,21 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                                 <RefineLogoIcon className="text-gray-900 dark:text-gray-0" />
                             </Link>
                         </div>
-                        <button
-                            type="button"
+                        <div
                             className={clsx(
-                                "text-gray-900 dark:text-gray-0",
-                                "block landing-md:hidden",
+                                "flex items-center gap-2",
+                                "landing-md:hidden",
                             )}
-                            onClick={() => setIsModalOpen(true)}
                         >
-                            <HamburgerIcon />
-                        </button>
+                            <HeaderAccountEntry compact />
+                            <button
+                                type="button"
+                                className={clsx("text-gray-900 dark:text-gray-0")}
+                                onClick={() => setIsModalOpen(true)}
+                            >
+                                <HamburgerIcon />
+                            </button>
+                        </div>
                         <div
                             className={clsx(
                                 "hidden landing-md:flex",
@@ -108,10 +114,10 @@ export const CommonHeader = ({ trackProgress }: Props) => {
                                 "items-center",
                                 "justify-end",
                                 "gap-4",
-                                "w-[130px]",
-                                "landing-lg:w-[200px]",
+                                "w-auto",
                             )}
                         >
+                            <HeaderAccountEntry />
                             <LandingGithubStarButton />
                             <CommonThemeToggle />
                         </div>
